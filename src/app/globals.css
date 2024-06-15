@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.highlight {
+  @apply hover:text-yellow-400 hover:scale-105 transition cursor-pointer;
+}
