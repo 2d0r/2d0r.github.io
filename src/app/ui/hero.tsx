@@ -5,7 +5,7 @@ interface HeroProps {
 }
 
 export default function Hero ({content}: HeroProps) {
-    return (<div className='flex items-center justify-center content-center gap-[10px] h-[150px]'>
+    return (<div className='flex items-end justify-center content-center gap-[10px] h-[150px]'>
         {/* Tools Columns */}
         <div className='flex flex-col h-[120px] justify-between'>
             <div className='border-white border rounded-lg h-[55px] w-[55px]'></div>

@@ -5,6 +5,7 @@ import localFont from 'next/font/local';
 import '@/app/globals.css';
 import { useState } from 'react';
 import Hero from './ui/hero';
+import Tools from './ui/tools';
 
 const DxGraphikFont = localFont({ src: '../../public/fonts/dxgrafik-semibold.otf'});
 const FunkyChokyFont = localFont({src: '../../public/fonts/funkychoky-regular.ttf'});
@@ -69,7 +70,7 @@ export default function Page() {
                     </div>
                     <div className='text-3xl font-bold highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Wolf Mentorship</div>
                     <div className='text-3xl font-bold highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Soundr Landing</div>
-                    <div className='text-3xl font-bold highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Counselling Landing</div>
+                    <div className='text-3xl font-bold highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Counsellor Landing</div>
                 </div>
                 <div className='flex flex-col gap-4 w-full'>
                     <div className='flex justify-center items-center w-full gap-2'>
@@ -91,9 +92,16 @@ export default function Page() {
                     </div>
                     <div className='text-3xl font-bold highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Album Artworks</div>
                     <div className='text-3xl font-bold highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Soundr Poster</div>
-                    <div className='text-3xl font-bold highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Wolfy's Posters</div>
+                    <div className='text-3xl font-bold highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>{'Wolfy\'s Posters'}</div>
                 </div>
             </div>
+            {/* Tools divider */}
+            <div className='flex justify-center items-center w-full gap-2'>
+                <div className='h-[1px] bg-white w-full'></div>
+                <div className='text-xl font-semibold w-auto'>Tools</div>
+                <div className='h-[1px] bg-white w-full'></div>
+            </div>
+            <Tools tools={['react', 'next', 'figma', 'github']}/>
         </div>
     </main>);
 }
