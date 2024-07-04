@@ -11,9 +11,10 @@ export default function Hero ({content}: HeroProps) {
             <div className='border-white border rounded-lg h-[55px] w-[55px]'></div>
             <div className='border-white border rounded-lg h-[55px] w-[55px]'></div>
         </div>
-        <div className='border-white border rounded-lg h-[120px] w-[120px]'></div>
-        <div className='border-white border rounded-lg h-[150px] w-[150px]'></div>
-        <div className='border-white border rounded-lg h-[120px] w-[120px]'></div>
+        {/* Center cards */}
+        <div className='border-white border rounded-lg h-[120px] w-full'></div>
+        <div className='border-white border rounded-lg h-[150px] w-full'></div>
+        <div className='border-white border rounded-lg h-[120px] w-full'></div>
         {/* Tools Columns */}
         <div className='flex flex-col h-[120px] justify-between'>
             <div className='border-white border rounded-lg h-[55px] w-[55px]'></div>
