@@ -19,9 +19,9 @@ export default function Page() {
         setHeroContent(hover ? '' : 'twdor');
     }
 
-    return (<main className='z-10 file:flex min-h-screen flex flex-col items-center bg-gradient-to-b from-blue-500 to-blue-300 overflow-scroll'>
+    return (<main className='z-10 file:flex min-h-screen flex flex-col items-center bg-gradient-to-b from-blue-500 to-blue-300 overflow-scroll hide-scrollbar py-12'>
         {/* Wrapper */}
-        <div className={`max-w-[900px] h-screen flex flex-col gap-4 items-center justify-center text-white ${DxGraphikFont.className}`}>
+        <div className={`max-w-[900px] h-screen flex flex-col gap-4 items-center justify-start text-white ${DxGraphikFont.className}`}>
             {/* Hero */}
             {/* <div className='h-[20vh] w-auto'></div> */}
             {/* Festival name */}
@@ -101,7 +101,7 @@ export default function Page() {
                 <div className='text-xl font-semibold w-auto'>Tools</div>
                 <div className='h-[1px] bg-white w-full'></div>
             </div>
-            <Tools tools={['react', 'next', 'figma', 'github']}/>
+            <Tools tools={['react', 'next', 'figma', 'github', 'pixelmator']}/>
         </div>
     </main>);
 }
