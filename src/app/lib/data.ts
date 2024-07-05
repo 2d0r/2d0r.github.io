@@ -59,7 +59,7 @@ export const timelineData = [
     },
 ]
 
-export const toolsData = [
+export const skillsData = [
     {
         name: 'React',
         icon: './icons/react-w.png',

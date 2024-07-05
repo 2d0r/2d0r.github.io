@@ -1,15 +1,15 @@
 import React from 'react';
 
-interface ProjectToolsProps {
-    tools?: string[],
+interface ProjectSkillsProps {
+    skills?: string[],
     onMouseOver: (projectId: string) => void,
     projectId: string,
     selected?: string,
 }
 
-export default function ProjectTools ({
-    tools, onMouseOver, projectId, selected,
-}: ProjectToolsProps) {
+export default function ProjectSkills ({
+    skills, onMouseOver, projectId, selected,
+}: ProjectSkillsProps) {
 
     const handleOnMouseOver = (over: boolean) => {
         onMouseOver && onMouseOver(over ? projectId : '');

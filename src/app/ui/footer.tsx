@@ -7,10 +7,10 @@ export default function Footer () {
     //     </>);
     // }
     for (let i = 60; i >= 0; i -= 3) {
-        gradientFooter.push(<>
+        gradientFooter.push(<div key={i}>
             <div className='w-full bg-white' style={{height: `${1}px`}}></div>
             <div className='w-full h-[6px]' style={{height: `${i}px`}}></div>
-        </>);
+        </div>);
     }
     return (<div className='w-full flex-col mt-24'>
         {gradientFooter}

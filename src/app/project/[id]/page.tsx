@@ -3,11 +3,12 @@ import { projectsData } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
 import '@/app/globals.css';
 import Divider from '@/app/ui/divider';
-import Tools from '@/app/ui/tools';
+import { getProjectData } from '@/app/lib/utils';
+import SkillsSection from '@/app/ui/skills-section';
 
 const museoModernoFont = localFont({ src: '../../../../public/fonts/museoModerno.ttf'});
 
-export default async function Page({params} : {params: any}) {
+export default function Page({params} : {params: any}) {
     const projectData = getProjectData(params.id);
 
     if (!projectData.props) {
@@ -22,8 +23,7 @@ export default async function Page({params} : {params: any}) {
             <div className='text-9xl -pb-4 -mb-4 font-regular tracking-widest'>{project.title}</div>
             <Divider heading='Overview' />
             <div className='w-full'>{project.text[0]}</div>
-            <Divider heading='Tools' />
-            {/* <Tools tools={project.tags || []} /> */}
+            <SkillsSection skills={project.tags} folderLevel={2} />
             <div className='w-full border-white border rounded-3xl h-[300px]'></div>
         </div>
     </main>);
@@ -35,20 +35,4 @@ export function generateStaticParams() {
     return projectsData.map(project => ({
         id: project.id.toString(),
     }));
-}
-
-// Fetch data for each generated path
-export function getProjectData(id: string) {
-    const project = projectsData.find(proj => proj.id === String(id));
-
-    // If no project found, return 404
-    if (!project) {
-        return {
-            notFound: true,
-        };
-    }
-
-    return {
-        props: { project },
-    };
 }
