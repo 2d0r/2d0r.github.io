@@ -16,7 +16,7 @@ export const projectsData = [
         tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
         // mainImage: kronos1,
     },
-];
+] as const;
 
 export const aboutData = {
     text: `
@@ -100,4 +100,27 @@ export const skillsData = [
         name: 'Tailwind',
         icon: './icons/tailwind-w.png',
     }
-]
+];
+
+export const links = [
+    // {
+    //     name: 'Home',
+    //     hash: '#home',
+    // },
+    {
+        name: 'Projects',
+        hash: '#projects',
+    },
+    {
+        name: 'Skills',
+        hash: '#skills',
+    },
+    {
+        name: 'About Me',
+        hash: '#about',
+    },
+    {
+        name: 'Contact',
+        hash: '#contact',
+    },
+] as const;

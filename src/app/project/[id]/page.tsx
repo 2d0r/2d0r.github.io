@@ -1,10 +1,10 @@
 import localFont from 'next/font/local';
-import { projectsData } from '@/app/lib/data';
+import { projectsData } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import '@/app/globals.css';
-import Divider from '@/app/ui/divider';
-import { getProjectData } from '@/app/lib/utils';
-import SkillsSection from '@/app/ui/skills-section';
+import Divider from '@/components/divider';
+import { getProjectData } from '@/lib/utils';
+import SkillsSection from '@/components/skills';
 
 const museoModernoFont = localFont({ src: '../../../../public/fonts/museoModerno.ttf'});
 

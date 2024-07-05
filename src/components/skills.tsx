@@ -4,9 +4,13 @@ import Image from 'next/image';
 import { skillsData } from '../lib/data';
 import Divider from './divider';
 import { imageLoader } from '../lib/utils';
+import '@/app/globals.css';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from '@/context/active-section-context';
+import { useEffect } from 'react';
 
 export default function SkillsSection ({skills, folderLevel} : {
-    skills?: string[], 
+    skills?: readonly ["React", "Next.js", "PostgreSQL", "Tailwind", "Prisma"], 
     folderLevel?: number // 1 is the app folder, 2 is a contained folder
 }) {
     const skillsForDisplay = skills ? skills : skillsData.map(skill => skill.name);
@@ -18,11 +22,21 @@ export default function SkillsSection ({skills, folderLevel} : {
             <div className='tooltip absolute top-[50px] left-auto right-auto bg-white/30 backdrop-blur-xl rounded-lg text-white px-2 py-1'>{skill}</div>
         </div>);
     });
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+    });
+    const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
-    return (<>
+    useEffect(() => {
+        if (inView && Date.now() - timeOfLastClick > 1000) {
+            setActiveSection('Skills');
+        }
+    }, [inView, setActiveSection, timeOfLastClick]);
+
+    return (<section id='skills' ref={ref} className='scroll-mt-28 flex flex-col items-center gap-8'>
         <Divider heading='Skills' />
         <div className='flex flex-wrap items-start justify-center gap-12 w-4/5'>
             {skillsDisplay}
         </div>
-    </>);
+    </section>);
 }

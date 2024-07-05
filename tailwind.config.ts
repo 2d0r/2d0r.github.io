@@ -8,7 +8,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      'sans': ['Roboto', 'Arial', 'sans-serif'],
+      'sans': ['Museo Moderno', 'Roboto', 'Arial', 'sans-serif'],
+      'body': ['Museo Moderno'],
     },
     extend: {
       backgroundImage: {

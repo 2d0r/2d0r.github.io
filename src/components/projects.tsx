@@ -1,36 +1,50 @@
 'use client';
 
 import Link from 'next/link';
-import Divider from './divider';
-import { useState } from 'react';
+import Divider from '@/components/divider';
+import { useEffect, useState } from 'react';
 import Hero from './hero';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
-export default function ProjectLineup () {
+export default function ProjectSection () {
     const [ heroContent, setHeroContent ] = useState<string>('twdor');
 
     const handleHover = (hover: boolean) => {
         setHeroContent(hover ? '' : 'twdor');
     };
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+    });
+    const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
-    return (<>
-        {/* Festival name */}
-        <div 
-            className={`relative flex flex-col gap-2 justify-center items-center ${
+    useEffect(() => {
+        if (inView && Date.now() - timeOfLastClick > 1000) {
+            setActiveSection('Projects');
+        }
+    }, [inView, setActiveSection, timeOfLastClick]);
+
+    return (<section id='projects' ref={ref} className='scroll-mt-[100rem] flex flex-col items-center gap-8'>
+        {/* Title */}
+        <motion.div 
+            className={`relative flex flex-col justify-center items-center ${
                 heroContent === 'twdor' ? '' : 'text-transparent pointer-events-none'
             }`} style={{
                 color: heroContent === 'twdor' ? '' : 'transparent',
                 pointerEvents: heroContent === 'twdor' ? 'auto' : 'none'
             }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
         >
-            <div className='flex text-uppercase justify-between items-between w-full z-50'>
-                <Link href='#contact-form' className='highlight w-1/3'>Contact</Link>
-                <span className='w-1/3 text-center cursor-default'>Hi! My name is</span>
+            <div className='flex text-uppercase justify-between items-center w-full z-40'>
+                {/* <Link href='#contact-form' className='highlight w-1/3'>Contact</Link> */}
+                <span className='w-1/3 cursor-default'>Hi! My name is</span>
                 <Link href='/CV' className='highlight w-1/3 text-right'>Download CV</Link>
             </div>
-            <div className='flex flex-col gap-4 items-center relative'>
+            <div className='flex flex-col gap-4 items-center relative pt-0 pb-3'>
                 <div className='text-9xl -pb-4 -mb-4 font-semibold text-center cursor-default'>Tudor Popescu</div>
                 <div className='flex gap-8 text-md font-medium'>
-                    
                     {/* Sometimes<br/>known as<br/>Tudor Popescu<br/>(Contact) */}
                 </div>
             </div>
@@ -48,7 +62,7 @@ export default function ProjectLineup () {
                 <Hero content={heroContent} />
             </div>
             }
-        </div>
+        </motion.div>
 
         <Divider heading='Lineup' /> 
 
@@ -87,5 +101,5 @@ export default function ProjectLineup () {
                 <div className='text-3xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>{'Wolfy\'s Posters'}</div>
             </div>
         </div>
-    </>);
+    </section>);
 }

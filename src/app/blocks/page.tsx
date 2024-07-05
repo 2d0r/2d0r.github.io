@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { LOREM_IPSUM } from '../lib/definitions';
-import ProjectCard from '../ui/project-card';
-import ProjectSkills from '../ui/project-skills';
+import { LOREM_IPSUM } from '../../lib/definitions';
+import ProjectCard from '../../components/project-card';
+import ProjectSkills from '../../components/blocks/project-skills';
 
 export default function Page() {
 
