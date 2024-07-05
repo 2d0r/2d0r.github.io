@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { skillsData } from '../lib/data';
 import Divider from './divider';
-import Skills from './skills';
 import { imageLoader } from '../lib/utils';
 
 export default function SkillsSection ({skills, folderLevel} : {

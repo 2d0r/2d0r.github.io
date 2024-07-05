@@ -1,12 +1,8 @@
 import React from 'react';
 import localFont from 'next/font/local';
 import '@/app/globals.css';
-import { useState } from 'react';
-import Hero from './ui/hero';
-import Skills from './ui/skills';
-import Link from 'next/link';
 import Divider from './ui/divider';
-import { aboutData, skillsData } from './lib/data';
+import { aboutData } from './lib/data';
 import Timeline from './ui/timeline';
 import ContactForm from './components/contact-form';
 import Footer from './ui/footer';
