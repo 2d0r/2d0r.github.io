@@ -7,18 +7,20 @@ import Hero from './hero';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/context/active-section-context';
+import { HeroId, ProjectTitle } from '@/lib/types';
+import ProjectHeading from './project-heading';
 
 export default function ProjectSection () {
-    const [ heroContent, setHeroContent ] = useState<string>('twdor');
+    const [ heroContent, setHeroContent ] = useState<HeroId>('twdor');
 
-    const handleHover = (hover: boolean) => {
-        setHeroContent(hover ? '' : 'twdor');
+    const handleHover = (projectId: HeroId) => {
+        setHeroContent('twdor');
     };
     const { ref, inView } = useInView({
         threshold: 0.5,
     });
-    const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
+    const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
     useEffect(() => {
         if (inView && Date.now() - timeOfLastClick > 1000) {
             setActiveSection('Projects');
@@ -26,7 +28,7 @@ export default function ProjectSection () {
     }, [inView, setActiveSection, timeOfLastClick]);
 
     return (<section id='projects' ref={ref} className='scroll-mt-[100rem] flex flex-col items-center gap-8'>
-        {/* Title */}
+        {/* Hero */}
         <motion.div 
             className={`relative flex flex-col justify-center items-center ${
                 heroContent === 'twdor' ? '' : 'text-transparent pointer-events-none'
@@ -56,10 +58,10 @@ export default function ProjectSection () {
                 <span className='w-1/3 text-center cursor-default'>with 3 years experience</span>
                 <Link href='/CV' className='w-1/3 text-right'>building & designing web apps</Link> */}
             </div>
-            {/* Hero */}
+            {/* Project Hero */}
             {heroContent !== 'twdor' && 
             <div className='absolute inset-0 z-30'>
-                <Hero content={heroContent} />
+                <Hero projectId={heroContent} />
             </div>
             }
         </motion.div>
@@ -67,38 +69,38 @@ export default function ProjectSection () {
         <Divider heading='Project Lineup' /> 
 
         {/* Headliners */}
-        <div className='flex gap-8 font-medium'>
-            <Link href='./project/1' className='text-8xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Kronos</Link>
-            <div className='text-8xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>WeJam</div>
+        <div className='flex gap-8'>
+            <ProjectHeading projectId='kronos' className='text-8xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+            <ProjectHeading projectId='wejam' className='text-8xl font-medium' onHover={(projectId) => handleHover(projectId)} />   
+            {/* <Link href='./project/1' className='text-8xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Kronos</Link> */}
+            {/* <div className='text-8xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>WeJam</div> */}
         </div>
 
         {/* Tier 2 */}
         <div className='flex flex-wrap gap-x-8 gap-y-4 justify-center'>
-            <div className='text-5xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Wolfpack NFT</div>
-            <div className='text-5xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Beach Volley Romania</div>
+            <ProjectHeading projectId='wolfpack' className='text-5xl font-medium' onHover={(projectId) => handleHover(projectId)} /> 
+            <ProjectHeading projectId='bvr' className='text-5xl font-medium' onHover={(projectId) => handleHover(projectId)} /> 
         </div>
 
         {/* Tier 3 - by stage */}
         <div className='flex gap-8 justify-center w-full text-center mt-2'>
             <div className='flex flex-col gap-4 w-full'>
                 <Divider heading='UX Stage' />
-                <div className='text-3xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Wolf Mentorship</div>
-                <div className='text-3xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Soundr Landing</div>
-                <div className='text-3xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Counsellor Landing</div>
+                <ProjectHeading projectId='wolf-mentorship' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='soundr-brand' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='counselor-landing' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
             </div>
             <div className='flex flex-col gap-4 w-full'>
                 <Divider heading='Logo Stage' />
-                <div className='text-3xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Finish That Track</div>
-                <div className='text-3xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Dreams & Monsters</div>
-                {/* <div className='text-3xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Mixing & Mastering Mentorship</div> */}
-                <div className='text-3xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>VoSports</div>
-                <div></div>
+                <ProjectHeading projectId='ftt' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='d&m' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='vosports' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
             </div>
             <div className='flex flex-col gap-3 w-full'>
                 <Divider heading='Graphic Design Stage' />
-                <div className='text-3xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Album Artworks</div>
-                <div className='text-3xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Soundr Poster</div>
-                <div className='text-3xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>{'Wolfy\'s Posters'}</div>
+                <ProjectHeading projectId='music-artworks' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='soundr-poster' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='wolfys-brand' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
             </div>
         </div>
     </section>);

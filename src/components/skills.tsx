@@ -19,7 +19,7 @@ export default function SkillsSection ({skills, folderLevel} : {
             <Image src={`${(folderLevel ? '../'.repeat(folderLevel - 1) : '')}${skillsData.find(el => el.name === skill)?.icon || ''}`} alt={skill} 
                 height={48} width={48} loader={imageLoader}
             />
-            <div className='tooltip absolute top-[50px] left-auto right-auto bg-white/30 backdrop-blur-xl rounded-lg text-white px-2 py-1'>{skill}</div>
+            <div className='tooltip absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white/30 backdrop-blur-xl rounded-lg text-white px-2 py-1'>{skill}</div>
         </div>);
     });
     const { ref, inView } = useInView({

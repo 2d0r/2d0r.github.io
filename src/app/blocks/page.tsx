@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { LOREM_IPSUM } from '../../lib/definitions';
-import ProjectCard from '../../components/project-card';
+import ProjectCard from '../../components/blocks/project-card';
 import ProjectSkills from '../../components/blocks/project-skills';
 
 export default function Page() {
