@@ -1,5 +1,7 @@
 import { AcademicCapIcon, ArrowDownIcon, BriefcaseIcon } from '@heroicons/react/24/solid';
 import TimelineCard from './timeline-card';
+import Link from 'next/link';
+import '@/app/globals.css';
 
 export default function Timeline() {
     return (<div className='w-4/5 flex flex-col gap-8 relative'>
@@ -49,7 +51,9 @@ export default function Timeline() {
             '><BriefcaseIcon height={24} className='fill-blue-400' /></div>
         </div>
         <div className='h-[120px] w-full flex relative'>
-            <div className='w-full h-full flex items-center justify-end pr-[36px]'>Download my CV</div>
+            <div className='w-full h-full flex items-center justify-end pr-[36px]'>
+                <Link href='/CV' className='highlight w-1/3 text-right'>Download CV</Link>
+            </div>
             <div className='w-full h-full flex items-center pl-[36px]'>2024</div>
             <div className='
                 z-40 absolute rounded-full w-[48px] h-[48px] bg-white

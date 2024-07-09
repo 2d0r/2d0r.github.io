@@ -64,7 +64,7 @@ export default function ProjectSection () {
             }
         </motion.div>
 
-        <Divider heading='Lineup' /> 
+        <Divider heading='Project Lineup' /> 
 
         {/* Headliners */}
         <div className='flex gap-8 font-medium'>

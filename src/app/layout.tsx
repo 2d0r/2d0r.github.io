@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import localFont from 'next/dist/compiled/@next/font/dist/local';
 import clsx from 'clsx';
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({ subsets: ["latin"] });
 // const museoModerno = localFont({ src: 'public/fonts/museoModerno.ttf'});
@@ -22,11 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={clsx('!scroll-smooth ')}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className={`${inter.className} z-10 file:flex min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-500 to-blue-300 overflow-scroll hide-scrollbar pt-12`}>
         <ActiveSectionContextProvider>
           <Header />
           {children}
           <Footer />
+          <Toaster position='bottom-right'/>
         </ActiveSectionContextProvider>
       </body>
     </html>

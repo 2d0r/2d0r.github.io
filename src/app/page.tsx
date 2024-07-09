@@ -12,7 +12,7 @@ const museoModerno = localFont({ src: '../../public/fonts/museoModerno.ttf'});
 export default function Page() {
 
     return (<>
-        <div className={clsx('max-w-[900px] flex flex-col gap-8 items-center justify-start text-white font-regular', museoModerno.className)}>
+        <div className={clsx('w-[min(900px,100%)] flex flex-col gap-8 items-center justify-start text-white font-regular mt-8', museoModerno.className)}>
             <ProjectSection />        
             <SkillsSection />
             <AboutSection />
