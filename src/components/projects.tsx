@@ -27,7 +27,7 @@ export default function ProjectSection () {
         }
     }, [inView, setActiveSection, timeOfLastClick]);
 
-    return (<section id='projects' ref={ref} className='scroll-mt-[100rem] flex flex-col items-center gap-8'>
+    return (<section id='projects' ref={ref} className='w-full scroll-mt-[100rem] flex flex-col items-center gap-8'>
         {/* Hero */}
         <motion.div 
             className={`relative flex flex-col justify-center items-center ${
@@ -38,21 +38,21 @@ export default function ProjectSection () {
             }}
             initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}
         >
-            <div className='flex text-uppercase justify-between items-center w-full z-40'>
+            <div className='flex text-uppercase justify-center md:justify-between items-center w-full z-40 my-6 md:my-0'>
                 {/* <Link href='#contact-form' className='highlight w-1/3'>Contact</Link> */}
-                <span className='w-1/3 cursor-default'>Hi! My name is</span>
-                <Link href='/CV' className='highlight w-1/3 text-right'>Download CV</Link>
+                <span className='md:w-1/3 cursor-default'>Hi! My name is</span>
+                <Link href='/CV' className='w-0 md:w-1/3 hidden md:inline highlight text-right'>Download CV</Link>
             </div>
             <div className='flex flex-col gap-4 items-center relative pt-0 pb-3'>
-                <div className='text-9xl -pb-4 -mb-4 font-semibold text-center cursor-default'>Tudor Popescu</div>
+                <div className='text-9xl -pb-4 -mb-4 font-semibold text-center cursor-default leading-[100px] md:leading-none'>Tudor Popescu</div>
                 <div className='flex gap-8 text-md font-medium'>
                     {/* Sometimes<br/>known as<br/>Tudor Popescu<br/>(Contact) */}
                 </div>
             </div>
             <div className='flex text-center justify-between items-center w-full'>
-                <span>X</span>
-                <span>I am a Front-End Developer with 3 years experience building & designing web apps.</span>
-                <span>X</span>
+                <span className='hidden md:inline'>X</span>
+                <span className='w-full text-center mt-8 md:mt-0 px-8 md:px-0'>I am a Front-End Developer with 3 years experience building & designing web apps.</span>
+                <span className='hidden md:inline'>X</span>
                 {/* <Link href='/contact' className='w-1/3'>I am a front-end developer</Link>
                 <span className='w-1/3 text-center cursor-default'>with 3 years experience</span>
                 <Link href='/CV' className='w-1/3 text-right'>building & designing web apps</Link> */}
@@ -69,11 +69,9 @@ export default function ProjectSection () {
         initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
             <Divider heading='Project Lineup' /> 
             {/* Headliners */}
-            <div className='flex gap-8'>
-                <ProjectHeading projectId='kronos' className='text-8xl font-medium' onHover={(projectId) => handleHover(projectId)} />
-                <ProjectHeading projectId='wejam' className='text-8xl font-medium' onHover={(projectId) => handleHover(projectId)} />   
-                {/* <Link href='./project/1' className='text-8xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Kronos</Link> */}
-                {/* <div className='text-8xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>WeJam</div> */}
+            <div className='flex flex-wrap flex-col md:flex-row gap-x-8 gap-y-4 justify-center'>
+                <ProjectHeading projectId='kronos' className='text-6xl md:text-8xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='wejam' className='text-6xl md:text-8xl font-medium' onHover={(projectId) => handleHover(projectId)} /> 
             </div>
 
             {/* Tier 2 */}
@@ -84,7 +82,7 @@ export default function ProjectSection () {
         </motion.div>
 
         {/* Tier 3 - by stage */}
-        <motion.div className='flex gap-8 justify-center w-full text-center mt-2 mb-2'
+        <motion.div className='flex flex-wrap md:flex-nowrap gap-8 justify-center w-full text-center mt-2 mb-2'
         initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
             <div className='flex flex-col gap-4 w-full'>
                 <Divider heading='UX Stage' />

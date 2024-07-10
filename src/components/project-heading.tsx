@@ -21,7 +21,7 @@ export default function ProjectHeading({ projectId, className, onHover } : Proje
     const project = projectsData.find(proj => proj.id === projectId);
 
     return (<div className='relative'>
-        <Link href={`./project/${projectId}`} className={clsx(className, 'highlight')} onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>{project?.title}</Link>
+        <Link href={`./project/${projectId}`} className={clsx(className, 'highlight text-center')} onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>{project?.title}</Link>
         {showTooltip && <ProjectCard project={project || {} as Project} />}
     </div>);
 }

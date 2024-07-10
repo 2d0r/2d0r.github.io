@@ -232,34 +232,36 @@ export const aboutData = {
 
 export const timelineData = [
     {
-        id: 1,
+        index: 1,
         title: 'Computer Science College',
         location: 'Brasov, Romania',
         text: 'Graduated Maths and Computer Science profile at top-tier college in Romania. I passed the Baccalaureate with 9.80 in Maths, 9.30 in Physics, and 10 in Digital Competencies.',
+        years: '',
+        type: 'education',
     },
     {
-        id: 2,
+        index: 2,
         title: 'Trainee Programmer',
         location: 'WeJam, London, UK',
         text: 'Learnt Python while working at WeJam. For half a year I auomated parts of the song production workflow.',
+        years: '2021 - 2022',
+        type: 'work',
     },
     {
-        id: 3,
+        index: 3,
         title: 'Product Design Course',
         location: 'Love Circular, London, UK',
         text: 'Completed a Product Design course at Love Circular, London. I saw through a design overhaul of the WeJam app UI. Pursued freelance design work on the side.',
+        years: '2022',
+        type: 'education',
     },
     {
-        id: 4,
+        index: 4,
         title: 'Front-End Developer',
         location: 'Wejam, London, UK',
         text: 'Learnt React and worked as a front-end developer at WeJam for 2 years. I then moved into node.js and back-end.',
-    },
-    {
-        id: 5,
-        title: '',
-        location: '',
-        text: '',
+        years: '2022 - 2024',
+        type: 'work',
     },
 ]
 
@@ -320,7 +322,7 @@ export const links = [
         hash: '#skills',
     },
     {
-        name: 'About Me',
+        name: 'About Me',
         hash: '#about',
     },
     {

@@ -27,7 +27,7 @@ export default function ContactForm () {
     >
         <Divider heading='Contact' />
         <div className='text-center w-3/5'>
-            Contact me at <a href='mailto:tudor.m.p@outlook.com' className='underline underline-offset-3'>tudor.m.p@outlook.com</a> or through this form:
+            Contact me at <a href='mailto:tudor.m.p@outlook.com' className='underline underline-offset-3'>tudor.m.p@outlook.com</a> or using this form:
         </div>
         <div className='w-[min(100%,400px)]' id='contact-form'>
             <form action={async (formData) => {
