@@ -1,3 +1,5 @@
+'use client';
+
 import { ArrowDownIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import '@/app/globals.css';
@@ -12,17 +14,19 @@ export default function Timeline() {
         { timelineData.map((el, index: number) => {
             return <TimelineMoment index={index + 1} />
         }) }
-        <motion.div className=' w-full flex relative group highlight cursor-pointer'
+        <motion.div className='w-full cursor-pointer'
         initial={{ y: 0 }} whileInView={{ y: 0 }} transition={{ duration: 1 }}>
-            <div className='md:w-1/2 h-full flex items-start md:justify-end pl-[72px] md:pl-0 md:pr-[36px]'>
-                <Link href='/CV' className='text-left md:text-right mt-[12px]'>Download CV</Link>
-            </div>
-            <div className='w-1/2 h-full hidden md:flex items-start md:pl-[36px] pl-[12px] mt-[12px] font-light md:font-normal'>2024</div>
-            <div className='z-40 absolute rounded-full w-[48px] h-[48px] bg-white
-            top-0 left-0 md:right-0 md:mx-auto 
-            flex items-center justify-center group-hover:bg-yellow-400 group-hover:scale-105 transition'>
-                <ArrowDownIcon height={24} className='fill-blue-400' />
-            </div>
+            <Link className='w-full flex relative group highlight' href='/files/tudor-popescu-cv.pdf' download>
+                <div className='md:w-1/2 h-full flex items-start md:justify-end pl-[72px] md:pl-0 md:pr-[36px]'>
+                    <div className='text-left md:text-right mt-[12px]'>Download CV</div>
+                </div>
+                <div className='w-1/2 h-full hidden md:flex items-start md:pl-[36px] pl-[12px] mt-[12px] font-light md:font-normal'>2024</div>
+                <div className='z-40 absolute rounded-full w-[48px] h-[48px] bg-white
+                top-0 left-0 md:right-0 md:mx-auto 
+                flex items-center justify-center group-hover:bg-yellow-300 group-hover:scale-105 transition'>
+                    <ArrowDownIcon height={24} className='fill-blue-400' />
+                </div>
+            </Link>
         </motion.div>
     </div>)
 }

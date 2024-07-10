@@ -41,7 +41,7 @@ export default function ProjectSection () {
             <div className='flex text-uppercase justify-center md:justify-between items-center w-full z-40 my-6 md:my-0'>
                 {/* <Link href='#contact-form' className='highlight w-1/3'>Contact</Link> */}
                 <span className='md:w-1/3 cursor-default'>Hi! My name is</span>
-                <Link href='/CV' className='w-0 md:w-1/3 hidden md:inline highlight text-right'>Download CV</Link>
+                <Link href='/files/tudor-popescu-cv.pdf' download className='w-0 md:w-1/3 hidden md:inline highlight text-right'>Download CV</Link>
             </div>
             <div className='flex flex-col gap-4 items-center relative pt-0 pb-3'>
                 <div className='text-9xl -pb-4 -mb-4 font-semibold text-center cursor-default leading-[100px] md:leading-none'>Tudor Popescu</div>
