@@ -315,18 +315,18 @@ export const links = [
     // },
     {
         name: 'Projects',
-        hash: '#projects',
+        hash: '/#projects',
     },
     {
         name: 'Skills',
-        hash: '#skills',
+        hash: '/#skills',
     },
     {
         name: 'About Me',
-        hash: '#about',
+        hash: '/#about',
     },
     {
         name: 'Contact',
-        hash: '#contact',
+        hash: '/#contact',
     },
 ] as const;
