@@ -18,7 +18,7 @@ export default function ProjectCard({project}: {project: Project}) {
     });
 
     return (
-        <motion.div className='absolute z-40 top-full w-[400px] left-1/2
+        <motion.div className='absolute z-40 top-full w-[400px] left-1/2 mt-2
         border border-white rounded-xl backdrop-blur-lg bg-white/10 
         text-white shadow-lg shadow-black/[0.03]
         flex gap-2 p-4 items-start justify-center h-48'

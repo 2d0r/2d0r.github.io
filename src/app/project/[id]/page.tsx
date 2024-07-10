@@ -17,16 +17,13 @@ export default function Page({params} : {params: any}) {
 
     const project = projectData.props.project;
 
-    return (<main className='z-10 file:flex min-h-screen flex flex-col items-center bg-gradient-to-b from-blue-500 to-blue-300 overflow-scroll hide-scrollbar py-12'>
-        {/* Wrapper */}
-        <div className={`min-w-[900px] h-screen flex flex-col gap-4 items-center justify-start text-white ${museoModernoFont.className}`}>
-            <div className='text-9xl -pb-4 -mb-4 font-regular tracking-widest'>{project.title}</div>
-            <Divider heading='Overview' />
-            <div className='w-full'>{project.text[0]}</div>
-            <SkillsSection skills={project.tags} folderLevel={2} />
-            <div className='w-full border-white border rounded-3xl h-[300px]'></div>
-        </div>
-    </main>);
+    return (<>
+        <div className='text-9xl -pb-4 -mb-4 font-regular tracking-widest'>{project.title}</div>
+        <Divider heading='Overview' />
+        <div className='w-full'>{project.text[0]}</div>
+        <SkillsSection skills={project.tags} folderLevel={2} />
+        <div className='w-full border-white border rounded-3xl h-[300px]'></div>
+    </>);
 }
 
 // Generate all possible paths at build time

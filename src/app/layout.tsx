@@ -4,12 +4,11 @@ import "@/app/globals.css";
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import ActiveSectionContextProvider from '@/context/active-section-context';
-import localFont from 'next/dist/compiled/@next/font/dist/local';
 import clsx from 'clsx';
 import { Toaster } from 'react-hot-toast';
+import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ["latin"] });
-// const museoModerno = localFont({ src: 'public/fonts/museoModerno.ttf'});
+const museoModerno = localFont({ src: '../../public/fonts/museoModerno.ttf'});
 
 export const metadata: Metadata = {
   title: "Tudor | Portfolio",
@@ -26,13 +25,15 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={`${inter.className} z-10 file:flex min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-500 to-blue-300 overflow-scroll hide-scrollbar pt-12`}>
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Footer />
-          <Toaster position='bottom-right'/>
-        </ActiveSectionContextProvider>
+      <body className={`z-10 file:flex min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-500 to-blue-300 overflow-scroll hide-scrollbar pt-12`}>
+          <ActiveSectionContextProvider>
+            <Header />
+            <div className={clsx('w-[min(900px,100%)] flex flex-col gap-8 items-center justify-start text-white font-regular mt-8', museoModerno.className)}>
+              {children}
+            </div>
+            <Footer />
+            <Toaster position='bottom-right'/>
+          </ActiveSectionContextProvider>
       </body>
     </html>
   );

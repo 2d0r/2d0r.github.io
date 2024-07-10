@@ -36,8 +36,7 @@ export default function ProjectSection () {
                 color: heroContent === 'twdor' ? '' : 'transparent',
                 pointerEvents: heroContent === 'twdor' ? 'auto' : 'none'
             }}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}
         >
             <div className='flex text-uppercase justify-between items-center w-full z-40'>
                 {/* <Link href='#contact-form' className='highlight w-1/3'>Contact</Link> */}
@@ -66,24 +65,27 @@ export default function ProjectSection () {
             }
         </motion.div>
 
-        <Divider heading='Project Lineup' /> 
+        <motion.div className='flex flex-col items-center justify-center gap-4'
+        initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+            <Divider heading='Project Lineup' /> 
+            {/* Headliners */}
+            <div className='flex gap-8'>
+                <ProjectHeading projectId='kronos' className='text-8xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='wejam' className='text-8xl font-medium' onHover={(projectId) => handleHover(projectId)} />   
+                {/* <Link href='./project/1' className='text-8xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Kronos</Link> */}
+                {/* <div className='text-8xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>WeJam</div> */}
+            </div>
 
-        {/* Headliners */}
-        <div className='flex gap-8'>
-            <ProjectHeading projectId='kronos' className='text-8xl font-medium' onHover={(projectId) => handleHover(projectId)} />
-            <ProjectHeading projectId='wejam' className='text-8xl font-medium' onHover={(projectId) => handleHover(projectId)} />   
-            {/* <Link href='./project/1' className='text-8xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>Kronos</Link> */}
-            {/* <div className='text-8xl highlight' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}>WeJam</div> */}
-        </div>
-
-        {/* Tier 2 */}
-        <div className='flex flex-wrap gap-x-8 gap-y-4 justify-center'>
-            <ProjectHeading projectId='wolfpack' className='text-5xl font-medium' onHover={(projectId) => handleHover(projectId)} /> 
-            <ProjectHeading projectId='bvr' className='text-5xl font-medium' onHover={(projectId) => handleHover(projectId)} /> 
-        </div>
+            {/* Tier 2 */}
+            <div className='flex flex-wrap gap-x-8 gap-y-4 justify-center'>
+                <ProjectHeading projectId='wolfpack' className='text-5xl font-medium' onHover={(projectId) => handleHover(projectId)} /> 
+                <ProjectHeading projectId='bvr' className='text-5xl font-medium' onHover={(projectId) => handleHover(projectId)} /> 
+            </div>
+        </motion.div>
 
         {/* Tier 3 - by stage */}
-        <div className='flex gap-8 justify-center w-full text-center mt-2'>
+        <motion.div className='flex gap-8 justify-center w-full text-center mt-2 mb-2'
+        initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
             <div className='flex flex-col gap-4 w-full'>
                 <Divider heading='UX Stage' />
                 <ProjectHeading projectId='wolf-mentorship' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
@@ -102,6 +104,6 @@ export default function ProjectSection () {
                 <ProjectHeading projectId='soundr-poster' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
                 <ProjectHeading projectId='wolfys-brand' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
             </div>
-        </div>
+        </motion.div>
     </section>);
 }

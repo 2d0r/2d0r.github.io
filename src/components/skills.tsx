@@ -8,6 +8,7 @@ import '@/app/globals.css';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/context/active-section-context';
 import { useEffect } from 'react';
+import { animate, delay, motion } from 'framer-motion';
 
 export default function SkillsSection ({skills, folderLevel} : {
     skills?: readonly ["React", "Next.js", "PostgreSQL", "Tailwind", "Prisma"], 
@@ -19,7 +20,11 @@ export default function SkillsSection ({skills, folderLevel} : {
             <Image src={`${(folderLevel ? '../'.repeat(folderLevel - 1) : '')}${skillsData.find(el => el.name === skill)?.icon || ''}`} alt={skill} 
                 height={48} width={48} loader={imageLoader}
             />
-            <div className='tooltip absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white/30 backdrop-blur-xl rounded-lg text-white px-2 py-1'>{skill}</div>
+            <motion.div className='tooltip absolute top-full mt-2 left-1/2 
+            bg-white/30 backdrop-blur-xl rounded-lg text-white px-2 py-1'
+                initial={{ opacity: 0, y: 10, x: '-50%' }} animate={{ opacity: 1, y: 0, x: '-50%' }}>
+                {skill}
+            </motion.div>
         </div>);
     });
     const { ref, inView } = useInView({
@@ -33,10 +38,28 @@ export default function SkillsSection ({skills, folderLevel} : {
         }
     }, [inView, setActiveSection, timeOfLastClick]);
 
-    return (<section id='skills' ref={ref} className='scroll-mt-28 flex flex-col items-center gap-8'>
+    const fadeInAnimationVariant = {
+        initial: { opacity: 0, y: 100 }, 
+        animate: (index: number) => ({ opacity: 1, y: 0, transition: { delay: 0.05 * index } }),
+    }
+
+    return (<section id='skills' ref={ref} className='w-full scroll-mt-28 flex flex-col items-center gap-8'>
         <Divider heading='Skills' />
         <div className='flex flex-wrap items-start justify-center gap-12 w-4/5'>
-            {skillsDisplay}
+            {skillsForDisplay.map((skill, index) => {
+                return (<motion.div className='tooltip-container relative' key={skill}
+                variants={fadeInAnimationVariant} initial='initial' whileInView='animate' viewport={{ once: true }} custom={index}>
+                    <Image src={`${(folderLevel ? '../'.repeat(folderLevel - 1) : '')}${skillsData.find(el => el.name === skill)?.icon || ''}`} alt={skill} 
+                        height={48} width={48} loader={imageLoader}
+
+                    />
+                    <motion.div className='tooltip absolute top-full mt-2 left-1/2 
+                    bg-white/30 backdrop-blur-xl rounded-lg text-white px-2 py-1'
+                        initial={{ opacity: 0, y: 10, x: '-50%' }} animate={{ opacity: 1, y: 0, x: '-50%' }}>
+                        {skill}
+                    </motion.div>
+                </motion.div>)
+            })}
         </div>
     </section>);
 }
