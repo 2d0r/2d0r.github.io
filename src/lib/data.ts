@@ -4,12 +4,12 @@ export const projectsData = [
         title: 'Kronos',
         description: 'A smart organiser that goes a step further.',
         text: [
-            '',
-            '',
-            '',
+            'Text 1',
+            'Text 2',
+            'Text 3',
         ],
         images: [
-            '',
+            'images/kronos-1.png',
             '',
             '',
         ],

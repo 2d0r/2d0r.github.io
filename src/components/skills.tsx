@@ -10,9 +10,10 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 import { useEffect } from 'react';
 import { animate, delay, motion } from 'framer-motion';
 
-export default function SkillsSection ({skills, folderLevel} : {
+export default function SkillsSection ({skills, folderLevel, title} : {
     skills?: readonly ["React", "Next.js", "PostgreSQL", "Tailwind", "Prisma"], 
-    folderLevel?: number // 1 is the app folder, 2 is a contained folder
+    folderLevel?: number, // 1 is the app folder, 2 is a contained folder
+    title?: string,
 }) {
     const skillsForDisplay = skills ? skills : skillsData.map(skill => skill.name);
     const skillsDisplay = skillsForDisplay.map(skill => {
@@ -44,8 +45,8 @@ export default function SkillsSection ({skills, folderLevel} : {
     }
 
     return (<section id='skills' ref={ref} className='w-full scroll-mt-28 flex flex-col items-center gap-8'>
-        <Divider heading='Skills' />
-        <div className='flex flex-wrap items-start justify-center gap-12 w-4/5'>
+        <Divider heading={title || 'Skills'} />
+        <div className='flex flex-wrap items-start justify-center gap-12 w-full md:w-4/5'>
             {skillsForDisplay.map((skill, index) => {
                 return (<motion.div className='tooltip-container relative' key={skill}
                 variants={fadeInAnimationVariant} initial='initial' whileInView='animate' viewport={{ once: true }} custom={index}>

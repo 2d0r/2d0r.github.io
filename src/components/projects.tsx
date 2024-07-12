@@ -10,7 +10,7 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 import { HeroId, ProjectTitle } from '@/lib/types';
 import ProjectHeading from './project-heading';
 
-export default function ProjectSection () {
+export default function Projects () {
     const [ heroContent, setHeroContent ] = useState<HeroId>('twdor');
 
     const handleHover = (projectId: HeroId) => {
@@ -44,7 +44,7 @@ export default function ProjectSection () {
                 <Link href='/files/tudor-popescu-cv.pdf' download className='w-0 md:w-1/3 hidden md:inline highlight text-right'>Download CV</Link>
             </div>
             <div className='flex flex-col gap-4 items-center relative pt-0 pb-3'>
-                <div className='text-9xl -pb-4 -mb-4 font-semibold text-center cursor-default leading-[100px] md:leading-none'>Tudor Popescu</div>
+                <div className='text-8xl md:text-9xl -pb-4 -mb-4 font-semibold text-center cursor-default leading-[80px] md:leading-none'>Tudor Popescu</div>
                 <div className='flex gap-8 text-md font-medium'>
                     {/* Sometimes<br/>known as<br/>Tudor Popescu<br/>(Contact) */}
                 </div>
