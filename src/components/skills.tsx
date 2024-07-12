@@ -44,7 +44,7 @@ export default function SkillsSection ({skills, folderLevel, title} : {
         animate: (index: number) => ({ opacity: 1, y: 0, transition: { delay: 0.05 * index } }),
     }
 
-    return (<section id='skills' ref={ref} className='w-full scroll-mt-28 flex flex-col items-center gap-8'>
+    return (<section id='skills' ref={ref} className='z-10 w-full scroll-mt-28 flex flex-col items-center gap-8'>
         <Divider heading={title || 'Skills'} />
         <div className='flex flex-wrap items-start justify-center gap-12 w-full md:w-4/5'>
             {skillsForDisplay.map((skill, index) => {

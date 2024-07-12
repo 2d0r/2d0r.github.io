@@ -27,7 +27,7 @@ export default function Projects () {
         }
     }, [inView, setActiveSection, timeOfLastClick]);
 
-    return (<section id='projects' ref={ref} className='w-full scroll-mt-[100rem] flex flex-col items-center gap-8'>
+    return (<section id='projects' ref={ref} className='z-10 w-full scroll-mt-[100rem] flex flex-col items-center gap-8'>
         {/* Hero */}
         <motion.div 
             className={`relative flex flex-col justify-center items-center ${
@@ -45,9 +45,6 @@ export default function Projects () {
             </div>
             <div className='flex flex-col gap-4 items-center relative pt-0 pb-3'>
                 <div className='text-8xl md:text-9xl -pb-4 -mb-4 font-semibold text-center cursor-default leading-[80px] md:leading-none'>Tudor Popescu</div>
-                <div className='flex gap-8 text-md font-medium'>
-                    {/* Sometimes<br/>known as<br/>Tudor Popescu<br/>(Contact) */}
-                </div>
             </div>
             <div className='flex text-center justify-between items-center w-full'>
                 <span className='hidden md:inline'>X</span>

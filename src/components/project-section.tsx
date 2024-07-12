@@ -10,7 +10,7 @@ export default function ProjectSection({title, text, image} : {
     image?: string,
 }) {
     
-    return (<motion.section id={title.toLowerCase()} className='scroll-mt-28 flex flex-col items-center gap-8 w-full'
+    return (<motion.section id={title.toLowerCase()} className='z-10 scroll-mt-28 flex flex-col items-center gap-8 w-full'
     initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
         <Divider heading={title} />
         <div dangerouslySetInnerHTML={{__html: text}} className='md:text-center w-full md:w-3/5 px-8 md:px-0'

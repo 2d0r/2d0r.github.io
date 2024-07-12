@@ -4,6 +4,7 @@ import '@/app/globals.css';
 import { getProjectData } from '@/lib/utils';
 import SkillsSection from '@/components/skills';
 import ProjectSection from '@/components/project-section';
+import CloudAnimation from '@/components/cloud-animation';
 
 export default function Page({params} : {params: any}) {
     const projectData = getProjectData(params.id);
@@ -20,6 +21,7 @@ export default function Page({params} : {params: any}) {
         <ProjectSection title='Features' text={project.text[1]} />
         <ProjectSection title='Next Steps' text={project.text[2]} />
         <SkillsSection skills={project.tags} folderLevel={2} title={'Tools'} />
+        <CloudAnimation clouds={2} />
     </>);
 }
 

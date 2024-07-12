@@ -22,7 +22,7 @@ export default function ContactForm () {
         }
     }, [inView, setActiveSection, timeOfLastClick]);
     
-    return(<motion.section id='contact' ref={ref} className='w-full scroll-mt-28 flex flex-col items-center gap-8'
+    return(<motion.section id='contact' ref={ref} className='z-10 w-full scroll-mt-28 flex flex-col items-center gap-8'
         initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}
     >
         <Divider heading='Contact' />
