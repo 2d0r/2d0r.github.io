@@ -12,7 +12,7 @@ export default function Timeline() {
         <div className='absolute top-[24px] bottom-0  w-[1px] bg-white
         left-[24px] md:left-0 md:right-0 md:mx-auto'></div>
         { timelineData.map((el, index: number) => {
-            return <TimelineMoment index={index + 1} />
+            return <TimelineMoment index={index + 1} key={index} />
         }) }
         <motion.div className='w-full cursor-pointer'
         initial={{ y: 0 }} whileInView={{ y: 0 }} transition={{ duration: 1 }}>

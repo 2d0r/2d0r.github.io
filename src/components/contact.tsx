@@ -5,9 +5,9 @@ import Divider from './divider';
 import { useActiveSectionContext } from '@/context/active-section-context';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { sendEmail } from '@/actions/sendEmail';
+// import { sendEmail } from '@/actions/sendEmail';
 import SubmitBtn from './submit-btn';
-import toast from 'react-hot-toast';
+// import toast from 'react-hot-toast';
 
 export default function ContactForm () {
 
@@ -30,16 +30,18 @@ export default function ContactForm () {
             Contact me at <a href='mailto:tudor.m.p@outlook.com' className='underline underline-offset-3'>tudor.m.p@outlook.com</a> or using this form:
         </div>
         <div className='w-[min(100%,400px)]' id='contact-form'>
-            <form action={async (formData) => {
-                const { data, error } = await sendEmail(formData);
+            <form action='https://formsubmit.co/el/wuhesa' method='POST' target='_blank'
+                // action={async (formData) => {
+                //     const { data, error } = await sendEmail(formData);
 
-                if (error) {
-                    toast.error(error);
-                    return;
-                }
+                //     if (error) {
+                //         toast.error(error);
+                //         return;
+                //     }
 
-                toast.success('Email sent successfully');
-            }}>
+                //     toast.success('Email sent successfully');
+                // }}
+            >
                 <div className='gap-2 flex flex-col items-center w-full'>
                     {/* <div className='flex flex-col gap-2 w-full'>
                         <label htmlFor='name'>Name</label>
