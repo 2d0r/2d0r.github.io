@@ -10,31 +10,32 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 import { useEffect } from 'react';
 import { animate, delay, motion } from 'framer-motion';
 
-export default function SkillsSection ({skills, folderLevel, title} : {
+export default function SkillsSection ({skills, folderLevel, title, linkToHeader} : {
     skills?: readonly ["React", "Next.js", "PostgreSQL", "Tailwind", "Prisma"], 
     folderLevel?: number, // 1 is the app folder, 2 is a contained folder
     title?: string,
+    linkToHeader?: boolean,
 }) {
     const skillsForDisplay = skills ? skills : skillsData.map(skill => skill.name);
-    const skillsDisplay = skillsForDisplay.map(skill => {
-        return (<div className='tooltip-container relative' key={skill}>
-            <Image src={`${(folderLevel ? '../'.repeat(folderLevel - 1) : '')}${skillsData.find(el => el.name === skill)?.icon || ''}`} alt={skill} 
-                height={48} width={48} loader={imageLoader}
-            />
-            <motion.div className='tooltip absolute top-full mt-2 left-1/2 
-            bg-white/30 backdrop-blur-xl rounded-lg text-white px-2 py-1'
-                initial={{ opacity: 0, y: 10, x: '-50%' }} animate={{ opacity: 1, y: 0, x: '-50%' }}>
-                {skill}
-            </motion.div>
-        </div>);
-    });
+    // const skillsDisplay = skillsForDisplay.map(skill => {
+    //     return (<div className='tooltip-container relative' key={skill}>
+    //         <Image src={`${(folderLevel ? '../'.repeat(folderLevel - 1) : '')}${skillsData.find(el => el.name === skill)?.icon || ''}`} alt={skill} 
+    //             height={48} width={48} loader={imageLoader}
+    //         />
+    //         <motion.div className='tooltip absolute top-full mt-2 left-1/2 
+    //         bg-white/30 backdrop-blur-xl rounded-lg text-white px-2 py-1'
+    //             initial={{ opacity: 0, y: 10, x: '-50%' }} animate={{ opacity: 1, y: 0, x: '-50%' }}>
+    //             {skill}
+    //         </motion.div>
+    //     </div>);
+    // });
     const { ref, inView } = useInView({
-        threshold: 0.5,
+        threshold: 0.25,
     });
     const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
     useEffect(() => {
-        if (inView && Date.now() - timeOfLastClick > 1000) {
+        if (linkToHeader && inView && Date.now() - timeOfLastClick > 1000) {
             setActiveSection('Skills');
         }
     }, [inView, setActiveSection, timeOfLastClick]);

@@ -72,5 +72,12 @@ body {
 }
 
 .section {
-  @apply:  flex flex-col items-center gap-8;
+  @apply  flex flex-col items-center gap-8;
+}
+
+.project-text {
+  @apply leading-7;
+}
+.project-text li:not(:last-child) {
+  @apply mb-2 pb-2 border-b border-b-white/50;
 }

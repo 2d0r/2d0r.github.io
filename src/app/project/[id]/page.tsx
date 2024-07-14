@@ -17,10 +17,10 @@ export default function Page({params} : {params: any}) {
 
     return (<>
         <div className='text-8xl md:text-9xl -pb-4 -mb-4 font-semibold'>{project.title}</div>
-        <ProjectSection title='Overview' text={project.text[0]} />
-        <ProjectSection title='Features' text={project.text[1]} />
-        <ProjectSection title='Next Steps' text={project.text[2]} />
-        <SkillsSection skills={project.tags} folderLevel={2} title={'Tools'} />
+        <SkillsSection skills={project.tags} folderLevel={2} title={'Tools'} linkToHeader={false} />
+        <ProjectSection title='Overview' text={project.text[0]} image={project.images[0]} />
+        <ProjectSection title='Features' text={project.text[1]} image={project.images[1]} alignImage='left' />
+        <ProjectSection title='Next Steps' text={project.text[2]} image={project.images[2]} />
         <CloudAnimation clouds={2} />
     </>);
 }

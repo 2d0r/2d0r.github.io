@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={`file:flex min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-500 to-blue-300 hide-scrollbar pt-12`}>
           <ActiveSectionContextProvider>
             <Header />
-            <div className={clsx('w-[min(900px,100%)] flex flex-col gap-8 items-center justify-start text-white font-regular mt-8 p-4 md:p-0', museoModerno.className)}>
+            <div className={clsx('w-[min(900px,96%)] flex flex-col gap-8 items-center justify-start text-white font-regular mt-8 p-4 md:p-0', museoModerno.className)}>
               {children}
             </div>
             <Footer />

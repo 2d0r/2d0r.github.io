@@ -30,36 +30,23 @@ export default function Projects () {
     return (<section id='projects' ref={ref} className='z-10 w-full scroll-mt-[100rem] flex flex-col items-center gap-8'>
         {/* Hero */}
         <motion.div 
-            className={`relative flex flex-col justify-center items-center ${
-                heroContent === 'twdor' ? '' : 'text-transparent pointer-events-none'
-            }`} style={{
-                color: heroContent === 'twdor' ? '' : 'transparent',
-                pointerEvents: heroContent === 'twdor' ? 'auto' : 'none'
-            }}
+            className='relative flex flex-col justify-center items-center'
             initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}
         >
-            <div className='flex text-uppercase justify-center md:justify-between items-center w-full z-40 my-6 md:my-0'>
-                {/* <Link href='#contact-form' className='highlight w-1/3'>Contact</Link> */}
+            {/* Overtitle */}
+            <div className='flex justify-center md:justify-between items-center w-full z-40 my-6 md:my-0'>
                 <span className='md:w-1/3 cursor-default'>Hi! My name is</span>
                 <Link href='/files/tudor-popescu-cv.pdf' download className='w-0 md:w-1/3 hidden md:inline highlight text-right'>Download CV</Link>
             </div>
-            <div className='flex flex-col gap-4 items-center relative pt-0 pb-3'>
-                <div className='text-8xl md:text-9xl -pb-4 -mb-4 font-semibold text-center cursor-default leading-[80px] md:leading-none'>Tudor Popescu</div>
-            </div>
-            <div className='flex text-center justify-between items-center w-full'>
+            {/* Title */}
+            <div className='text-8xl md:text-9xl pt-0 mb-4 font-semibold text-center cursor-default leading-[80px] md:leading-none'>Tudor Popescu</div>
+            
+            {/* Subtitle */}
+            <div className='flex gap-4 text-center justify-between items-center w-full text-lg'>
                 <span className='hidden md:inline'>X</span>
                 <span className='w-full text-center mt-8 md:mt-0 px-8 md:px-0'>I am a Front-End Developer with 3 years experience building & designing web apps.</span>
                 <span className='hidden md:inline'>X</span>
-                {/* <Link href='/contact' className='w-1/3'>I am a front-end developer</Link>
-                <span className='w-1/3 text-center cursor-default'>with 3 years experience</span>
-                <Link href='/CV' className='w-1/3 text-right'>building & designing web apps</Link> */}
             </div>
-            {/* Project Hero */}
-            {heroContent !== 'twdor' && 
-            <div className='absolute inset-0 z-30'>
-                <Hero projectId={heroContent} />
-            </div>
-            }
         </motion.div>
 
         <motion.div className='flex flex-col items-center justify-center gap-4'

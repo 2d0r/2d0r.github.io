@@ -12,10 +12,10 @@ export default function Header() {
 
     return (<header className='z-50 relative w-full font-body'>
         <motion.div 
-            className='fixed top-0 left-1/2 -translate-x-1/2 h-[3.25rem] w-full 
-            sm:top-6 sm:h-[3.25rem] sm:w-[28rem] sm:rounded-full
-            rounded-none border backdrop-blur-lg border-b-white sm:border-white
-            bg-white/10 text-white shadow-lg shadow-black/[0.03]'
+            className='fixed top-0 sm:top-6 left-1/2 -translate-x-1/2 
+            h-[3.25rem] w-full sm:h-[3.25rem] sm:w-[28rem]
+            border-b sm:border border-b-white sm:border-white rounded-none sm:rounded-full
+            bg-white/10 text-white shadow-lg shadow-black/[0.03] backdrop-blur-lg'
             initial={{ x: '-50%', y: -100, opacity: 0 }}
             animate={{ x: '-50%', y: 0, opacity: 1 }}
         >

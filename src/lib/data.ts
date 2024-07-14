@@ -4,14 +4,29 @@ export const projectsData = [
         title: 'Kronos',
         description: 'A smart organiser that goes a step further.',
         text: [
-            'Text 1',
-            'Text 2',
-            'Text 3',
+            `
+            <p>Kronos was born from a creative's need to get organised. It is a smart organiser aimed at understanding more deeply and assisting with an individual personal time and goals. It takes Motion and Reclaim.ai and goes one step further, by integrating academic findings and a bespoke language that connects personal time and the psychology of motivation.</p>
+            `,
+            `
+            <ul className='list-disc'>
+                <li>Next.js app, using the latest app router</li>
+                <li>Smart timeline showing the task to focus on and every option relevant to that moment</li>
+                <li>Calendar powered by Hexaflexa, to visualise and edit events</li>
+                <li>Task browser, with filters and sorting options</li>
+                <li>Custom checkbox, showing additional task statuses such as 'in progress' and 'repeating'</li>
+                <li>Conditional task input form, to speed up adding the needed nuance to each task</li>
+                <li>Markdown text editor, which allows checklists, links and headings</li>
+            </ul>
+            `,
+            `<ol>
+                <li>Step 1</li>
+                <li>Step 2</li>
+            </ol>`,
         ],
         images: [
             'images/kronos-1.png',
-            '',
-            '',
+            'images/kronos-2.png',
+            'images/kronos-3.png',
         ],
         tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
         // mainImage: kronos1,
@@ -309,10 +324,6 @@ export const skillsData = [
 ];
 
 export const links = [
-    // {
-    //     name: 'Home',
-    //     hash: '#home',
-    // },
     {
         name: 'Projects',
         hash: '/#projects',

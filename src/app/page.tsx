@@ -9,9 +9,9 @@ import CloudAnimation from '@/components/cloud-animation';
 export default function Page() {
     return (<>
         <Projects />        
-        <SkillsSection />
+        <SkillsSection linkToHeader={true} />
         <AboutSection />
         <ContactForm />
-        <CloudAnimation />
+        <CloudAnimation clouds={3} />
     </>);
 }
