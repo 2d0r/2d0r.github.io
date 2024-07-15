@@ -27,7 +27,7 @@ export default function Projects () {
         }
     }, [inView, setActiveSection, timeOfLastClick]);
 
-    return (<section id='projects' ref={ref} className='z-10 w-full scroll-mt-[100rem] flex flex-col items-center gap-8'>
+    return (<section id='projects' ref={ref} className='z-40 w-full scroll-mt-[100rem] flex flex-col items-center gap-8'>
         {/* Hero */}
         <motion.div 
             className='relative flex flex-col justify-center items-center'
@@ -49,19 +49,19 @@ export default function Projects () {
             </div>
         </motion.div>
 
-        <motion.div className='flex flex-col items-center justify-center gap-4'
+        <motion.div className='w-full flex flex-col items-center justify-center gap-4 font-medium'
         initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
             <Divider heading='Project Lineup' /> 
             {/* Headliners */}
             <div className='flex flex-wrap flex-col md:flex-row gap-x-8 gap-y-4 justify-center'>
-                <ProjectHeading projectId='kronos' className='text-6xl md:text-8xl font-medium' onHover={(projectId) => handleHover(projectId)} />
-                <ProjectHeading projectId='wejam' className='text-6xl md:text-8xl font-medium' onHover={(projectId) => handleHover(projectId)} /> 
+                <ProjectHeading projectId='kronos' className='text-6xl md:text-8xl' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='wejam' className='text-6xl md:text-8xl' onHover={(projectId) => handleHover(projectId)} /> 
             </div>
 
             {/* Tier 2 */}
             <div className='flex flex-wrap gap-x-8 gap-y-4 justify-center'>
-                <ProjectHeading projectId='wolfpack' className='text-5xl font-medium' onHover={(projectId) => handleHover(projectId)} /> 
-                <ProjectHeading projectId='bvr' className='text-5xl font-medium' onHover={(projectId) => handleHover(projectId)} /> 
+                <ProjectHeading projectId='wolfpack' className='text-6xl md:text-7xl' onHover={(projectId) => handleHover(projectId)} /> 
+                <ProjectHeading projectId='bvr' className='text-6xl md:text-7xl' onHover={(projectId) => handleHover(projectId)} /> 
             </div>
         </motion.div>
 
@@ -69,10 +69,10 @@ export default function Projects () {
         <motion.div className='flex flex-wrap md:flex-nowrap gap-8 justify-center w-full text-center mt-2 mb-2'
         initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
             <div className='flex flex-col gap-4 w-full'>
-                <Divider heading='UX Stage' />
+                <Divider heading='Web Design Stage' />
                 <ProjectHeading projectId='wolf-mentorship' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
-                <ProjectHeading projectId='soundr-brand' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
-                <ProjectHeading projectId='counselor-landing' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='soundr-landing' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='counselling-site' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
             </div>
             <div className='flex flex-col gap-4 w-full'>
                 <Divider heading='Logo Stage' />
@@ -83,8 +83,8 @@ export default function Projects () {
             <div className='flex flex-col gap-3 w-full'>
                 <Divider heading='Graphic Design Stage' />
                 <ProjectHeading projectId='music-artworks' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
-                <ProjectHeading projectId='soundr-poster' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
-                <ProjectHeading projectId='wolfys-brand' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='soundr-rebrand' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
+                <ProjectHeading projectId='wolfys-posters' className='text-3xl font-medium' onHover={(projectId) => handleHover(projectId)} />
             </div>
         </motion.div>
     </section>);

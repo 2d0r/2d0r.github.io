@@ -5,6 +5,7 @@ import { getProjectData } from '@/lib/utils';
 import SkillsSection from '@/components/skills';
 import ProjectSection from '@/components/project-section';
 import CloudAnimation from '@/components/cloud-animation';
+import { Skill } from '@/lib/types';
 
 export default function Page({params} : {params: any}) {
     const projectData = getProjectData(params.id);

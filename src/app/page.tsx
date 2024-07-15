@@ -9,7 +9,9 @@ import CloudAnimation from '@/components/cloud-animation';
 export default function Page() {
     return (<>
         <Projects />        
-        <SkillsSection linkToHeader={true} />
+        <SkillsSection skills={[
+            'React', 'Next.js', 'Tailwind', 'Typescript', 'Python', 'Node.js', 'Prisma', 'Figma', 'Sketch', 'Pixelmator', 'Photoshop', 'GitHub', 'GitLab', 'Notion'
+        ]} />
         <AboutSection />
         <ContactForm />
         <CloudAnimation clouds={3} />

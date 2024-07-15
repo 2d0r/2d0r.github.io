@@ -1,4 +1,6 @@
-export const projectsData = [
+import { ProjectDataType } from './types';
+
+export const projectsData: ProjectDataType = [
     {
         id: 'kronos',
         title: 'Kronos',
@@ -28,13 +30,13 @@ export const projectsData = [
             'images/kronos-2.png',
             'images/kronos-3.png',
         ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
+        tags: ['React', 'Next.js', 'Tailwind', 'Typescript', 'Prisma', 'PostgreSQL'],
         // mainImage: kronos1,
     },
     {
         id: 'wejam',
         title: 'WeJam',
-        description: '',
+        description: 'A music game for immersive band experiences',
         text: [
             '',
             '',
@@ -45,13 +47,13 @@ export const projectsData = [
             '',
             '',
         ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
+        tags: ['React', 'Node.js', 'Python', 'Socket.io', 'SASS', 'Figma'],
         // mainImage: kronos1,
     },
     {
         id: 'wolfpack',
-        title: 'Wolfpack NFT',
-        description: '',
+        title: 'Wolfpack',
+        description: 'Landing site for a NFT collection',
         text: [
             '',
             '',
@@ -62,13 +64,13 @@ export const projectsData = [
             '',
             '',
         ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
+        tags: ['HTML', 'CSS', 'JavaScript', 'Figma'],
         // mainImage: kronos1,
     },
     {
         id: 'bvr',
-        title: 'Beach Volley Romania',
-        description: '',
+        title: 'BVR',
+        description: 'UX Project for a new beach volley booking app, mobile and web',
         text: [
             '',
             '',
@@ -79,13 +81,13 @@ export const projectsData = [
             '',
             '',
         ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
+        tags: ['Figma', 'Pixelmator'],
         // mainImage: kronos1,
     },
     {
         id: 'wolf-mentorship',
         title: 'Wolf Mentorship',
-        description: '',
+        description: 'Landing site for a business mentorship programme',
         text: [
             '',
             '',
@@ -100,9 +102,9 @@ export const projectsData = [
         // mainImage: kronos1,
     },
     {
-        id: 'soundr-brand',
-        title: 'Soundr Brand Identity',
-        description: '',
+        id: 'soundr-landing',
+        title: 'Soundr Landing',
+        description: 'Landing site for a metaverse NFT creator',
         text: [
             '',
             '',
@@ -113,12 +115,12 @@ export const projectsData = [
             '',
             '',
         ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
+        tags: ['Photoshop', 'Figma'],
         // mainImage: kronos1,
     },
     {
-        id: 'counselor-landing',
-        title: 'Counselor Landing',
+        id: 'counselling-site',
+        title: 'Counselling Site',
         description: '',
         text: [
             '',
@@ -130,13 +132,13 @@ export const projectsData = [
             '',
             '',
         ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
+        tags: ['Figma'],
         // mainImage: kronos1,
     },
     {
         id: 'ftt',
         title: 'Finish That Track',
-        description: '',
+        description: 'Logo design for a mixing and mastering teacher',
         text: [
             '',
             '',
@@ -147,13 +149,13 @@ export const projectsData = [
             '',
             '',
         ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
+        tags: ['Figma'],
         // mainImage: kronos1,
     },
     {
         id: 'd&m',
         title: 'Dreams & Monsters',
-        description: '',
+        description: 'Logo design for an indie music label',
         text: [
             '',
             '',
@@ -164,13 +166,13 @@ export const projectsData = [
             '',
             '',
         ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
+        tags: ['Figma', 'Pixelmator'],
         // mainImage: kronos1,
     },
     {
         id: 'vosports',
         title: 'VoSports',
-        description: '',
+        description: 'Logo design for a sporting events organiser',
         text: [
             '',
             '',
@@ -181,13 +183,13 @@ export const projectsData = [
             '',
             '',
         ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
+        tags: ['Sketch'],
         // mainImage: kronos1,
     },
     {
         id: 'music-artworks',
         title: 'Music Artworks',
-        description: '',
+        description: 'Artworks for my music creations',
         text: [
             '',
             '',
@@ -198,13 +200,13 @@ export const projectsData = [
             '',
             '',
         ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
+        tags: ['Photoshop', 'Pixelmator'],
         // mainImage: kronos1,
     },
     {
-        id: 'soundr-poster',
-        title: 'Soundr Poster',
-        description: '',
+        id: 'soundr-rebrand',
+        title: 'Soundr Rebrand',
+        description: 'Design assets for a rebranded metaverse NFT creator',
         text: [
             '',
             '',
@@ -215,13 +217,13 @@ export const projectsData = [
             '',
             '',
         ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
+        tags: ['Pixelmator'],
         // mainImage: kronos1,
     },
     {
-        id: 'wolfys-brand',
-        title: 'Wolfy\'s Brand Assets',
-        description: '',
+        id: 'wolfys-posters',
+        title: 'Wolfy\'s Posters',
+        description: 'Poster designs for a cosy café bar in south-east London',
         text: [
             '',
             '',
@@ -232,7 +234,7 @@ export const projectsData = [
             '',
             '',
         ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
+        tags: ['Figma', 'Pixelmator'],
         // mainImage: kronos1,
     },
 ] as const;
@@ -288,6 +290,9 @@ export const skillsData = [
         name: 'Next.js',
         icon: './icons/next-w.png',
     }, {
+        name: 'CSS',
+        icon: './icons/css-w.png',
+    }, {
         name: 'Figma',
         icon: './icons/figma-w.png',
     }, {
@@ -296,6 +301,12 @@ export const skillsData = [
     }, {
         name: 'GitLab',
         icon: './icons/gitlab-w.png',
+    }, {
+        name: 'HTML',
+        icon: './icons/html-w.png',
+    }, {
+        name: 'JavaScript',
+        icon: './icons/javascript-w.png',
     }, {
         name: 'Notion',
         icon: './icons/notion-w.png',
@@ -318,10 +329,22 @@ export const skillsData = [
         name: 'Python',
         icon: './icons/python-w.png',
     }, {
+        name: 'Socket.io',
+        icon: './icons/socketio-w.png',
+    }, {
+        name: 'SASS',
+        icon: './icons/sass-w.png',
+    }, {
+        name: 'Sketch',
+        icon: './icons/sketch-w.png',
+    }, {
         name: 'Tailwind',
         icon: './icons/tailwind-w.png',
+    }, {
+        name: 'Typescript',
+        icon: './icons/typescript-w.png'
     }
-];
+] as const;
 
 export const links = [
     {
