@@ -38,7 +38,7 @@ body {
 }
 
 .highlight {
-  @apply hover:text-yellow-300 hover:scale-105 transition cursor-pointer;
+  @apply md:hover:text-yellow-300 md:hover:scale-105 transition cursor-pointer;
 }
 
 .enlarge {

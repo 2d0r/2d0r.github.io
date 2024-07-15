@@ -3,17 +3,26 @@ import { timelineData } from '../lib/data';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
 import useDeviceDetection from '@/lib/use-device-detection';
+import { useWindowWidth } from '@/lib/use-window-width';
 
 export default function TimelineMoment ({ index } : { index: number }) {
     const timelineMoment = timelineData.find(moment => moment.index === index);
     const isOdd = index % 2 === 0 ? false : true;
 
+    const windowWidth = useWindowWidth();
+
+    console.log(windowWidth);
+
+    const isMobile = windowWidth && windowWidth < 800;
     const device = useDeviceDetection();
-    const timelineMomentVariant = device !== 'Mobile' ? {
+    const timelineMomentVariant = 
+    !isMobile ?
+    {
         initial: {  opacity: 0, x: isOdd ? -10 : 10 },
         animate: () => ({ opacity: 1, x: 0, transition: { duration: 1 } }),
-    } : {
-        initial: {}, animate: {}
+    } 
+    : {
+        initial: { opacity: 1, x: 0 }, animate: { opacity: 1, x: 0 }
     };
 
     return (<>

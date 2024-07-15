@@ -8,12 +8,14 @@ import TimelineMoment from './timeline-moment';
 import { timelineData } from '@/lib/data';
 
 export default function Timeline() {
-    return (<div className='w-4/5 flex flex-col gap-8 relative my-8'>
+    return (<div className='w-full md:w-4/5 flex flex-col gap-8 relative my-8'>
+        {/* The line */}
         <div className='absolute top-[24px] bottom-0  w-[1px] bg-white
         left-[24px] md:left-0 md:right-0 md:mx-auto'></div>
         { timelineData.map((el, index: number) => {
             return <TimelineMoment index={index + 1} key={index} />
         }) }
+        {/* CV Download */}
         <motion.div className='w-full cursor-pointer'
         initial={{ y: 0 }} whileInView={{ y: 0 }} transition={{ duration: 1 }}>
             <Link className='w-full flex relative group highlight' href='/files/tudor-popescu-cv.pdf' download>
