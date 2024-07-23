@@ -1,10 +1,11 @@
 import { projectsData } from './data';
+import { Project } from './types';
 
 export function imageLoader({ src }: { src: string }) {
     return `${src}`; // REPLACE WITH YOUR IMAGE DIRECTORY
 }
 
- // Fetch data for each generated path
+// Fetch data for each generated path
 export function getProjectsData(id: string) {
     const project = projectsData.find(proj => proj.id === String(id));
 
@@ -18,6 +19,17 @@ export function getProjectsData(id: string) {
     return {
         props: { project },
     };
+}
+
+// Fetch data for each generated path
+export function getAdjacentProjects(id: string): [Project | null, Project | null] {
+    const projectIdx = projectsData.findIndex(proj => proj.id === String(id));
+
+    let adjacentProjects: [Project | null, Project | null] = [null, null];
+    adjacentProjects[0] = projectIdx > 0 ? projectsData[projectIdx - 1] : null;
+    adjacentProjects[1] = projectIdx < projectsData.length - 1 ? projectsData[projectIdx + 1] : null;
+    
+    return adjacentProjects;
 }
 
 export const getErrorMessage = (error: unknown): string => {

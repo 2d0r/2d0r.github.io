@@ -235,10 +235,10 @@ export const projectsData : ProjectData2Type[] = [
 
 export const aboutData = {
     text: `
-        <p>After graduating music, the difficult scene during the pandemic turned me to my other passion from college, programming.</p>
-        <p>I started in a sound role at WeJam, then received training as a front-end programmer. I finished a UX course at Love Circular and completed several programming certifications to fill in the gaps.</p>
+        <p>After graduating music, the affected music industry during the pandemic turned me to my other passion from college, programming.</p><br/>
+        <p>I started in a sound production role at WeJam, then received training as a front-end programmer. I finished a UX course at Love Circular and completed several programming certifications to fill in the gaps.</p><br/>
         <p>On the side, I started working as a freelancer, designing and building sites and assets.</p>
-    `
+    `,
 }
 
 export const timelineData = [
