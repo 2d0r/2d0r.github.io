@@ -32,13 +32,13 @@ export default function SkillsSection ({skills, folderLevel, title, linkToHeader
         </div>);
     });
     const { ref, inView } = useInView({
-        threshold: 0.25,
+        threshold: 0.5,
     });
     const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
     useEffect(() => {
-        if (linkToHeader && inView && Date.now() - timeOfLastClick > 1000) {
-            setActiveSection('Skills');
+        if (inView && Date.now() - timeOfLastClick > 1000) {
+            setActiveSection(linkToHeader ? 'Skills' : undefined);
         }
     }, [inView, setActiveSection, timeOfLastClick, linkToHeader]);
 

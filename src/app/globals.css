@@ -84,3 +84,18 @@ body {
 .project-text p {
   @apply mb-3;
 }
+
+.longTitle {
+  font-size: 3rem;
+}
+.shortTitle {
+  font-size: 4rem;
+}
+@media (min-width: 768px) {
+  .longTitle {
+    font-size: 6rem;
+  }
+  .shortTitle {
+    font-size: 8rem;
+  }
+}

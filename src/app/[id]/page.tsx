@@ -5,23 +5,27 @@ import { getProjectsData } from '@/lib/utils';
 import SkillsSection from '@/components/skills';
 import CloudAnimation from '@/components/cloud-animation';
 import ProjectSection from '@/components/project-section';
+import ScrollToTop from '@/components/scroll-to-top';
+import clsx from 'clsx';
 
 export default function Page({params} : {params: any}) {
     const projectData = getProjectsData(params.id);
-
-    if (!projectData.props) {
-        notFound();
-    }
-
+    if (!projectData.props) { notFound(); }
     const project = projectData.props.project;
 
     return (<>
-        <div className='text-8xl md:text-9xl -pb-4 -mb-4 font-semibold'>{project.title}</div>
+        <div className={clsx('text-8xl md:text-9xl text-center -pb-4 mt-4 md:-mb-4 font-semibold',
+            project.title.length > 8 ? 'longTitle' : 'shortTitle',
+        )} >
+            {project.title}
+        </div>
         <SkillsSection skills={project.tools} folderLevel={2} title={'Tools'} linkToHeader={false} />
         { project.sections.map((section, idx) => {
+            if (section.title === '') return <></>;
             return <ProjectSection section={section} alignImage={idx % 2 ? 'left' : 'right'} key={`${project.id}-section-${idx}`} />
         })}
         <CloudAnimation clouds={2} />
+        <ScrollToTop />
     </>);
 }
 

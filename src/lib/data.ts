@@ -53,12 +53,12 @@ export const projectsData : ProjectData2Type[] = [
         id: 'wejam',
         title: 'WeJam',
         description: 'A music game for immersive band experiences',
-        thumbnail: 'images/kronos-1.png',
+        thumbnail: 'images/wejam-1.png',
         sections: [
             {
                 title: 'Overview',
                 text: `
-                    <p>WeJam is a immersive band experience for groups of up to 6 people who can play popular songs together in sync.</p>
+                    <p>WeJam is an immersive band experience for groups of up to 6 people who can play popular songs together in sync.</p>
                     <p>This is made possible by a user interface that simplifies the song score, while still triggering the full track. A bit like Guitar Hero.</p>
                 `,
                 images: [ 'images/wejam-1.png' ],
@@ -69,16 +69,16 @@ export const projectsData : ProjectData2Type[] = [
                     <p>I arrived at the company at a time when the experience was ready for booked sessions, but still bare bones in terms of UI and features.
                     Here are some of the features I developed:</p>
                     <ul>
-                        <li>Improved user journeys that separate functionality for facilitators, commercial-booking players, and educational sessions</li>
-                        <li>Stats screen, which includes players' performance after a song, and the overall leaderboard</li>
+                        <li>User journeys that separate functionality for facilitators, booking clients, and school sessions</li>
+                        <li>Stats screen: players' performance metrics after a song, and overall leaderboard</li>
                         
-                        <li>UI Redesign: from a black and white, bare bones UI, I redesigned and implemented this colourful and dynamic theme, in line with the existing logo and branding.</li>
-                        <li>Python script that turns a MuseScore score into the images needed in the game - using Lilypond (music engraving language)</li>
-                        <li>Improved karaoke mode using CSS Animations</li>
-                        <li>Song list for users to browse available songs and difficulties</li>
-                        <li>Game tutorial: edited video and implemented UI</li>
+                        <li>UI Redesign: from a black and white, bare bones UI, to a colourful and dynamic theme, in line with the existing branding.</li>
+                        <li>Python script that turns a MuseScore score into the images needed in the game (using Lilypond, a music engraving language)</li>
+                        <li>Animated karaoke mode (CSS Animations)</li>
+                        <li>Song list for browsing available songs and difficulties</li>
+                        <li>Game tutorial: animated demonstrations and UI</li>
                         <li>Minimised random client disconnections</li>
-                        <li>Worked with the MaxMSP developers to add controls in the Max UI, which allow the facilitator to manage the react app client-side.</li>
+                        <li>Facilitator controls to manage client tablets during a session (in collaboration with the MaxMSP developers)</li>
                     </ul>
                 `,
                 images: [ 'images/wejam-2.png' ],
@@ -102,16 +102,8 @@ export const projectsData : ProjectData2Type[] = [
     {
         id: 'wolfpack',
         title: 'Wolfpack',
-        description: 'Landing site for a NFT collection',
-        thumbnail: '',
-        sections: [],
-        tools: ['HTML', 'CSS', 'JavaScript', 'Figma'],
-    },
-    {
-        id: 'wolfpack',
-        title: 'Wolfpack',
         description: 'Landing site for an NFT collection',
-        thumbnail: '',
+        thumbnail: 'images/wolfpack-1.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -123,7 +115,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'bvr',
         title: 'BVR',
         description: 'UX Project for a new beach volley booking app, mobile and web',
-        thumbnail: '',
+        thumbnail: 'images/bvr-1.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -135,7 +127,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'wolf-mentorship',
         title: 'Wolf Mentorship',
         description: 'Landing site for a business mentorship programme',
-        thumbnail: '',
+        thumbnail: 'images/wolf-mentorship-1.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -147,7 +139,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'soundr-landing',
         title: 'Soundr Landing',
         description: 'Landing site for a metaverse NFT creator',
-        thumbnail: '',
+        thumbnail: 'images/soundr-landing-1.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -159,7 +151,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'counselling-site',
         title: 'Counselling Site',
         description: '',
-        thumbnail: '',
+        thumbnail: 'images/counselling-site-1.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -171,7 +163,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'ftt',
         title: 'Finish That Track',
         description: 'Logo design for a mixing and mastering teacher',
-        thumbnail: '',
+        thumbnail: 'images/ftt-1.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -180,10 +172,10 @@ export const projectsData : ProjectData2Type[] = [
         tools: ['Figma']
     },
     {
-        id: 'd&m',
+        id: 'dreams-and-monsters',
         title: 'Dreams & Monsters',
         description: 'Logo design for an alternative music label',
-        thumbnail: '',
+        thumbnail: 'images/dreams-and-monsters-1.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -195,7 +187,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'vosports',
         title: 'VoSports',
         description: 'Logo design for a sporting events organiser',
-        thumbnail: '',
+        thumbnail: 'images/vosports-1.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -207,7 +199,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'music-artworks',
         title: 'Music Artworks',
         description: 'Artworks for my music creations',
-        thumbnail: '',
+        thumbnail: 'images/music-artworks-1.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -219,7 +211,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'soundr-rebrand',
         title: 'Soundr Rebrand',
         description: 'Design assets for a rebranded metaverse NFT creator',
-        thumbnail: '',
+        thumbnail: 'images/soundr-rebrand-1.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -231,7 +223,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'wolfys-posters',
         title: "Wolfy's Posters",
         description: 'Poster designs for a cosy café bar in south-east London',
-        thumbnail: '',
+        thumbnail: 'images/wolfys-posters-1.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },

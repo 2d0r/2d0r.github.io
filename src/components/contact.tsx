@@ -26,8 +26,8 @@ export default function ContactForm () {
         initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}
     >
         <Divider heading='Contact' />
-        <div className='text-center w-3/5'>
-            Message me using this form:
+        <div className='text-center w-full md:w-3/5'>
+            Contact me using this form:
         </div>
         <div className='w-[min(100%,400px)]' id='contact-form'>
             <form action='https://formsubmit.co/el/wuhesa' method='POST' target='_blank'
