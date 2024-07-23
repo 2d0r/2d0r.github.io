@@ -26,15 +26,11 @@ export default function ProjectLink({ projectId, className } : ProjectLinkProps)
     }
     const handleClick = (e: any) => {
         if (window.innerWidth < 768) {
-            setClicks((prevClicks) => prevClicks + 1);
-            if (clicks + 1 !== 2) {
-                e.preventDefault(); // Prevent the default action on the first click
-            }
-            setShowTooltip(clicks + 1 === 2 ? true : !showTooltip );
+            e.preventDefault(); // Prevent the default action on the first click
+            setShowTooltip( !showTooltip );
         }
     }
     const handleBlur = () => {
-        setClicks(0);
         setShowTooltip(false);
     }
     const project = projectsData.find(proj => proj.id === projectId);
