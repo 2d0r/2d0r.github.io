@@ -14,4 +14,22 @@ export type ProjectDataType = {
     text: string[],
     images: string[],
     tags: Skill[],
-}[];
+};
+
+export type ProjectSectionType = {
+    title: string,
+    text?: string,
+    images?: string[],
+};
+export type ProjectData2Type = {
+    id: string,
+    title: string, 
+    description: string,
+    thumbnail: string,
+    sections: ProjectSectionType[],
+    tools: Skill[],
+    link?: {
+        name: string,
+        href: string,
+    },
+};

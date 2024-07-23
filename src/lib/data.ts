@@ -1,241 +1,243 @@
-import { ProjectDataType } from './types';
+import { ProjectData2Type, ProjectDataType } from './types';
 
-export const projectsData: ProjectDataType = [
+export const projectsData : ProjectData2Type[] = [
     {
         id: 'kronos',
         title: 'Kronos',
-        description: 'A smart organiser that goes a step further.',
-        text: [
-            `
-            <p>Kronos was born from a creative's need to get organised. It is a smart organiser aimed at understanding more deeply and assisting with an individual personal time and goals. It takes Motion and Reclaim.ai and goes one step further, by integrating academic findings and a bespoke language that connects personal time and the psychology of motivation.</p>
-            `,
-            `
-            <ul className='list-disc'>
-                <li>Next.js app, using the latest app router</li>
-                <li>Smart timeline showing the task to focus on and every option relevant to that moment</li>
-                <li>Calendar powered by Hexaflexa, to visualise and edit events</li>
-                <li>Task browser, with filters and sorting options</li>
-                <li>Custom checkbox, showing additional task statuses such as 'in progress' and 'repeating'</li>
-                <li>Conditional task input form, to speed up adding the needed nuance to each task</li>
-                <li>Markdown text editor, which allows checklists, links and headings</li>
-            </ul>
-            `,
-            `<ol>
-                <li>Step 1</li>
-                <li>Step 2</li>
-            </ol>`,
+        description: 'A smart organiser that understands mindsets',
+        thumbnail: 'images/kronos-1.png',
+        sections: [
+            {
+                title: 'Overview',
+                text: `
+                    <p>Kronos was born from a creative's need to get organised. 
+                    It is a smart organiser that goes one step further from Motion and Reclaim.ai by understanding a user's tasks more deeply and assisting with reaching personal goals.</p>
+                    <p>The aim is to integrate scientific findings about personal time management and the psychology of motivation into a bespoke language of rules and patterns which describe the user's use of time and allow AI models to guide and improve it.</p>
+                `,
+                images: [ 'images/kronos-1.png' ],
+            },
+            {
+                title: 'Features',
+                text: `
+                    <ul className='list-disc'>
+                        <li>Next.js app, using the latest app router</li>
+                        <li>Smart timeline showing the task to focus on and every option relevant to that moment</li>
+                        <li>Calendar powered by Hexaflexa, to visualise and edit events</li>
+                        <li>Task browser, with filters and sorting options</li>
+                        <li>Custom checkbox, showing additional task statuses such as 'in progress' and 'repeating'</li>
+                        <li>Conditional task input form, to speed up adding the needed nuance to each task</li>
+                        <li>Markdown text editor, which allows checklists, links and headings</li>
+                    </ul>
+                `,
+                images: [ 'images/kronos-2.png' ],
+            },
+            {
+                title: 'Next Steps',
+                text: `
+                    <ol>
+                        <li>Implement time monitors to aid task input</li>
+                        <li>Implement smart notifications</li>
+                        <li>Measure stats: routine streaks, daily completion rate, task distribution</li>
+                        <li>SMART AUTOMATION:</li>
+                        <li>Implement NLP model to understand and categorise tasks by mindset</li>
+                        <li>Train ML model on task mindset distribution, and the user's interaction with it</li>
+                    </ol>
+                `,
+                images: [ 'images/kronos-3.png' ],
+            },
         ],
-        images: [
-            'images/kronos-1.png',
-            'images/kronos-2.png',
-            'images/kronos-3.png',
-        ],
-        tags: ['React', 'Next.js', 'Tailwind', 'Typescript', 'Prisma', 'PostgreSQL'],
-        // mainImage: kronos1,
+        tools: ['React', 'Next.js', 'Tailwind', 'Typescript', 'Prisma', 'PostgreSQL'],
+        link: { name: 'Kronos Git Repo', href: 'https://github.com/2d0r/kronos-web.git' },
     },
     {
         id: 'wejam',
         title: 'WeJam',
         description: 'A music game for immersive band experiences',
-        text: [
-            '',
-            '',
-            '',
+        thumbnail: 'images/kronos-1.png',
+        sections: [
+            {
+                title: 'Overview',
+                text: `
+                    <p>WeJam is a immersive band experience for groups of up to 6 people who can play popular songs together in sync.</p>
+                    <p>This is made possible by a user interface that simplifies the song score, while still triggering the full track. A bit like Guitar Hero.</p>
+                `,
+                images: [ 'images/wejam-1.png' ],
+            },
+            {
+                title: 'Features',
+                text: `
+                    <p>I arrived at the company at a time when the experience was ready for booked sessions, but still bare bones in terms of UI and features.
+                    Here are some of the features I developed:</p>
+                    <ul>
+                        <li>Improved user journeys that separate functionality for facilitators, commercial-booking players, and educational sessions</li>
+                        <li>Stats screen, which includes players' performance after a song, and the overall leaderboard</li>
+                        
+                        <li>UI Redesign: from a black and white, bare bones UI, I redesigned and implemented this colourful and dynamic theme, in line with the existing logo and branding.</li>
+                        <li>Python script that turns a MuseScore score into the images needed in the game - using Lilypond (music engraving language)</li>
+                        <li>Improved karaoke mode using CSS Animations</li>
+                        <li>Song list for users to browse available songs and difficulties</li>
+                        <li>Game tutorial: edited video and implemented UI</li>
+                        <li>Minimised random client disconnections</li>
+                        <li>Worked with the MaxMSP developers to add controls in the Max UI, which allow the facilitator to manage the react app client-side.</li>
+                    </ul>
+                `,
+                images: [ 'images/wejam-2.png' ],
+            },
+            {
+                title: 'Next Steps',
+                text: `
+                    <ol>
+                        <li>Automating the score creation process, by testing patterns of note selection based on different levels of difficulty</li>
+                        <li>Implementing Redux for better complex state management (than the context providers)</li>
+                        <li>Optimising the server for faster loading and better connectivity</li>
+                        <li>Adding animations for a more dynamic UI</li>
+                        <li>Turning the score images into functional code, for faster loading, faster score creation and a customisable score scroll animation</li>
+                    </ol>
+                `,
+                images: [ 'images/wejam-3.png' ],
+            },
         ],
-        images: [
-            '',
-            '',
-            '',
-        ],
-        tags: ['React', 'Node.js', 'Python', 'Socket.io', 'SASS', 'Figma'],
-        // mainImage: kronos1,
+        tools: ['React', 'Node.js', 'Python', 'Socket.io', 'SASS', 'Figma'],
     },
     {
         id: 'wolfpack',
         title: 'Wolfpack',
         description: 'Landing site for a NFT collection',
-        text: [
-            '',
-            '',
-            '',
+        thumbnail: '',
+        sections: [],
+        tools: ['HTML', 'CSS', 'JavaScript', 'Figma'],
+    },
+    {
+        id: 'wolfpack',
+        title: 'Wolfpack',
+        description: 'Landing site for an NFT collection',
+        thumbnail: '',
+        sections: [
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
         ],
-        images: [
-            '',
-            '',
-            '',
-        ],
-        tags: ['HTML', 'CSS', 'JavaScript', 'Figma'],
-        // mainImage: kronos1,
+        tools: ['HTML', 'CSS', 'JavaScript', 'Figma']
     },
     {
         id: 'bvr',
         title: 'BVR',
         description: 'UX Project for a new beach volley booking app, mobile and web',
-        text: [
-            '',
-            '',
-            '',
+        thumbnail: '',
+        sections: [
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
         ],
-        images: [
-            '',
-            '',
-            '',
-        ],
-        tags: ['Figma', 'Pixelmator'],
-        // mainImage: kronos1,
+        tools: ['Figma', 'Pixelmator']
     },
     {
         id: 'wolf-mentorship',
         title: 'Wolf Mentorship',
         description: 'Landing site for a business mentorship programme',
-        text: [
-            '',
-            '',
-            '',
+        thumbnail: '',
+        sections: [
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
         ],
-        images: [
-            '',
-            '',
-            '',
-        ],
-        tags: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma'],
-        // mainImage: kronos1,
+        tools: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma']
     },
     {
         id: 'soundr-landing',
         title: 'Soundr Landing',
         description: 'Landing site for a metaverse NFT creator',
-        text: [
-            '',
-            '',
-            '',
+        thumbnail: '',
+        sections: [
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
         ],
-        images: [
-            '',
-            '',
-            '',
-        ],
-        tags: ['Photoshop', 'Figma'],
-        // mainImage: kronos1,
+        tools: ['Photoshop', 'Figma']
     },
     {
         id: 'counselling-site',
         title: 'Counselling Site',
         description: '',
-        text: [
-            '',
-            '',
-            '',
+        thumbnail: '',
+        sections: [
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
         ],
-        images: [
-            '',
-            '',
-            '',
-        ],
-        tags: ['Figma'],
-        // mainImage: kronos1,
+        tools: ['Figma']
     },
     {
         id: 'ftt',
         title: 'Finish That Track',
         description: 'Logo design for a mixing and mastering teacher',
-        text: [
-            '',
-            '',
-            '',
+        thumbnail: '',
+        sections: [
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
         ],
-        images: [
-            '',
-            '',
-            '',
-        ],
-        tags: ['Figma'],
-        // mainImage: kronos1,
+        tools: ['Figma']
     },
     {
         id: 'd&m',
         title: 'Dreams & Monsters',
-        description: 'Logo design for an indie music label',
-        text: [
-            '',
-            '',
-            '',
+        description: 'Logo design for an alternative music label',
+        thumbnail: '',
+        sections: [
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
         ],
-        images: [
-            '',
-            '',
-            '',
-        ],
-        tags: ['Figma', 'Pixelmator'],
-        // mainImage: kronos1,
+        tools: ['Figma', 'Pixelmator']
     },
     {
         id: 'vosports',
         title: 'VoSports',
         description: 'Logo design for a sporting events organiser',
-        text: [
-            '',
-            '',
-            '',
+        thumbnail: '',
+        sections: [
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
         ],
-        images: [
-            '',
-            '',
-            '',
-        ],
-        tags: ['Sketch'],
-        // mainImage: kronos1,
+        tools: ['Sketch']
     },
     {
         id: 'music-artworks',
         title: 'Music Artworks',
         description: 'Artworks for my music creations',
-        text: [
-            '',
-            '',
-            '',
+        thumbnail: '',
+        sections: [
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
         ],
-        images: [
-            '',
-            '',
-            '',
-        ],
-        tags: ['Photoshop', 'Pixelmator'],
-        // mainImage: kronos1,
+        tools: ['Photoshop', 'Pixelmator']
     },
     {
         id: 'soundr-rebrand',
         title: 'Soundr Rebrand',
         description: 'Design assets for a rebranded metaverse NFT creator',
-        text: [
-            '',
-            '',
-            '',
+        thumbnail: '',
+        sections: [
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
         ],
-        images: [
-            '',
-            '',
-            '',
-        ],
-        tags: ['Pixelmator'],
-        // mainImage: kronos1,
+        tools: ['Pixelmator']
     },
     {
         id: 'wolfys-posters',
-        title: 'Wolfy\'s Posters',
+        title: "Wolfy's Posters",
         description: 'Poster designs for a cosy café bar in south-east London',
-        text: [
-            '',
-            '',
-            '',
+        thumbnail: '',
+        sections: [
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
+            { title: '', text: '', images: [] },
         ],
-        images: [
-            '',
-            '',
-            '',
-        ],
-        tags: ['Figma', 'Pixelmator'],
-        // mainImage: kronos1,
+        tools: ['Figma', 'Pixelmator']
     },
 ] as const;
 
@@ -286,61 +288,80 @@ export const skillsData = [
     {
         name: 'React',
         icon: './icons/react-w.png',
-    }, {
+    },
+    {
         name: 'Next.js',
         icon: './icons/next-w.png',
-    }, {
+    },
+    {
         name: 'CSS',
         icon: './icons/css-w.png',
-    }, {
+    },
+    {
         name: 'Figma',
         icon: './icons/figma-w.png',
-    }, {
+    },
+    {
         name: 'GitHub',
         icon: './icons/github-w.png',
-    }, {
+    },
+    {
         name: 'GitLab',
         icon: './icons/gitlab-w.png',
-    }, {
+    },
+    {
         name: 'HTML',
         icon: './icons/html-w.png',
-    }, {
+    },
+    {
         name: 'JavaScript',
         icon: './icons/javascript-w.png',
-    }, {
+    },
+    {
         name: 'Notion',
         icon: './icons/notion-w.png',
-    }, {
+    },
+    {
         name: 'Node.js',
         icon: './icons/nodejs-w.png',
-    }, {
+    },
+    {
         name: 'Photoshop',
         icon: './icons/photoshop-w.png',
-    }, {
+    },
+    {
         name: 'Pixelmator',
         icon: './icons/pixelmator-w.png',
-    }, {
+    },
+    {
         name: 'PostgreSQL',
         icon: './icons/postgresql-w.png',
-    }, {
+    },
+    {
         name: 'Prisma',
         icon: './icons/prisma-w.png',
-    }, {
+    },
+    {
         name: 'Python',
         icon: './icons/python-w.png',
-    }, {
+    },
+    {
         name: 'Socket.io',
         icon: './icons/socketio-w.png',
-    }, {
+    },
+    {
         name: 'SASS',
         icon: './icons/sass-w.png',
-    }, {
+    },
+    {
         name: 'Sketch',
         icon: './icons/sketch-w.png',
-    }, {
+    },
+    {
         name: 'Tailwind',
         icon: './icons/tailwind-w.png',
-    }, {
+    },
+    {
         name: 'Typescript',
         icon: './icons/typescript-w.png'
     }

@@ -14,7 +14,7 @@ export default function Hero ({projectId}: HeroProps) {
 
     const project = projectsData.find(proj => proj.id === projectId);
 
-    const skillsDisplay = project?.tags?.slice(0, 4).map(skillName => {
+    const skillsDisplay = project?.tools?.slice(0, 4).map(skillName => {
         const skillIcon = skillsData.find(skill => skill.name === skillName)?.icon;
         console.log('skillIcon', skillIcon);
 

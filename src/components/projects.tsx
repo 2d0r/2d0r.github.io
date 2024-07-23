@@ -3,11 +3,10 @@
 import Link from 'next/link';
 import Divider from '@/components/divider';
 import { useEffect, useState } from 'react';
-import Hero from './hero';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/context/active-section-context';
-import { HeroId, ProjectTitle } from '@/lib/types';
+import { HeroId } from '@/lib/types';
 import ProjectHeading from './project-heading';
 
 export default function Projects () {
@@ -39,7 +38,7 @@ export default function Projects () {
                 <Link href='/files/tudor-popescu-cv.pdf' download className='w-0 md:w-1/3 hidden md:inline highlight text-right'>Download CV</Link>
             </div>
             {/* Title */}
-            <div className='text-8xl md:text-9xl pt-0 mb-4 font-semibold text-center cursor-default leading-[80px] md:leading-none'>Tudor Popescu</div>
+            <div className='text-7xl sm:text-8xl md:text-9xl pt-0 mb-4 font-semibold text-center cursor-default leading-[80px] md:leading-none'>Tudor Popescu</div>
             
             {/* Subtitle */}
             <div className='flex gap-4 text-center justify-between items-center w-full text-lg'>
@@ -51,7 +50,7 @@ export default function Projects () {
 
         <motion.div className='w-full flex flex-col items-center justify-center gap-4 font-medium'
         initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-            <Divider heading='Project Lineup' /> 
+            <Divider heading='Headliners' /> 
             {/* Headliners */}
             <div className='flex flex-wrap flex-col md:flex-row gap-x-8 gap-y-4 justify-center'>
                 <ProjectHeading projectId='kronos' className='text-6xl md:text-8xl' onHover={(projectId) => handleHover(projectId)} />
