@@ -30,7 +30,7 @@ export default function ContactForm () {
             Contact me using this form:
         </div>
         <div className='w-[min(100%,400px)]' id='contact-form'>
-            <form action='https://formsubmit.co/tudor.m.p@outlook.com' method='POST' target='_blank' //wuhesa
+            <form action='https://formsubmit.co/5583cae2e581490e3f28d5d4f1b23470' method='POST' target='_blank'
                 // action={async (formData) => {
                 //     const { data, error } = await sendEmail(formData);
 
