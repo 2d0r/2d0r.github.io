@@ -7,21 +7,12 @@ export type ProjectId = (typeof projectsData)[number]['id'];
 export type Skill = (typeof skillsData)[number]['name'];
 export type HeroId = (ProjectId | 'twdor');
 
-export type ProjectDataType = {
-    id: string,
-    title: string, 
-    description: string,
-    text: string[],
-    images: string[],
-    tags: Skill[],
-};
-
 export type ProjectSectionType = {
     title: string,
     text?: string,
     images?: string[],
 };
-export type ProjectData2Type = {
+export type ProjectDataType = {
     id: string,
     title: string, 
     description: string,

@@ -1,11 +1,11 @@
-import { ProjectData2Type, ProjectDataType } from './types';
+import { ProjectDataType } from './types';
 
-export const projectsData : ProjectData2Type[] = [
+export const projectsData : ProjectDataType[] = [
     {
         id: 'kronos',
         title: 'Kronos',
         description: 'A smart organiser that understands mindsets',
-        thumbnail: 'images/kronos-1.png',
+        thumbnail: 'images/kronos-thumb.png',
         sections: [
             {
                 title: 'Overview',
@@ -53,7 +53,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'wejam',
         title: 'WeJam',
         description: 'A music game for immersive band experiences',
-        thumbnail: 'images/wejam-1.png',
+        thumbnail: 'images/wejam-thumb.png',
         sections: [
             {
                 title: 'Overview',
@@ -103,7 +103,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'wolfpack',
         title: 'Wolfpack',
         description: 'Landing site for an NFT collection',
-        thumbnail: 'images/wolfpack-1.png',
+        thumbnail: 'images/wolfpack-thumb.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -115,7 +115,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'bvr',
         title: 'BVR',
         description: 'UX Project for a new beach volley booking app, mobile and web',
-        thumbnail: 'images/bvr-1.png',
+        thumbnail: 'images/bvr-thumb.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -127,7 +127,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'wolf-mentorship',
         title: 'Wolf Mentorship',
         description: 'Landing site for a business mentorship programme',
-        thumbnail: 'images/wolf-mentorship-1.png',
+        thumbnail: 'images/wolf-mentorship-thumb.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -139,7 +139,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'soundr-landing',
         title: 'Soundr Landing',
         description: 'Landing site for a metaverse NFT creator',
-        thumbnail: 'images/soundr-landing-1.png',
+        thumbnail: 'images/soundr-landing-thumb.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -151,7 +151,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'counselling-site',
         title: 'Counselling Site',
         description: '',
-        thumbnail: 'images/counselling-site-1.png',
+        thumbnail: 'images/counselling-site-thumb.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -163,7 +163,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'ftt',
         title: 'Finish That Track',
         description: 'Logo design for a mixing and mastering teacher',
-        thumbnail: 'images/ftt-1.png',
+        thumbnail: 'images/ftt-thumb.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -175,7 +175,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'dreams-and-monsters',
         title: 'Dreams & Monsters',
         description: 'Logo design for an alternative music label',
-        thumbnail: 'images/dreams-and-monsters-1.png',
+        thumbnail: 'images/dreams-and-monsters-thumb.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -187,7 +187,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'vosports',
         title: 'VoSports',
         description: 'Logo design for a sporting events organiser',
-        thumbnail: 'images/vosports-1.png',
+        thumbnail: 'images/vosports-thumb.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -199,7 +199,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'music-artworks',
         title: 'Music Artworks',
         description: 'Artworks for my music creations',
-        thumbnail: 'images/music-artworks-1.png',
+        thumbnail: 'images/music-artworks-thumb.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -211,7 +211,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'soundr-rebrand',
         title: 'Soundr Rebrand',
         description: 'Design assets for a rebranded metaverse NFT creator',
-        thumbnail: 'images/soundr-rebrand-1.png',
+        thumbnail: 'images/soundr-rebrand-thumb.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
@@ -223,7 +223,7 @@ export const projectsData : ProjectData2Type[] = [
         id: 'wolfys-posters',
         title: "Wolfy's Posters",
         description: 'Poster designs for a cosy café bar in south-east London',
-        thumbnail: 'images/wolfys-posters-1.png',
+        thumbnail: 'images/wolfys-posters-thumb.png',
         sections: [
             { title: '', text: '', images: [] },
             { title: '', text: '', images: [] },
