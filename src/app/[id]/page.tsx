@@ -24,7 +24,10 @@ export default function Page({params} : {params: any}) {
         <SkillsSection skills={project.tools} folderLevel={2} title={'Tools'} linkToHeader={false} />
         { project.sections.map((section, idx) => {
             if (section.title === '') return <></>;
-            return <ProjectSection section={section} alignImage={idx % 2 ? 'left' : 'right'} key={`${project.id}-section-${idx}`} />
+            return <ProjectSection 
+                section={section} alignImage={idx % 2 ? 'left' : 'right'} key={`${project.id}-section-${idx}`} 
+                layout={section.layout} 
+            />
         })}
         <ProjectNav project1={adjacentProjects[0]} project2={adjacentProjects[1]} />
         <CloudAnimation clouds={2} />

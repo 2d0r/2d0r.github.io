@@ -11,6 +11,7 @@ export type ProjectSectionType = {
     title: string,
     text?: string,
     images?: string[],
+    layout?: 'sides' | 'wide' | 'gallery',
 };
 export type ProjectDataType = {
     id: string,

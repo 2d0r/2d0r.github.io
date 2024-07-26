@@ -38,7 +38,6 @@ export const projectsData : ProjectDataType[] = [
                         <li>Implement time monitors to aid task input</li>
                         <li>Implement smart notifications</li>
                         <li>Measure stats: routine streaks, daily completion rate, task distribution</li>
-                        <li>SMART AUTOMATION:</li>
                         <li>Implement NLP model to understand and categorise tasks by mindset</li>
                         <li>Train ML model on task mindset distribution, and the user's interaction with it</li>
                     </ol>
@@ -61,7 +60,8 @@ export const projectsData : ProjectDataType[] = [
                     <p>WeJam is an immersive band experience for groups of up to 6 people who can play popular songs together in sync.</p>
                     <p>This is made possible by a user interface that simplifies the song score, while still triggering the full track. A bit like Guitar Hero.</p>
                 `,
-                images: [ 'images/wejam-1.png' ],
+                images: [ 'gifs/wejam-play.gif' ],
+                layout: 'wide',
             },
             {
                 title: 'Features',
@@ -81,7 +81,7 @@ export const projectsData : ProjectDataType[] = [
                         <li>Facilitator controls to manage client tablets during a session (in collaboration with the MaxMSP developers)</li>
                     </ul>
                 `,
-                images: [ 'images/wejam-2.png' ],
+                images: [ 'images/wejam-playme.png', 'images/wejam-tutorial.png', 'images/wejam-songlist-sq.png' ],
             },
             {
                 title: 'Next Steps',
@@ -94,7 +94,8 @@ export const projectsData : ProjectDataType[] = [
                         <li>Turning the score images into functional code, for faster loading, faster score creation and a customisable score scroll animation</li>
                     </ol>
                 `,
-                images: [ 'images/wejam-3.png' ],
+                images: [ 'gifs/wejam-studio.gif' ],
+                layout: 'wide',
             },
         ],
         tools: ['React', 'Node.js', 'Python', 'Socket.io', 'SASS', 'Figma'],
@@ -105,8 +106,28 @@ export const projectsData : ProjectDataType[] = [
         description: 'Landing site for an NFT collection',
         thumbnail: 'images/wolfpack-thumb.png',
         sections: [
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
+            { 
+                title: 'Overview', 
+                text: `
+                    <p>Landing page for the brand new NFT collection launched by Wolfy’s Bar. Coded from scratch using HTML, CSS and JavaScript, inside a Popmenu HTML block.</p>
+                    <p>This is because some of the requirements weren’t possible with the Popmenu web builder. It also helped give a custom look, the feels more special than the rest of the site.
+                `, 
+                images: [ 'gifs/wolfpack-demo.gif' ],
+                layout: 'wide',
+            },
+            { 
+                title: 'Features', 
+                text: `
+                    <ul>
+                        <li>Responsive webpage created with HTML, CSS and JavaScript.</li>
+                        <li>Scrollable galleries for mobile</li>
+                        <li>Collapsible box with JS</li>
+                        <li>UI elements and illustrations in line with Wolfy’s existing brand, but with a premium finish.</li>
+                        <li>UX project in Figma.</li>
+                    </ul>
+                `, 
+                images: [ 'gifs/wolfpack-demo-mobile.gif' ],
+            },
             { title: '', text: '', images: [] },
         ],
         tools: ['HTML', 'CSS', 'JavaScript', 'Figma']
@@ -117,8 +138,25 @@ export const projectsData : ProjectDataType[] = [
         description: 'UX Project for a new beach volley booking app, mobile and web',
         thumbnail: 'images/bvr-thumb.png',
         sections: [
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
+            { 
+                title: 'Overview', 
+                text: `
+                    <p>Beach Volley Romania is a volleyball player's passion project to bring all the amateur beach volley events in Romania in one place.</p>
+                    <p>I executed the mobile UX project from the existing, bare-bones look, and later extended the mobile look for web.</p>
+                `, 
+                images: [ 'gifs/bvr-demo-mobile.gif' ] 
+            },
+            { 
+                title: 'Design Notes', 
+                text: `
+                    <ul>
+                        <li>Colour palette inspired by sand and clear skies</li>
+                        <li>Hi fidelity visual prototypes for more specific transitions</li>
+                        <li>Mostly Dark UI</li>
+                    </ul>
+                `, 
+                images: [ 'gifs/bvr-demo-drawer.gif' ] 
+            },
             { title: '', text: '', images: [] },
         ],
         tools: ['Figma', 'Pixelmator']
@@ -129,11 +167,14 @@ export const projectsData : ProjectDataType[] = [
         description: 'Landing site for a business mentorship programme',
         thumbnail: 'images/wolf-mentorship-thumb.png',
         sections: [
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
+            { 
+                title: 'Demo', 
+                text: 'Designed in Figma. Built using Squarespace, as per client requirement.', 
+                images: ['gifs/wolf-mentorship-demo-1.gif'],
+                layout: 'wide',
+            },
         ],
-        tools: ['React', 'Next.js', 'PostgreSQL', 'Tailwind', 'Prisma']
+        tools: ['Squarespace', 'Figma', 'Pixelmator'],
     },
     {
         id: 'soundr-landing',
@@ -141,23 +182,20 @@ export const projectsData : ProjectDataType[] = [
         description: 'Landing site for a metaverse NFT creator',
         thumbnail: 'images/soundr-landing-thumb.png',
         sections: [
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
+            { title: 'Demo', text: 'Designed in Figma. Assets edited in Pixelmator. Built using Wix.', images: ['gifs/soundr-landing-demo-1.gif'], layout: 'wide' },
         ],
-        tools: ['Photoshop', 'Figma']
+        tools: ['Wix', 'Pixelmator', 'Figma']
     },
     {
         id: 'counselling-site',
         title: 'Counselling Site',
-        description: '',
+        description: 'Landing page for an independend counsellor',
         thumbnail: 'images/counselling-site-thumb.png',
         sections: [
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
+            { title: 'Demo', text: 'Landing page for an independent wellbeing counsellor looking to improve his online presence. Built with Wix.', images: [ 'gifs/counselling-site-demo.gif' ], layout: 'wide', },
         ],
-        tools: ['Figma']
+        tools: ['Wix', 'Figma'],
+        link: { name: 'Go to site', href: 'https://www.wellbeingcounselingoregon.com/' }
     },
     {
         id: 'ftt',
@@ -165,9 +203,12 @@ export const projectsData : ProjectDataType[] = [
         description: 'Logo design for a mixing and mastering teacher',
         thumbnail: 'images/ftt-thumb.png',
         sections: [
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
+            { 
+                title: 'Overview', 
+                text: 'Logo design for a mixing and mastering mentorship package that promises to teach how to get your song ready for release. Created in Figma.', 
+                images: [ 'images/ftt-blackBg-1.png' ],
+                layout: 'sides',
+            }
         ],
         tools: ['Figma']
     },
@@ -177,9 +218,20 @@ export const projectsData : ProjectDataType[] = [
         description: 'Logo design for an alternative music label',
         thumbnail: 'images/dreams-and-monsters-thumb.png',
         sections: [
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
+            { 
+                title: 'Overview', 
+                text: 'Logo design for a music studio who define their sound as half dreamy, half dark and gritty.', 
+                images: [
+                    'images/d&m-logo-wide.png'
+                ],
+                layout: 'wide',
+            },
+            {
+                title: 'Poster header',
+                text: '',
+                images: [ 'images/d&m-poster-1.png' ],
+                layout: 'wide',
+            },
         ],
         tools: ['Figma', 'Pixelmator']
     },
@@ -189,9 +241,11 @@ export const projectsData : ProjectDataType[] = [
         description: 'Logo design for a sporting events organiser',
         thumbnail: 'images/vosports-thumb.png',
         sections: [
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
+            { 
+                title: 'Overview', 
+                text: 'Logo design for a sporting events organiser specialising in net sports: volleyball, badminton, foot volleyball, tennis. Hence the net and ball.', 
+                images: [ 'images/vosports-colour-2-sq.png' ] 
+            },
         ],
         tools: ['Sketch']
     },
@@ -201,9 +255,16 @@ export const projectsData : ProjectDataType[] = [
         description: 'Artworks for my music creations',
         thumbnail: 'images/music-artworks-thumb.png',
         sections: [
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
+            { 
+                title: 'Gallery', 
+                text: 'I use Photoshop, Pixelmator and sometimes Figma or Sketch to create artworks', 
+                images: [
+                    'images/musicArt-autopilot-1.png',
+                    'images/musicArt-collection-silver.png',
+                    'images/musicArt-trust-2.png',
+                ],
+                layout: 'gallery',
+            },
         ],
         tools: ['Photoshop', 'Pixelmator']
     },
@@ -213,8 +274,11 @@ export const projectsData : ProjectDataType[] = [
         description: 'Design assets for a rebranded metaverse NFT creator',
         thumbnail: 'images/soundr-rebrand-thumb.png',
         sections: [
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
+            { 
+                title: 'Overview', 
+                text: 'Soundr were shifting their focus to metaverse NFTs, which required rethinking their visual identity to express the futuristic and natively digital nature of their new product.', 
+                images: ['images/soundr-rebrand-posters-sq.png'], layout: 'sides' },
+            { title: 'Banner', text: '', images: ['images/soundr-rebrand-banner.png'] },
             { title: '', text: '', images: [] },
         ],
         tools: ['Pixelmator']
@@ -225,8 +289,12 @@ export const projectsData : ProjectDataType[] = [
         description: 'Poster designs for a cosy café bar in south-east London',
         thumbnail: 'images/wolfys-posters-thumb.png',
         sections: [
-            { title: '', text: '', images: [] },
-            { title: '', text: '', images: [] },
+            { 
+                title: 'Overview', 
+                text: 'Wolfy’s Bar started hosting events to engage their community and create a sense of excitement around the brand. The posters sprinkle that excitement over their cosy, hearth-of-the-neighbourhood aesthetic and spirit.', 
+                images: [ 'images/wolfys-posters-qr.jpg', 'images/wolfys-posters-halloween.jpg', 'images/wolfys-posters-dragshow.jpg', 'images/wolfys-posters-rugby.jpg', 'images/wolfys-posters-nft.png' ],
+                layout: 'gallery'
+            },
             { title: '', text: '', images: [] },
         ],
         tools: ['Figma', 'Pixelmator']
@@ -350,12 +418,20 @@ export const skillsData = [
         icon: './icons/sketch-w.png',
     },
     {
+        name: 'Squarespace',
+        icon: './icons/squarespace-w.png',
+    },
+    {
         name: 'Tailwind',
         icon: './icons/tailwind-w.png',
     },
     {
         name: 'Typescript',
-        icon: './icons/typescript-w.png'
+        icon: './icons/typescript-w.png',
+    },
+    {
+        name: 'Wix',
+        icon: './icons/wix-w.png',
     }
 ] as const;
 
