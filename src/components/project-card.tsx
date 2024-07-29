@@ -8,10 +8,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-export default function ProjectCard({project, imageFit = 'cover', onBlur}: {
+export default function ProjectCard({project, imageFit = 'cover'}: {
     project: Project,
     imageFit?: ('cover' | 'contain'),
-    onBlur: () => void,
 }) {
     const skillsDisplay = project?.tools?.slice(0, 4).map(tool => {
         const skillIcon = skillsData.find(skill => skill.name === tool)?.icon;
@@ -33,8 +32,7 @@ export default function ProjectCard({project, imageFit = 'cover', onBlur}: {
         animate={window.innerWidth >= 768 ? {opacity: 1, y: 0, x: '-50%'} : {opacity: 1, height: 'auto', y: 0, x: 0}}
         exit={window.innerWidth >= 768 ? {} : {opacity: 0, height: 0, y: 0, x: 0, padding: 0, marginTop: 0}}
         // transition={{ duration: 0.3 }}
-        key={`${project.title}-card`}
-        onBlur={() => onBlur()}>
+        key={`${project.title}-card`}>
             <div className='w-full flex gap-2 p-4 items-start justify-center h-48 border-b border-white md:border-none'>
                 <div className='flex flex-col min-w-36 w-1/2 h-full justify-between'>
                     <div className='flex flex-col gap-2 overflow-y-clip max-h-[80%]'>

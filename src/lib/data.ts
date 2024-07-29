@@ -214,7 +214,7 @@ export const projectsData : ProjectDataType[] = [
             }
         ],
         tools: ['Figma'],
-        link: { href: 'https://finishthattrack.com/', name: 'Mentorship site' }
+        link: { href: 'https://finishthattrack.com/', name: 'Mentorship site' },
     },
     {
         id: 'dreams-and-monsters',
@@ -237,7 +237,7 @@ export const projectsData : ProjectDataType[] = [
                 layout: 'wide',
             },
         ],
-        tools: ['Figma', 'Pixelmator']
+        tools: ['Figma', 'Pixelmator'],
     },
     {
         id: 'vosports',
@@ -251,7 +251,7 @@ export const projectsData : ProjectDataType[] = [
                 images: [ 'images/vosports-colour-2-sq.png' ] 
             },
         ],
-        tools: ['Sketch']
+        tools: ['Sketch'],
     },
     {
         id: 'music-artworks',
@@ -270,7 +270,7 @@ export const projectsData : ProjectDataType[] = [
                 layout: 'gallery',
             },
         ],
-        tools: ['Photoshop', 'Pixelmator']
+        tools: ['Photoshop', 'Pixelmator'],
     },
     {
         id: 'soundr-rebrand',
@@ -285,7 +285,7 @@ export const projectsData : ProjectDataType[] = [
             { title: 'Banner', text: '', images: ['images/soundr-rebrand-banner.png'] },
             { title: '', text: '', images: [] },
         ],
-        tools: ['Pixelmator']
+        tools: ['Pixelmator'],
     },
     {
         id: 'wolfys-posters',
@@ -301,7 +301,7 @@ export const projectsData : ProjectDataType[] = [
             },
             { title: '', text: '', images: [] },
         ],
-        tools: ['Figma', 'Pixelmator']
+        tools: ['Figma', 'Pixelmator'],
     },
 ] as const;
 

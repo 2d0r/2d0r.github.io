@@ -4,7 +4,7 @@ import { projectsData } from '@/lib/data';
 import { HeroId, Project } from '@/lib/types';
 import clsx from 'clsx';
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ProjectCard from './project-card';
 import { AnimatePresence } from 'framer-motion';
 
@@ -15,34 +15,49 @@ interface ProjectLinkProps {
 
 export default function ProjectLink({ projectId, className } : ProjectLinkProps) {
 
-    const [ showTooltip, setShowTooltip ] = useState<boolean>(false);
+    const [ showCard, setShowCard ] = useState<boolean>(false);
+    const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
     const handleHover = (hover: boolean) => {
-        if (window.innerWidth < 768) {
-            setShowTooltip(false);
+        if (isMobile) {
+            setShowCard(false);
         } else {
-            setShowTooltip(hover);
+            setShowCard(hover);
         }
     }
     const handleClick = (e: any) => {
-        if (window.innerWidth < 768) {
+        if (isMobile) {
             e.preventDefault(); // Prevent the default action on the first click
-            setShowTooltip( !showTooltip );
+            setShowCard( !showCard );
         }
     }
-    const handleBlur = () => {
-        setShowTooltip(false);
-    }
     const project = projectsData.find(proj => proj.id === projectId);
+
+    // Hook to detect when user clicks outside of ProjectCard
+    const ref = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (ref.current && !ref.current.contains(event.target as Node)) {
+                setShowCard(false);
+            }
+        }
+    
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [ref]);
 
     return (<div className='md:relative w-full md:w-auto flex flex-col justify-center align-center'>
         <Link href={`./${projectId}`} 
             className={clsx(className, 'highlight text-center')} 
             onMouseOver={() => handleHover(true)} 
-            onMouseOut={() => handleHover(false)}
+            onMouseOut={isMobile ? () => {} : () => handleHover(false)}
             onClick={handleClick}
         >{project?.title}</Link>
-        <AnimatePresence>
-            {showTooltip && <ProjectCard project={project || {} as Project} onBlur={handleBlur} />}
-        </AnimatePresence>
+        <div ref={ref}>
+            <AnimatePresence>
+                {showCard && <ProjectCard project={project || {} as Project} />}
+            </AnimatePresence>
+        </div>
     </div>);
 }
