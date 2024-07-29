@@ -53,6 +53,7 @@ export const projectsData : ProjectDataType[] = [
         title: 'WeJam',
         description: 'A music game for immersive band experiences',
         thumbnail: 'images/wejam-thumb.png',
+        link: { href: 'https://wejam.studio/', name: 'WeJam Website' },
         sections: [
             {
                 title: 'Overview',
@@ -130,7 +131,8 @@ export const projectsData : ProjectDataType[] = [
             },
             { title: '', text: '', images: [] },
         ],
-        tools: ['HTML', 'CSS', 'JavaScript', 'Figma']
+        tools: ['HTML', 'CSS', 'JavaScript', 'Figma'],
+        link: { href: 'https://www.wolfysbar.com/nft-wolfys-bar', name: 'Link to live page'}
     },
     {
         id: 'bvr',
@@ -175,6 +177,7 @@ export const projectsData : ProjectDataType[] = [
             },
         ],
         tools: ['Squarespace', 'Figma', 'Pixelmator'],
+        link: { href: 'https://www.wolf-mentor.com/', name: 'Link to live page' }
     },
     {
         id: 'soundr-landing',
@@ -210,7 +213,8 @@ export const projectsData : ProjectDataType[] = [
                 layout: 'sides',
             }
         ],
-        tools: ['Figma']
+        tools: ['Figma'],
+        link: { href: 'https://finishthattrack.com/', name: 'Mentorship site' }
     },
     {
         id: 'dreams-and-monsters',

@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/context/active-section-context';
-import ProjectLink from './project-heading';
+import ProjectLink from './project-link';
 
 export default function Projects () {
 

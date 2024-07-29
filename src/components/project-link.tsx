@@ -16,7 +16,6 @@ interface ProjectLinkProps {
 export default function ProjectLink({ projectId, className } : ProjectLinkProps) {
 
     const [ showTooltip, setShowTooltip ] = useState<boolean>(false);
-    const [ clicks, setClicks ] = useState<number>(0);
     const handleHover = (hover: boolean) => {
         if (window.innerWidth < 768) {
             setShowTooltip(false);
@@ -41,10 +40,9 @@ export default function ProjectLink({ projectId, className } : ProjectLinkProps)
             onMouseOver={() => handleHover(true)} 
             onMouseOut={() => handleHover(false)}
             onClick={handleClick}
-            onBlur={handleBlur}
         >{project?.title}</Link>
         <AnimatePresence>
-            {showTooltip && <ProjectCard project={project || {} as Project} />}
+            {showTooltip && <ProjectCard project={project || {} as Project} onBlur={handleBlur} />}
         </AnimatePresence>
     </div>);
 }
