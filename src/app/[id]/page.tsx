@@ -31,14 +31,16 @@ export default function Page({params} : {params: any}) {
             />
         })}
         {/* Project Link */}
-        <div className='w-full text-xl flex justify-center py-16'>
-            <a href={project.link?.href} className='flex gap-4 items-center justify-center highlight bg-white/10 rounded-full py-4 px-8'
-            target='_blank' rel='noopener noreferrer'>
-                <LinkIcon height={24} />
-                {project.link?.name.replace(' ', ' ')}
-                <LinkIcon height={24} />
-            </a>
-        </div>
+        { project.link && 
+            <div className='w-full text-xl flex justify-center py-16'>
+                <a href={project.link?.href} className='flex gap-4 items-center justify-center highlight bg-white/10 rounded-full py-4 px-8'
+                target='_blank' rel='noopener noreferrer'>
+                    <LinkIcon height={24} />
+                    {project.link?.name.replace(' ', ' ')}
+                    <LinkIcon height={24} />
+                </a>
+            </div>
+        }
         <ProjectNav project1={adjacentProjects[0]} project2={adjacentProjects[1]} />
         <CloudAnimation clouds={2} />
         <ScrollToTop />

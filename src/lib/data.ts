@@ -95,7 +95,7 @@ export const projectsData : ProjectDataType[] = [
                         <li>Turning the score images into functional code, for faster loading, faster score creation and a customisable score scroll animation</li>
                     </ol>
                 `,
-                images: [ 'gifs/wejam-studio.gif' ],
+                images: [ 'gifs/wejam-studio-2.gif' ],
                 layout: 'wide',
             },
         ],
@@ -113,7 +113,7 @@ export const projectsData : ProjectDataType[] = [
                     <p>Landing page for the brand new NFT collection launched by Wolfy’s Bar. Coded from scratch using HTML, CSS and JavaScript, inside a Popmenu HTML block.</p>
                     <p>This is because some of the requirements weren’t possible with the Popmenu web builder. It also helped give a custom look, the feels more special than the rest of the site.
                 `, 
-                images: [ 'gifs/wolfpack-demo.gif' ],
+                images: [ 'gifs/wolfpack-demo-2.gif' ],
                 layout: 'wide',
             },
             { 
@@ -172,7 +172,7 @@ export const projectsData : ProjectDataType[] = [
             { 
                 title: 'Demo', 
                 text: 'Designed in Figma. Built using Squarespace, as per client requirement.', 
-                images: ['gifs/wolf-mentorship-demo-1.gif'],
+                images: ['gifs/wolf-mentorship-demo-1.1.gif'],
                 layout: 'wide',
             },
         ],

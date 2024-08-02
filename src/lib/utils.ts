@@ -48,3 +48,18 @@ export const getErrorMessage = (error: unknown): string => {
     return message;
     
 }
+
+export function loadImage (setImageDimensions: any, imageUrl: string) {
+    const img = new Image();
+    img.src = imageUrl;
+  
+    img.onload = () => {
+      setImageDimensions({
+        height: img.height,
+        width: img.width
+      });
+    };
+    img.onerror = (err) => {
+      console.error(err);
+    };
+  };

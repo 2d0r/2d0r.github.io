@@ -10,7 +10,7 @@ export default function Footer () {
         gradientFooter.push(<div key={i}>
             <div className='w-full bg-white' style={{height: `${1}px`}}></div>
             <div className='w-full h-[6px] flex justify-center items-center' style={{height: `${i}px`}}>
-                {i === 45 && <span className='text-sm text-white text-center'>
+                {i === 60 && <span className='text-sm text-white text-center'>
                     This site was built using Next.js, Tailwind and Typescript.
                 </span>}
             </div>
