@@ -95,7 +95,7 @@ export const projectsData : ProjectDataType[] = [
                         <li>Turning the score images into functional code, for faster loading, faster score creation and a customisable score scroll animation</li>
                     </ol>
                 `,
-                images: [ 'gifs/wejam-studio-2.gif' ],
+                images: [ 'gifs/wejam-studio-1.1.gif' ],
                 layout: 'wide',
             },
         ],
@@ -261,7 +261,7 @@ export const projectsData : ProjectDataType[] = [
         sections: [
             { 
                 title: 'Gallery', 
-                text: 'I use Photoshop, Pixelmator and sometimes Figma or Sketch to create artworks', 
+                text: 'I use Photoshop, Pixelmator and Rhino 3D to create artworks for music releases.', 
                 images: [
                     'images/musicArt-autopilot-1.png',
                     'images/musicArt-collection-silver.png',
@@ -282,7 +282,7 @@ export const projectsData : ProjectDataType[] = [
                 title: 'Overview', 
                 text: 'Soundr were shifting their focus to metaverse NFTs, which required rethinking their visual identity to express the futuristic and natively digital nature of their new product.', 
                 images: ['images/soundr-rebrand-posters-sq.png'], layout: 'sides' },
-            { title: 'Banner', text: '', images: ['images/soundr-rebrand-banner.png'] },
+            { title: 'Banner', text: '', images: ['images/soundr-rebrand-banner.png'], layout: 'wide' },
             { title: '', text: '', images: [] },
         ],
         tools: ['Pixelmator'],
@@ -301,15 +301,37 @@ export const projectsData : ProjectDataType[] = [
             },
             { title: '', text: '', images: [] },
         ],
-        tools: ['Figma', 'Pixelmator'],
+        tools: ['Figma', 'Pixelmator', 'Photoshop'],
+    },
+    {
+        id: 'f1-showcase',
+        title: "F1 Showcase",
+        description: 'Design for an event that promoted will.i.am\'s collaboration with F1',
+        thumbnail: 'images/f1-thumb-1.png',
+        sections: [
+            { 
+                title: 'Overview', 
+                text: 'I created a showcase project of F1 Silverstone to promote their collaboration with will.i.am. This project would be shared on FYI, will.i.am\'s freshly launched app for creative collaboration.', 
+                images: [ 'gifs/f1-demo.gif' ],
+                layout: 'gallery',
+            },
+            {
+                title: 'Assets',
+                text: '',
+                images: [ 'images/f1-1.png', 'images/f1-2.png' ],
+                layout: 'wide',
+            },
+        ],
+        tools: ['Figma', 'Pixelmator', 'Photoshop'],
     },
 ] as const;
 
 export const aboutData = {
     text: `
         <p>After graduating music, the affected music industry during the pandemic turned me to my other passion from college, programming.</p><br/>
-        <p>I started in a sound production role at WeJam, then received training as a front-end programmer. I finished a UX course at Love Circular and completed several programming certifications to fill in the gaps.</p><br/>
-        <p>On the side, I started working as a freelancer, designing and building sites and assets.</p>
+        <p>I started in a sound production role at WeJam, then received training as a front-end programmer. I completed several programming certifications to fill in the gaps, and finished a Product Design course at Love Circular.</p><br/>
+        <p>On the side, I started working as a freelancer, designing and building sites and assets for various clients.</p><br/>
+        <p>I like to understand every bit of code I work with, I refuse to separate good code from a good user experience, I am always excited to learn more, and I am driven to get to the next level in my career.</p>
     `,
 }
 
@@ -457,3 +479,8 @@ export const links = [
         hash: '/#contact',
     },
 ] as const;
+
+export const cvData = {
+    name: 'Tudor Popescu\'s CV',
+    href: 'files/tudor-popescu-cv-1.pdf',
+}

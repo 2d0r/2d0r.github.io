@@ -25,7 +25,7 @@ export default function AboutSection() {
     initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
         <Divider heading='About Me' />
         <div dangerouslySetInnerHTML={{__html: aboutData.text}} 
-            className='text-center w-full md:w-3/5 md:px-8'
+            className='text-center w-full md:w-4/5 md:px-8'
         ></div>
         <Timeline />
     </motion.section>)

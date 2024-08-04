@@ -13,7 +13,7 @@ export default function ProjectSection({section, alignImage = 'right', layout = 
     layout?: ProjectSectionType['layout'],
 }) {
     return (
-        <motion.section id={section.title.toLowerCase()} className='z-10 scroll-mt-28 flex flex-col items-center gap-8 w-full'
+        <motion.section id={section.title.toLowerCase()} className='scroll-mt-28 flex flex-col items-center gap-8 w-full'
         initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
             <Divider heading={section.title} />
             {(layout === 'sides' || layout === 'wide') ? 

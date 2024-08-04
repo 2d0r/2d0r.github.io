@@ -11,7 +11,7 @@ export default function ProjectNav({project1, project2} : {
   project1?: Project | null, project2?: Project | null,
 }) {
   return (
-    <div className='z-30 flex gap-4 w-full justify-between items-center mt-12 text-xl'>
+    <div className='flex gap-4 w-full justify-between items-center mt-12 text-xl'>
       { project1 ?
         <Link href={`/${project1.id}`} className='flex flex-col md:flex-row gap-2 w-full highlight'>
           <span className='flex gap-2 items-center'>

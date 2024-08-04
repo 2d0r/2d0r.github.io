@@ -7,7 +7,6 @@ import ActiveSectionContextProvider from '@/context/active-section-context';
 import clsx from 'clsx';
 import { Toaster } from 'react-hot-toast';
 import localFont from 'next/font/local';
-import CloudAnimation from '@/components/cloud-animation';
 
 const museoModerno = localFont({ src: '../../public/fonts/museoModerno.ttf'});
 

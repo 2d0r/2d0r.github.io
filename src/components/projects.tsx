@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/context/active-section-context';
 import ProjectLink from './project-link';
+import { cvData } from '@/lib/data';
 
 export default function Projects () {
 
@@ -30,7 +31,7 @@ export default function Projects () {
             {/* Overtitle */}
             <div className='flex justify-center md:justify-between items-center w-full z-40 my-6 md:my-0'>
                 <span className='md:w-1/3 cursor-default'>Hi! My name is</span>
-                <Link href='/files/tudor-popescu-cv.pdf' download className='w-0 md:w-1/3 hidden md:inline highlight text-right'>Download CV</Link>
+                <Link href={cvData.href} download className='w-0 md:w-1/3 hidden md:inline highlight text-right'>Download CV</Link>
             </div>
             {/* Title */}
             <div className='text-7xl sm:text-8xl md:text-9xl pt-0 mb-4 font-semibold text-center cursor-default leading-[80px] md:leading-none'>Tudor Popescu</div>
@@ -76,9 +77,11 @@ export default function Projects () {
             </div>
             <div className='flex flex-col gap-3 w-full'>
                 <Divider heading='Graphic Design Stage' />
-                <ProjectLink projectId='music-artworks' className='text-3xl font-medium' />
-                <ProjectLink projectId='soundr-rebrand' className='text-3xl font-medium' />
+                <ProjectLink projectId='f1-showcase' className='text-3xl font-medium' />
                 <ProjectLink projectId='wolfys-posters' className='text-3xl font-medium' />
+                <ProjectLink projectId='soundr-rebrand' className='text-3xl font-medium' />
+                <ProjectLink projectId='music-artworks' className='text-3xl font-medium' />
+                
             </div>
         </motion.div>
     </section>);
