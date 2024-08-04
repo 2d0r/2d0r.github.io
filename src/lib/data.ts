@@ -6,6 +6,7 @@ export const projectsData : ProjectDataType[] = [
         title: 'Kronos',
         description: 'A smart organiser that understands mindsets',
         thumbnail: 'images/kronos-thumb.png',
+        tools: ['React', 'Next.js', 'Tailwind', 'Typescript', 'Prisma', 'PostgreSQL'],
         sections: [
             {
                 title: 'Overview',
@@ -45,7 +46,6 @@ export const projectsData : ProjectDataType[] = [
                 images: [ 'images/kronos-3.png' ],
             },
         ],
-        tools: ['React', 'Next.js', 'Tailwind', 'Typescript', 'Prisma', 'PostgreSQL'],
         link: { name: 'Kronos Git Repo', href: 'https://github.com/2d0r/kronos-web.git' },
     },
     {
@@ -54,6 +54,7 @@ export const projectsData : ProjectDataType[] = [
         description: 'A music game for immersive band experiences',
         thumbnail: 'images/wejam-thumb.png',
         link: { href: 'https://wejam.studio/', name: 'WeJam Website' },
+        tools: ['React', 'Node.js', 'Python', 'Socket.io', 'SASS', 'Figma'],
         sections: [
             {
                 title: 'Overview',
@@ -99,13 +100,13 @@ export const projectsData : ProjectDataType[] = [
                 layout: 'wide',
             },
         ],
-        tools: ['React', 'Node.js', 'Python', 'Socket.io', 'SASS', 'Figma'],
     },
     {
         id: 'wolfpack',
         title: 'Wolfpack',
         description: 'Landing site for an NFT collection',
         thumbnail: 'images/wolfpack-thumb.png',
+        tools: ['HTML', 'CSS', 'JavaScript', 'Figma'],
         sections: [
             { 
                 title: 'Overview', 
@@ -131,14 +132,14 @@ export const projectsData : ProjectDataType[] = [
             },
             { title: '', text: '', images: [] },
         ],
-        tools: ['HTML', 'CSS', 'JavaScript', 'Figma'],
         link: { href: 'https://www.wolfysbar.com/nft-wolfys-bar', name: 'Link to live page'}
     },
     {
         id: 'bvr',
         title: 'BVR',
-        description: 'UX Project for a new beach volley booking app, mobile and web',
+        description: 'UX Project for a new sports booking app, for mobile and web',
         thumbnail: 'images/bvr-thumb.png',
+        tools: ['Figma', 'Pixelmator'],
         sections: [
             { 
                 title: 'Overview', 
@@ -148,26 +149,27 @@ export const projectsData : ProjectDataType[] = [
                 `, 
                 images: [ 'gifs/bvr-demo-mobile.gif' ] 
             },
-            { 
+            {
                 title: 'Design Notes', 
                 text: `
                     <ul>
                         <li>Colour palette inspired by sand and clear skies</li>
-                        <li>Hi fidelity visual prototypes for more specific transitions</li>
-                        <li>Mostly Dark UI</li>
+                        <li>Versatile design system with responsiveness in mind</li>
+                        <li>High fidelity visual prototypes for more specific transitions</li>
+                        <li>Mostly Dark UI, as per requirement</li>
+                        <li>
                     </ul>
                 `, 
                 images: [ 'gifs/bvr-demo-drawer.gif' ] 
             },
-            { title: '', text: '', images: [] },
         ],
-        tools: ['Figma', 'Pixelmator']
     },
     {
         id: 'wolf-mentorship',
         title: 'Wolf Mentorship',
         description: 'Landing site for a business mentorship programme',
         thumbnail: 'images/wolf-mentorship-thumb.png',
+        tools: ['Squarespace', 'Figma', 'Pixelmator'],
         sections: [
             { 
                 title: 'Demo', 
@@ -176,7 +178,6 @@ export const projectsData : ProjectDataType[] = [
                 layout: 'wide',
             },
         ],
-        tools: ['Squarespace', 'Figma', 'Pixelmator'],
         link: { href: 'https://www.wolf-mentor.com/', name: 'Link to live page' }
     },
     {
@@ -184,27 +185,28 @@ export const projectsData : ProjectDataType[] = [
         title: 'Soundr Landing',
         description: 'Landing site for a metaverse NFT creator',
         thumbnail: 'images/soundr-landing-thumb.png',
+        tools: ['Wix', 'Pixelmator', 'Figma'],
         sections: [
             { title: 'Demo', text: 'Designed in Figma. Assets edited in Pixelmator. Built using Wix.', images: ['gifs/soundr-landing-demo-1.gif'], layout: 'wide' },
         ],
-        tools: ['Wix', 'Pixelmator', 'Figma']
     },
     {
         id: 'counselling-site',
         title: 'Counselling Site',
         description: 'Landing page for an independend counsellor',
         thumbnail: 'images/counselling-site-thumb.png',
+        tools: ['Wix', 'Figma'],
         sections: [
             { title: 'Demo', text: 'Landing page for an independent wellbeing counsellor looking to improve his online presence. Built with Wix.', images: [ 'gifs/counselling-site-demo.gif' ], layout: 'wide', },
         ],
-        tools: ['Wix', 'Figma'],
-        link: { name: 'Go to site', href: 'https://www.wellbeingcounselingoregon.com/' }
+        link: { name: 'Go to site', href: 'https://www.wellbeingcounselingoregon.com/' },
     },
     {
         id: 'ftt',
         title: 'Finish That Track',
         description: 'Logo design for a mixing and mastering teacher',
         thumbnail: 'images/ftt-thumb.png',
+        tools: ['Figma'],
         sections: [
             { 
                 title: 'Overview', 
@@ -213,7 +215,6 @@ export const projectsData : ProjectDataType[] = [
                 layout: 'sides',
             }
         ],
-        tools: ['Figma'],
         link: { href: 'https://finishthattrack.com/', name: 'Mentorship site' },
     },
     {
@@ -221,6 +222,7 @@ export const projectsData : ProjectDataType[] = [
         title: 'Dreams & Monsters',
         description: 'Logo design for an alternative music label',
         thumbnail: 'images/dreams-and-monsters-thumb.png',
+        tools: ['Figma', 'Pixelmator'],
         sections: [
             { 
                 title: 'Overview', 
@@ -237,13 +239,13 @@ export const projectsData : ProjectDataType[] = [
                 layout: 'wide',
             },
         ],
-        tools: ['Figma', 'Pixelmator'],
     },
     {
         id: 'vosports',
         title: 'VoSports',
         description: 'Logo design for a sporting events organiser',
         thumbnail: 'images/vosports-thumb.png',
+        tools: ['Sketch'],
         sections: [
             { 
                 title: 'Overview', 
@@ -251,13 +253,13 @@ export const projectsData : ProjectDataType[] = [
                 images: [ 'images/vosports-colour-2-sq.png' ] 
             },
         ],
-        tools: ['Sketch'],
     },
     {
         id: 'music-artworks',
         title: 'Music Artworks',
         description: 'Artworks for my music creations',
         thumbnail: 'images/music-artworks-thumb.png',
+        tools: ['Photoshop', 'Pixelmator'],
         sections: [
             { 
                 title: 'Gallery', 
@@ -270,13 +272,13 @@ export const projectsData : ProjectDataType[] = [
                 layout: 'gallery',
             },
         ],
-        tools: ['Photoshop', 'Pixelmator'],
     },
     {
         id: 'soundr-rebrand',
         title: 'Soundr Rebrand',
         description: 'Design assets for a rebranded metaverse NFT creator',
         thumbnail: 'images/soundr-rebrand-thumb.png',
+        tools: ['Pixelmator'],
         sections: [
             { 
                 title: 'Overview', 
@@ -285,29 +287,28 @@ export const projectsData : ProjectDataType[] = [
             { title: 'Banner', text: '', images: ['images/soundr-rebrand-banner.png'], layout: 'wide' },
             { title: '', text: '', images: [] },
         ],
-        tools: ['Pixelmator'],
     },
     {
         id: 'wolfys-posters',
         title: "Wolfy's Posters",
         description: 'Poster designs for a cosy café bar in south-east London',
         thumbnail: 'images/wolfys-posters-thumb.png',
+        tools: ['Figma', 'Pixelmator', 'Photoshop'],
         sections: [
             { 
                 title: 'Overview', 
                 text: 'Wolfy’s Bar started hosting events to engage their community and create a sense of excitement around the brand. The posters sprinkle that excitement over their cosy, hearth-of-the-neighbourhood aesthetic and spirit.', 
                 images: [ 'images/wolfys-posters-qr.jpg', 'images/wolfys-posters-halloween.jpg', 'images/wolfys-posters-dragshow.jpg', 'images/wolfys-posters-rugby.jpg', 'images/wolfys-posters-nft.png' ],
-                layout: 'gallery'
+                layout: 'gallery',
             },
-            { title: '', text: '', images: [] },
         ],
-        tools: ['Figma', 'Pixelmator', 'Photoshop'],
     },
     {
         id: 'f1-showcase',
         title: "F1 Showcase",
         description: 'Design for an event that promoted will.i.am\'s collaboration with F1',
         thumbnail: 'images/f1-thumb-1.png',
+        tools: ['Figma', 'Pixelmator', 'Photoshop'],
         sections: [
             { 
                 title: 'Overview', 
@@ -322,16 +323,15 @@ export const projectsData : ProjectDataType[] = [
                 layout: 'wide',
             },
         ],
-        tools: ['Figma', 'Pixelmator', 'Photoshop'],
     },
 ] as const;
 
 export const aboutData = {
     text: `
-        <p>After graduating music, the affected music industry during the pandemic turned me to my other passion from college, programming.</p><br/>
-        <p>I started in a sound production role at WeJam, then received training as a front-end programmer. I completed several programming certifications to fill in the gaps, and finished a Product Design course at Love Circular.</p><br/>
-        <p>On the side, I started working as a freelancer, designing and building sites and assets for various clients.</p><br/>
-        <p>I like to understand every bit of code I work with, I refuse to separate good code from a good user experience, I am always excited to learn more, and I am driven to get to the next level in my career.</p>
+        <p>After graduating music, the affected music industry during the pandemic turned me to my other passion from college, programming.<br/>
+        I started in a sound production role at WeJam, then received training as a front-end programmer. I completed several programming certifications to fill in the gaps, and finished a Product Design course at Love Circular.<br/>
+        On the side, I started working as a freelancer, designing and building sites and assets for various clients.<br/>
+        I like to understand every bit of code I work with, I refuse to separate good code from a good user experience, I am always excited to learn more, and I am driven to get to the next level in my career.</p>
     `,
 }
 

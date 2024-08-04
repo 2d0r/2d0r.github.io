@@ -2,17 +2,15 @@ import { AcademicCapIcon, BriefcaseIcon } from '@heroicons/react/16/solid';
 import { timelineData } from '../lib/data';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
-import useDeviceDetection from '@/lib/use-device-detection';
-import { useWindowWidth } from '@/lib/use-window-width';
+import { useWindowDimensions } from '@/lib/use-window-dimensions';
 
 export default function TimelineMoment ({ index } : { index: number }) {
     const timelineMoment = timelineData.find(moment => moment.index === index);
     const isOdd = index % 2 === 0 ? false : true;
 
-    const windowWidth = useWindowWidth();
+    const { windowWidth } = useWindowDimensions();
 
     const isMobile = windowWidth && windowWidth < 800;
-    const device = useDeviceDetection();
     const timelineMomentVariant = 
     !isMobile ?
     {
