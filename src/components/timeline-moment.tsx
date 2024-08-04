@@ -11,8 +11,6 @@ export default function TimelineMoment ({ index } : { index: number }) {
 
     const windowWidth = useWindowWidth();
 
-    console.log(windowWidth);
-
     const isMobile = windowWidth && windowWidth < 800;
     const device = useDeviceDetection();
     const timelineMomentVariant = 

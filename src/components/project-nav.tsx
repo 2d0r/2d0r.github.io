@@ -3,7 +3,7 @@
 import { Project } from '@/lib/types';
 import { imageLoader } from '@/lib/utils';
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import '@/app/globals.css';
 

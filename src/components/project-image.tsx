@@ -3,7 +3,7 @@
 import { ProjectSectionType } from '@/lib/types';
 import { imageLoader, loadImage } from '@/lib/utils';
 import clsx from 'clsx';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import React, { useEffect, useState } from 'react';
 import '@/app/globals.css';
 import { XMarkIcon } from '@heroicons/react/16/solid';
@@ -67,11 +67,11 @@ export default function ProjectImage({ image, layout } : ProjectImageProps) {
             <AnimatePresence>
             {showModal && 
                 <div className='fixed inset-0 w-screen h-screen top-0 left-0 z-50 flex items-center justify-center bg-blue-300/70'>
-                    <motion.div className='relative w-[90vw] h-auto'
+                    <motion.div className='relative w-[90vw] h-auto rounded-3xl'
                     style={{ aspectRatio: `${imageDimensions.width}/${imageDimensions.height}`}}
                     initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.5 }}>
                         <Image src={`/${image}`} alt={`${image.split('/')}-image`} loader={imageLoader}
-                        className='rounded-3xl object-contain overflow-clip border border-white w-auto h-auto' layout='fill'
+                        className='rounded-3xl object-contain overflow-clip w-auto h-auto' layout='fill'
                         style={{ aspectRatio: `${imageDimensions.width}/${imageDimensions.height}`}}/>
                         {/* <XMarkIcon height={48} fill='white'/> */}
                     </motion.div>

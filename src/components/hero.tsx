@@ -3,7 +3,7 @@
 import { projectsData, skillsData } from '@/lib/data';
 import { ProjectId } from '@/lib/types';
 import { imageLoader } from '@/lib/utils';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import React from 'react';
 
 interface HeroProps {
