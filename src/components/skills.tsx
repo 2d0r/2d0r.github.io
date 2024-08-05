@@ -19,17 +19,16 @@ export default function SkillsSection ({skills, folderLevel, title, linkToHeader
 }) {
     const skillsForDisplay = skills ? skills : skillsData.map(skill => skill.name);
     const skillsDisplay = skillsForDisplay.map(skill => {
-        return (<div className='tooltip-container relative' key={skill}>
+        return (<motion.div className='tooltip-container relative hover:scale-110 transition' key={skill}>
             <Image src={`${(folderLevel ? '../'.repeat(folderLevel - 1) : '')}${skillsData.find(el => el.name === skill)?.icon || ''}`} alt={skill} 
-                height={48} width={48} loader={imageLoader}
-                className='hover:scale-110 transition'
+                className='object-contain' height={48} width={48} loader={imageLoader}
             />
-            <motion.div className='tooltip absolute top-full mt-2 left-1/2 
+            <motion.div className='tooltip absolute top-full left-1/2 
             bg-white/30 backdrop-blur-xl rounded-lg text-white px-2 py-1'
-                initial={{ opacity: 0, y: 20, x: '-50%' }} animate={{ opacity: 1, y: 0, x: '-50%' }}>
+            initial={{ opacity: 0, y: 20, x: '-50%' }} animate={{ opacity: 1, y: 0, x: '-50%' }}>
                 {skill}
             </motion.div>
-        </div>);
+        </motion.div>);
     });
     const { ref, inView } = useInView({
         threshold: 0.5,
