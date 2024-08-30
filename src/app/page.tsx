@@ -10,7 +10,7 @@ export default function Page() {
     return (<>
         <Projects />        
         <SkillsSection skills={[
-            'React', 'Next.js', 'Tailwind', 'Typescript', 'Python', 'Node.js', 'GitHub', 'Figma', 'Photoshop', 'Notion',
+            'React', 'Next.js', 'Tailwind', 'Typescript', 'Node.js', 'Redux', 'Python', 'GitHub', 'GitLab', 'Figma', 'Photoshop', 'Notion',
         ]} />
         <AboutSection />
         <ContactForm />

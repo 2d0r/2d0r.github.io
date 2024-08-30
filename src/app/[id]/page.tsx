@@ -23,6 +23,7 @@ export default function Page({params} : {params: any}) {
             {project.title}
         </div>
         <SkillsSection skills={project.tools} folderLevel={2} title={'Tools'} linkToHeader={false} />
+
         { project.sections.map((section, idx) => {
             if (section.title === '') return <></>;
             return <ProjectSection 
@@ -30,6 +31,7 @@ export default function Page({params} : {params: any}) {
                 layout={section.layout} 
             />
         })}
+
         {/* Project Links */}
         { project.links?.length && 
             <div className='w-full text-xl flex flex-col gap-8 justify-center items-center py-16'>

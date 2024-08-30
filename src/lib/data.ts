@@ -12,36 +12,55 @@ export const projectsData : ProjectDataType[] = [
                 title: 'Overview',
                 text: `
                     <p>Kronos was born from a creative's need to get organised. 
-                    It is a smart organiser that goes one step further from Motion and Reclaim.ai by understanding a user's tasks more deeply and assisting with reaching personal goals.</p>
-                    <p>The aim is to integrate scientific findings about personal time management and the psychology of motivation into a bespoke language of rules and patterns which describe the user's use of time and allow AI models to guide and improve it.</p>
+                    It is a smart organiser that goes one step further by understanding a user's tasks more deeply and assisting with reaching personal goals.</p>
+                    <p>The final aim is to integrate research findings about personal time management and the psychology of motivation into an AI model that can offer a personalised and interactive guide towards one's goals.</p>
                 `,
                 images: [ 'images/kronos-1.png' ],
             },
             {
                 title: 'Features',
                 text: `
-                    <ul className='list-disc'>
-                        <li>Next.js app, using the latest app router</li>
-                        <li>Smart timeline showing the task to focus on and every option relevant to that moment</li>
-                        <li>Calendar powered by Hexaflexa, to visualise and edit events</li>
-                        <li>Task browser, with filters and sorting options</li>
-                        <li>Custom checkbox, showing additional task statuses such as 'in progress' and 'repeating'</li>
-                        <li>Conditional task input form, to speed up adding the needed nuance to each task</li>
-                        <li>Markdown text editor, which allows checklists, links and headings</li>
+                    <ul style='text-align:left'>
+                        <li>Next.js app with app router</li>
+                        <li>Smart timeline showing the next organised task in real time</li>
+                        <li>Calendar component to visualise and edit events</li>
+                        <li>Task browser, with filter and sort</li>
+                        <li>Deeply conditional task input form, to speed up adding nuanced tasks</li>
+                        <li>A dyanmic UI colour palette, updating in real time based on the nearest task's mindset</li>
+                        <li>Custom checkbox, for displaying 'in progress' and 'repeating' status</li>
+                        <li>Framer Motion animations</li>
+                        <li>Markdown text editor, with checklists, headings and bullet lists</li>
+                        <li>Redux store which communicates with database to update the app's states</li>
+                        <li class='soon'>User profile</li>
+                        <li class='soon'>Search for dates and notes</li>
+                        <li class='soon'>Integration with Notion - sync tasks with Notion database</li>
+                        <li class='soon'>Smart notifications</li>
+                        <li class='soon'>Personalisation settings</li>
+                        <li class='soon'>User stats and scoring system</li>
+                        <li class='soon'>NLP model to categorise tasks by mindset</li>
+                        <li class='soon'>ML model to learn user's mindset map, and organise tasks in accordance</li>
                     </ul>
                 `,
                 images: [ 'images/kronos-2.png' ],
+                layout: 'wide'
             },
             {
-                title: 'Next Steps',
+                title: 'What I Learnt',
+                layout: 'wide',
                 text: `
-                    <ol>
-                        <li>Implement time monitors to aid task input</li>
-                        <li>Implement smart notifications</li>
-                        <li>Measure stats: routine streaks, daily completion rate, task distribution</li>
-                        <li>Implement NLP model to understand and categorise tasks by mindset</li>
-                        <li>Train ML model on task mindset distribution, and the user's interaction with it</li>
-                    </ol>
+                    <ul style='text-align:left'>
+                        <li>How to set up a Next.js web app with its own database from scratch</li>
+                        <li>The dev-lifesaving preventive measures of Typescript</li>
+                        <li>Styling like the wind with Tailwind CSS</li>
+                        <li>Choosing between client components or server components</li>
+                        <li>Using route handlers to fetch data from client components</li>
+                        <li>Self-hosting a database using Docker</li>
+                        <li>The wonders of Redux: avoiding prop drilling and cascading hooks</li>
+                        <li>Creating animation for transitions and gestures using Framer Motion</li>
+                        <li>How search parameters can be used to centralise components</li>
+                        <li>Organising a web project</li>
+                        <li>Deploying to Vercel</li>
+                    </ul>
                 `,
                 images: [ 'images/kronos-3.png' ],
             },
@@ -443,6 +462,10 @@ export const skillsData = [
     {
         name: 'Python',
         icon: './icons/python-w.png',
+    },
+    {
+        name: 'Redux',
+        icon: './icons/redux-w.png',
     },
     {
         name: 'Socket.io',

@@ -41,44 +41,27 @@ p {
   }
 }
 
-.highlight {
-  @apply md:hover:text-yellow-300 md:hover:scale-105 transition cursor-pointer;
+#about p {
+  @apply mb-4;
 }
-
 .enlarge {
   @apply hover:scale-105 transition cursor-pointer;
 }
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
 /* Hide scrollbar for IE, Edge and Firefox */
 .hide-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-
-.tooltip-container .tooltip {
-  visibility: hidden;
-  cursor: default;
+.highlight {
+  @apply md:hover:text-yellow-300 md:hover:scale-105 transition cursor-pointer;
 }
-.tooltip-container:hover .tooltip {
-  visibility: visible;
+.longTitle {
+  @apply text-[3rem] md:text-[6rem];
 }
-
-.wire-box {
-  @apply border-white border rounded-lg p-1;
-}
-.wire-button {
-  @apply rounded-full hover:bg-white/25 py-1 px-3;
-}
-
-.section {
-  @apply  flex flex-col items-center gap-8;
-}
-
 .project-text {
   @apply leading-7;
 }
@@ -88,22 +71,25 @@ p {
 .project-text p {
   @apply mb-3;
 }
-
-.longTitle {
-  font-size: 3rem;
+.project-text .soon {
+  @apply opacity-20;
+}
+.section {
+  @apply  flex flex-col items-center gap-8;
 }
 .shortTitle {
-  font-size: 4rem;
+  @apply text-[4rem] md:text-[8rem];
 }
-@media (min-width: 768px) {
-  .longTitle {
-    font-size: 6rem;
-  }
-  .shortTitle {
-    font-size: 8rem;
-  }
+.tooltip-container .tooltip {
+  visibility: hidden;
+  cursor: default;
 }
-
-#about p {
-  @apply mb-4;
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+}
+.wire-box {
+  @apply border-white border rounded-lg p-1;
+}
+.wire-button {
+  @apply rounded-full hover:bg-white/25 py-1 px-3;
 }

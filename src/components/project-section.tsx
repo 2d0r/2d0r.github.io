@@ -6,12 +6,31 @@ import ProjectImage from './project-image';
 import '../app/globals.css';
 import clsx from 'clsx';
 import { ProjectSectionType } from '@/lib/types';
+import { useEffect } from 'react';
 
 export default function ProjectSection({section, alignImage = 'right', layout = 'sides'} : {
     section: ProjectSectionType,
     alignImage?: ('left' | 'right' | 'bottom'),
     layout?: ProjectSectionType['layout'],
 }) {
+
+    useEffect(() => {
+        // JavaScript code to insert 'Coming soon' span into all divs with class 'soon'
+        setTimeout(() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                // Select all divs with the class 'soon'
+                const soonDivs = document.querySelectorAll('li.soon');
+                
+                // Iterate through each div and insert the span element
+                soonDivs.forEach(div => {
+                    const span = document.createElement('span');
+                    span.textContent = ' Coming soon';
+                    div.appendChild(span);
+                });
+            });
+        }, 1000);
+    }, []);
+
     return (
         <motion.section id={section.title.toLowerCase()} className='scroll-mt-28 flex flex-col items-center gap-8 w-full'
         initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
