@@ -46,14 +46,19 @@ export const projectsData : ProjectDataType[] = [
                 images: [ 'images/kronos-3.png' ],
             },
         ],
-        link: { name: 'Kronos Git Repo', href: 'https://github.com/2d0r/kronos-web.git' },
+        links: [
+            { name: 'Deployed Site', href: 'https://kronos-fsn1eomm9-tudor-popescus-projects.vercel.app/' },
+            { name: 'Git Repo', href: 'https://github.com/2d0r/kronos-web.git' },
+        ],
     },
     {
         id: 'wejam',
         title: 'WeJam',
         description: 'A music game for immersive band experiences',
         thumbnail: 'images/wejam-thumb.png',
-        link: { href: 'https://wejam.studio/', name: 'WeJam Website' },
+        links: [
+            { href: 'https://wejam.studio/', name: 'WeJam Website' },
+        ],
         tools: ['React', 'Node.js', 'Python', 'Socket.io', 'SASS', 'Figma'],
         sections: [
             {
@@ -132,7 +137,9 @@ export const projectsData : ProjectDataType[] = [
             },
             { title: '', text: '', images: [] },
         ],
-        link: { href: 'https://www.wolfysbar.com/nft-wolfys-bar', name: 'Link to live page'}
+        links: [
+            { href: 'https://www.wolfysbar.com/nft-wolfys-bar', name: 'Link to live page'},
+        ]
     },
     {
         id: 'bvr',
@@ -178,7 +185,9 @@ export const projectsData : ProjectDataType[] = [
                 layout: 'wide',
             },
         ],
-        link: { href: 'https://www.wolf-mentor.com/', name: 'Link to live page' }
+        links: [
+            { href: 'https://www.wolf-mentor.com/', name: 'Link to live page' },
+        ]
     },
     {
         id: 'soundr-landing',
@@ -199,7 +208,9 @@ export const projectsData : ProjectDataType[] = [
         sections: [
             { title: 'Demo', text: 'Landing page for an independent wellbeing counsellor looking to improve his online presence. Built with Wix.', images: [ 'gifs/counselling-site-demo.gif' ], layout: 'wide', },
         ],
-        link: { name: 'Go to site', href: 'https://www.wellbeingcounselingoregon.com/' },
+        links: [
+            { name: 'Go to site', href: 'https://www.wellbeingcounselingoregon.com/' }
+        ],
     },
     {
         id: 'ftt',
@@ -215,7 +226,9 @@ export const projectsData : ProjectDataType[] = [
                 layout: 'sides',
             }
         ],
-        link: { href: 'https://finishthattrack.com/', name: 'Mentorship site' },
+        links: [
+            { href: 'https://finishthattrack.com/', name: 'Mentorship site' }
+        ],
     },
     {
         id: 'dreams-and-monsters',

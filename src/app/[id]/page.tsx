@@ -30,15 +30,19 @@ export default function Page({params} : {params: any}) {
                 layout={section.layout} 
             />
         })}
-        {/* Project Link */}
-        { project.link && 
-            <div className='w-full text-xl flex justify-center py-16'>
-                <a href={project.link?.href} className='flex gap-4 items-center justify-center highlight bg-white/10 rounded-full py-4 px-8'
-                target='_blank' rel='noopener noreferrer'>
-                    <LinkIcon height={24} />
-                    {project.link?.name.replace(' ', ' ')}
-                    <LinkIcon height={24} />
-                </a>
+        {/* Project Links */}
+        { project.links?.length && 
+            <div className='w-full text-xl flex flex-col gap-8 justify-center items-center py-16'>
+                { project.links.map((link, idx) => {
+                    return (
+                        <a href={link.href} key={idx} className='flex gap-4 items-center justify-center highlight bg-white/10 rounded-full py-4 px-8'
+                        target='_blank' rel='noopener noreferrer'>
+                            <LinkIcon height={24} />
+                            {link.name.replace(' ', ' ')}
+                            <LinkIcon height={24} />
+                        </a>
+                    );
+                })}
             </div>
         }
         <ProjectNav project1={adjacentProjects[0]} project2={adjacentProjects[1]} />

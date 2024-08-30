@@ -20,8 +20,8 @@ export type ProjectDataType = {
     thumbnail: string,
     sections: ProjectSectionType[],
     tools: Skill[],
-    link?: {
+    links?: {
         name: string,
         href: string,
-    },
+    }[],
 };
