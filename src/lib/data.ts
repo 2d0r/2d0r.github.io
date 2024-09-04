@@ -15,7 +15,8 @@ export const projectsData : ProjectDataType[] = [
                     It is a smart organiser that goes one step further by understanding a user's tasks more deeply and assisting with reaching personal goals.</p>
                     <p>The final aim is to integrate research findings about personal time management and the psychology of motivation into an AI model that can offer a personalised and interactive guide towards one's goals.</p>
                 `,
-                images: [ 'images/kronos-1.png' ],
+                images: [ 'gifs/kronos-timeline-1.gif' ],
+                layout: 'wide',
             },
             {
                 title: 'Features',
@@ -26,43 +27,47 @@ export const projectsData : ProjectDataType[] = [
                         <li>Calendar component to visualise and edit events</li>
                         <li>Task browser, with filter and sort</li>
                         <li>Deeply conditional task input form, to speed up adding nuanced tasks</li>
-                        <li>A dyanmic UI colour palette, updating in real time based on the nearest task's mindset</li>
-                        <li>Custom checkbox, for displaying 'in progress' and 'repeating' status</li>
-                        <li>Framer Motion animations</li>
+                        <li>A dyanmic UI colour palette, updating in real time based on the nearest event's mindset</li>
+                        <li>A next-level checkbox, for displaying 'in progress' and 'repeating' status</li>
                         <li>Markdown text editor, with checklists, headings and bullet lists</li>
+                        <li>Framer Motion animations</li>
                         <li>Redux store which communicates with database to update the app's states</li>
                         <li class='soon'>User profile</li>
-                        <li class='soon'>Search for dates and notes</li>
-                        <li class='soon'>Integration with Notion - sync tasks with Notion database</li>
                         <li class='soon'>Smart notifications</li>
-                        <li class='soon'>Personalisation settings</li>
+                        <li class='soon'>Drag & drop tasks into the calendar</li>
+                        <li class='soon'>Search for dates and inside task notes</li>
+                        <li class='soon'>Settings for a personalised experience</li>
                         <li class='soon'>User stats and scoring system</li>
+                        <li class='soon'>Integration with Notion, to sync tasks with personal Notion database</li>
+                        <li class='soon'>Interactive set up</li>
+                        <li class='soon'>Smart prompts and dynamic guides</li>
                         <li class='soon'>NLP model to categorise tasks by mindset</li>
-                        <li class='soon'>ML model to learn user's mindset map, and organise tasks in accordance</li>
+                        <li class='soon'>ML model to learn user's mindset patterns, and organise tasks in accordance</li>
                     </ul>
                 `,
-                images: [ 'images/kronos-2.png' ],
-                layout: 'wide'
+                images: [ 'gifs/kronos-addTask-1.gif' ],
+                layout: 'wide',
             },
             {
-                title: 'What I Learnt',
+                title: 'What I Learned',
                 layout: 'wide',
                 text: `
                     <ul style='text-align:left'>
                         <li>How to set up a Next.js web app with its own database from scratch</li>
-                        <li>The dev-lifesaving preventive measures of Typescript</li>
+                        <li>The life-saving preventive measures of Typescript</li>
                         <li>Styling like the wind with Tailwind CSS</li>
-                        <li>Choosing between client components or server components</li>
-                        <li>Using route handlers to fetch data from client components</li>
+                        <li>When to use client components or server components</li>
+                        <li>Using route handlers to fetch data from within client components</li>
                         <li>Self-hosting a database using Docker</li>
                         <li>The wonders of Redux: avoiding prop drilling and cascading hooks</li>
-                        <li>Creating animation for transitions and gestures using Framer Motion</li>
-                        <li>How search parameters can be used to centralise components</li>
-                        <li>Organising a web project</li>
+                        <li>Creating animations for transitions and gestures using Framer Motion</li>
+                        <li>How search parameters can be used to centralise often-present components</li>
+                        <li>Organising a web project and planning a complex algorithm</li>
                         <li>Deploying to Vercel</li>
+                        <li>Iteratively developing a piece of software</li>
                     </ul>
                 `,
-                images: [ 'images/kronos-3.png' ],
+                images: [ 'gifs/kronos-organiser-2.3.gif' ],
             },
         ],
         links: [
@@ -91,10 +96,11 @@ export const projectsData : ProjectDataType[] = [
             },
             {
                 title: 'Features',
+                layout: 'wide',
                 text: `
-                    <p>I arrived at the company at a time when the experience was ready for booked sessions, but still bare bones in terms of UI and features.
+                    <p style='text-align:left'>I arrived at the company at a time when the experience was ready for booked sessions, but still bare bones in terms of UI and features.
                     Here are some of the features I developed:</p>
-                    <ul>
+                    <ul style='text-align:left'>
                         <li>User journeys that separate functionality for facilitators, booking clients, and school sessions</li>
                         <li>Stats screen: players' performance metrics after a song, and overall leaderboard</li>
                         
@@ -105,20 +111,34 @@ export const projectsData : ProjectDataType[] = [
                         <li>Game tutorial: animated demonstrations and UI</li>
                         <li>Minimised random client disconnections</li>
                         <li>Facilitator controls to manage client tablets during a session (in collaboration with the MaxMSP developers)</li>
+                        <li class='soon'>Automating the score creation process in Python, by testing different note patterns for each difficulty</li>
+                        <li class='soon'>Implementing Redux for better complex state management (than the context providers)</li>
+                        <li class='soon'>Optimising the server for faster loading and better connectivity</li>
+                        <li class='soon'>Adding animations for a more dynamic UI</li>
+                        <li class='soon'>Turning the score images into functional code, for faster loading, faster score creation and a customisable score scroll animation</li>
                     </ul>
                 `,
-                images: [ 'images/wejam-playme.png', 'images/wejam-tutorial.png', 'images/wejam-songlist-sq.png' ],
+                images: ['gifs/wejam-setUpPlayer-1.1.gif'],
             },
+            // {
+            //     title: 'Gallery',
+            //     images: [ 'images/wejam-playme.png', 'images/wejam-tutorial.png', 'images/wejam-songlist-sq.png' ],
+            //     layout: 'gallery'
+            // },
             {
-                title: 'Next Steps',
+                title: 'What I Learned',
                 text: `
-                    <ol>
-                        <li>Automating the score creation process, by testing patterns of note selection based on different levels of difficulty</li>
-                        <li>Implementing Redux for better complex state management (than the context providers)</li>
-                        <li>Optimising the server for faster loading and better connectivity</li>
-                        <li>Adding animations for a more dynamic UI</li>
-                        <li>Turning the score images into functional code, for faster loading, faster score creation and a customisable score scroll animation</li>
-                    </ol>
+                    <ul style='text-align:left'>
+                        <li>Learning an existing codebase from scratch</li>
+                        <li>Coding with consideration for developers other than myself</li>
+                        <li>Reusing code and components</li>
+                        <li>That CSS animations can do unexpectedly complex things</li>
+                        <li>Overcoming Git versioning headaches when one of the app languages isn’t versionable</li>
+                        <li>Pair programming and pair debugging</li>
+                        <li>How Python can automate seemingly anything</li>
+                        <li>How to make server logging make sense</li>
+                        <li>The huge speed boost of a well organised project management tool</li>
+                    </ul>
                 `,
                 images: [ 'gifs/wejam-studio-1.1.gif' ],
                 layout: 'wide',
