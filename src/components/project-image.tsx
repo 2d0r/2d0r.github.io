@@ -10,6 +10,7 @@ import { XMarkIcon } from '@heroicons/react/16/solid';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { useWindowDimensions } from '@/lib/use-window-dimensions';
+import LoadingAnimation from './loading-animation';
 
 interface ProjectImageProps {
     image: string;
@@ -21,6 +22,7 @@ export default function ProjectImage({ image, layout } : ProjectImageProps) {
     const [ imageDimensions, setImageDimensions ] = useState({height: 0, width: 0});
     const [ showModal, setShowModal ] = useState<boolean>(false);
     const [ imageIsOverflowing, setImageIsOverflowing ] = useState<boolean>(false);
+    const [ loading, setLoading ] = useState<boolean>(true);
 
     const handleOnClick = () => {
         setShowModal(!showModal);
@@ -65,11 +67,12 @@ export default function ProjectImage({ image, layout } : ProjectImageProps) {
             layout === 'wide' && 'md:h-[30rem] items-start',
             layout === 'sides' && 'md:w-[24rem]',
         )} onClick={handleOnClick}>
+            { loading && <LoadingAnimation wholePage={false} />}
             <Image src={`/${image}`} alt={`${image.split('/')}-image`} loader={imageLoader}
-            className='w-full h-auto object-cover z-20' layout='fill' width={0} height={0} />
-            {/* <img
-                src={`/${image}`}
-                alt={`${image.split('/').pop()}-image`}
+            className='w-full h-auto object-cover z-20' layout='fill' width={0} height={0}
+            onLoadingComplete={() => setLoading(false)}
+             />
+            {/* <img src={`/${image}`} alt={`${image.split('/').pop()}-image`}
                 className={clsx(
                     imageDimensions.height > imageDimensions.width ? 'max-w-[100%] max-h-none' : 'max-h-[100%] max-w-none',
                     image.endsWith('.gif') ? 'object-cover h-full w-full' : 'object-contain'

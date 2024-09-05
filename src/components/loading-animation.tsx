@@ -1,11 +1,15 @@
 'use client';
 
+import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
-export default function LoadingAnimation() {
+export default function LoadingAnimation({wholePage = true} : {wholePage?: boolean}) {
   return (<div>
         {/* Background overlay */}
-        <motion.div className='top-0 left-0 fixed w-full min-h-screen z-40 bg-gradient-to-b from-blue-500 to-blue-300'
+        <motion.div className={clsx(
+            wholePage ? 'top-0 left-0 fixed w-full min-h-screen z-40 bg-gradient-to-b from-blue-500 to-blue-300'
+            : 'w-full h-full',
+        )}
         initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             {/* Loading animation */}
             <div className='flex flex-col gap-8 fixed w-full justify-center items-center h-screen'>

@@ -383,7 +383,7 @@ export const aboutData = {
         <p>After graduating music, the affected music industry during the pandemic turned me to my other passion from college, programming.<br/></p>
         <p>I started in a sound production role at WeJam, then received training as a front-end programmer. I completed several programming certifications to fill in the gaps, and finished a Product Design course at Love Circular.<br/></p>
         <p>On the side, I started working as a freelancer, designing and building sites and assets for various clients.<br/></p>
-        <p>I like to understand every bit of code I work with, I refuse to separate good code from a good user experience and I am always pumped to learn more and build better.</p>
+        <p>I like to understand every bit of code I work with, I refuse to separate good code from a good user experience and I am endlessly hungry to learn more and build better.</p>
     `,
 }
 
