@@ -25,6 +25,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#3b82f6" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body className='file:flex min-h-screen flex flex-col items-center justify-center overflow-x-hidden overscroll-none
       bg-gradient-to-b from-blue-500 to-blue-300 hide-scrollbar pt-12'>
