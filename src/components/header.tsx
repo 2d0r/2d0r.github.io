@@ -15,7 +15,7 @@ export default function Header() {
             className='fixed top-0 sm:top-6 left-1/2 -translate-x-1/2 text-white
             h-[3.25rem] w-full sm:h-[3.25rem] sm:w-[28rem]
             border-b sm:border border-b-white sm:border-white rounded-none sm:rounded-full
-            bg-blue-500/60 md:bg-white/10 md:backdrop-blur-lg shadow-lg shadow-black/[0.03]'
+            bg-blue-500 md:bg-white/10 md:backdrop-blur-lg shadow-lg shadow-black/[0.03]'
             initial={{ x: '-50%', y: -100, opacity: 0 }}
             animate={{ x: '-50%', y: 0, opacity: 1 }}
         >

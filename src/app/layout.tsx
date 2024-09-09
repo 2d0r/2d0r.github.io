@@ -26,7 +26,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#3b82f6" />
       </head>
-      <body className={`file:flex min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-500 to-blue-300 hide-scrollbar pt-12 overflow-x-hidden`}>
+      <body className='file:flex min-h-screen flex flex-col items-center justify-center overflow-x-hidden overscroll-none
+      bg-gradient-to-b from-blue-500 to-blue-300 hide-scrollbar pt-12'>
           <ActiveSectionContextProvider>
             <Header />
             <div className={clsx('w-[min(900px,96%)] flex flex-col gap-8 items-center justify-start text-white font-regular mt-8 p-4 md:p-0', museoModerno.className)}>

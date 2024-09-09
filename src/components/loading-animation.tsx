@@ -12,7 +12,7 @@ export default function LoadingAnimation({wholePage = true} : {wholePage?: boole
         )}
         initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             {/* Loading animation */}
-            <div className='flex flex-col gap-8 fixed w-full justify-center items-center h-screen'>
+            <div className='flex flex-col gap-8 fixed w-full h-full justify-center items-center'>
                 <motion.div
                     className='w-8 h-8 border border-white'
                     animate={{
