@@ -47,7 +47,7 @@ export default function ProjectCard({project, imageFit = 'cover'}: {
                 </div>
             </div>
             <Link href={`/${project.id}`}
-            className='md:hidden flex align-center justify-center w-full p-3 text-lg font-medium text-yellow-200'>
+            className='md:hidden flex align-center justify-center w-full p-3 text-lg font-medium text-yellow-300'>
                 Go to project
             </Link>
         </motion.div>

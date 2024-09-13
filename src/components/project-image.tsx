@@ -68,7 +68,7 @@ export default function ProjectImage({ image, layout } : ProjectImageProps) {
             layout === 'sides' && 'md:w-[24rem]',
         )} onClick={handleOnClick}>
             { loading && <LoadingAnimation wholePage={false} />}
-            <Image src={`/${image}`} alt={`${image.split('/')}-image`} loader={imageLoader}
+            <Image src={`/${image}`} alt={`${image.split('/')}-image`} loader={imageLoader} loading='lazy'
             className='w-full h-auto object-cover z-20' layout='fill' width={0} height={0}
             onLoadingComplete={() => setLoading(false)}
              />

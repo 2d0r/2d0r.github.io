@@ -5,7 +5,7 @@ export const projectsData : ProjectDataType[] = [
         id: 'kronos',
         title: 'Kronos',
         description: 'A smart organiser that understands mindsets',
-        thumbnail: 'images/kronos-thumb.png',
+        thumbnail: 'images/kronos-playTask-1.png',
         tools: ['React', 'Next.js', 'Tailwind', 'Typescript', 'Prisma', 'PostgreSQL'],
         sections: [
             {
@@ -416,7 +416,7 @@ export const timelineData = [
         index: 4,
         title: 'Front-End Developer',
         location: 'Wejam, London, UK',
-        text: 'Learnt React and worked as a front-end developer at WeJam for 2 years. I then moved into node.js and back-end.',
+        text: 'Learnt React and worked as a front-end developer at WeJam for 2 years. Tasks started involving Node.js and back-end.',
         years: '2022 - 2024',
         type: 'work',
     },
@@ -538,5 +538,5 @@ export const links = [
 
 export const cvData = {
     name: 'Tudor Popescu\'s CV',
-    href: 'files/tudor-popescu-cv-1.pdf',
+    href: 'files/tudor-popescu-cv.pdf',
 }

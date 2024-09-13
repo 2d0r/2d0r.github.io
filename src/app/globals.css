@@ -57,7 +57,7 @@ p {
   scrollbar-width: none;  /* Firefox */
 }
 .highlight {
-  @apply md:hover:text-yellow-200 md:hover:scale-105 transition cursor-pointer;
+  @apply md:hover:text-yellow-300 md:hover:scale-105 transition cursor-pointer;
 }
 .longTitle {
   @apply text-[3rem] md:text-[6rem];
