@@ -6,7 +6,6 @@ import clsx from 'clsx';
 import Image from "next/legacy/image";
 import React, { useEffect, useState } from 'react';
 import '@/app/globals.css';
-import { XMarkIcon } from '@heroicons/react/16/solid';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { useWindowDimensions } from '@/lib/use-window-dimensions';
@@ -24,11 +23,10 @@ export default function ProjectImage({ image, layout } : ProjectImageProps) {
     const [ imageIsOverflowing, setImageIsOverflowing ] = useState<boolean>(false);
     const [ loading, setLoading ] = useState<boolean>(true);
 
+    // Handlers
+
     const handleOnClick = () => {
         setShowModal(!showModal);
-    }
-    const handleXClick = () => {
-        setShowModal(false);
     }
 
     // HOOKS
@@ -47,6 +45,9 @@ export default function ProjectImage({ image, layout } : ProjectImageProps) {
             document.body.style.overflow = 'unset';
         };
     }, [showModal]);
+    useEffect(() => {
+        console.log(loading ? 'is loading' : 'not loading');
+    }, [loading])
 
     // Compare image aspect ratio with window aspect ratio
     const { windowWidth, windowHeight } = useWindowDimensions();

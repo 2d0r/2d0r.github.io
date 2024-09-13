@@ -4,15 +4,17 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
 export default function LoadingAnimation({wholePage = true} : {wholePage?: boolean}) {
-  return (<div>
+  return (<div className='w-full h-full'>
         {/* Background overlay */}
         <motion.div className={clsx(
             wholePage ? 'top-0 left-0 fixed w-full min-h-screen z-40 bg-gradient-to-b from-blue-500 to-blue-300'
-            : 'w-full h-full',
+            : 'w-full h-full min-h-full',
         )}
         initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             {/* Loading animation */}
-            <div className='flex flex-col gap-8 fixed w-full h-full justify-center items-center'>
+            <div className={clsx('flex flex-col gap-8 w-full h-full justify-center items-center',
+                wholePage ? 'fixed' : '',
+            )}>
                 <motion.div
                     className='w-8 h-8 border border-white'
                     animate={{
