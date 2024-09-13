@@ -25,7 +25,7 @@ export default function Timeline() {
                 <div className='w-1/2 h-full hidden md:flex items-start md:pl-[36px] pl-[12px] mt-[12px] font-light md:font-normal'>2024</div>
                 <div className='z-40 absolute rounded-full w-[48px] h-[48px] bg-white
                 top-0 left-0 md:right-0 md:mx-auto 
-                flex items-center justify-center group-hover:bg-yellow-300 group-hover:scale-105 transition'>
+                flex items-center justify-center group-hover:bg-yellow-200 group-hover:scale-105 transition'>
                     <ArrowDownIcon height={24} className='fill-blue-400' />
                 </div>
             </Link>

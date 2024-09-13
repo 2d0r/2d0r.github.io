@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "@/app/globals.css";
+import type { Metadata } from 'next';
+import '@/app/globals.css';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import ActiveSectionContextProvider from '@/context/active-section-context';
@@ -11,8 +10,8 @@ import localFont from 'next/font/local';
 const museoModerno = localFont({ src: '../../public/fonts/museoModerno.ttf'});
 
 export const metadata: Metadata = {
-  title: "Tudor | Portfolio",
-  description: "Tudor is a Front-End Developer with 3 years experience.",
+  title: 'Tudor | Portfolio',
+  description: 'Tudor is a Front-End Developer with 3 years experience.',
 };
 
 export default function RootLayout({
@@ -21,11 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={clsx('!scroll-smooth ')}>
+    <html lang='en' className={clsx('!scroll-smooth ')}>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#3b82f6" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name='theme-color' content='#3b82f6' />
+        <link rel='icon' href='/favicon.ico' />
       </head>
       <body className='file:flex min-h-screen flex flex-col items-center justify-center overflow-x-hidden overscroll-none
       bg-gradient-to-b from-blue-500 to-blue-300 hide-scrollbar pt-12'>

@@ -43,15 +43,10 @@ export default function ContactForm () {
                 // }}
             >
                 <div className='gap-2 flex flex-col items-center w-full'>
-                    {/* <div className='flex flex-col gap-2 w-full'>
-                        <label htmlFor='name'>Name</label>
-                        <input name='name' type='text' placeholder='Who do I have the pleasure with?' required
-                            className='w-full bg-transparent border border-white/70 rounded-xl p-2 placeholder:text-white/30 focus:outline-none focus:border-white' />
-                    </div> */}
                     <div className='flex flex-col gap-2 w-full'>
                         {/* <label htmlFor='name'>Email address</label> */}
-                        <input name='senderEmail' type='email' placeholder='Email address' required //'What is your email address?'
-                            className='w-full bg-transparent border border-white/70 rounded-xl p-2 placeholder:text-white/30 focus:outline-none focus:border-white' />
+                        <input name='senderEmail' type='email' placeholder='Email address' required
+                        className='w-full bg-transparent border border-white/70 rounded-xl p-2 placeholder:text-white/30 focus:outline-none focus:border-white' />
                     </div>
                     <div className='flex flex-col gap-2 w-full'>
                         {/* <label htmlFor='name'>Message</label> */}
