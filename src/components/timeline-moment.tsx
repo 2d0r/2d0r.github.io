@@ -31,10 +31,10 @@ export default function TimelineMoment ({ index } : { index: number }) {
                 <div className='border border-white rounded-3xl w-full h-full flex flex-col p-4 gap-2'>
                     <div className='flex flex-col'>
                         <span className='font-semibold'>{timelineMoment?.title}</span>
-                        <span className='font-medium'>
+                        {timelineMoment?.location && <span className='font-medium'>
                             {timelineMoment?.location}
                             <span className='font-light md:invisible visible'>{timelineMoment?.years && ' • '}{timelineMoment?.years}</span>
-                        </span>
+                        </span>}
                     </div>
                     <span className='font-normal'>{timelineMoment?.text}</span>
                 </div>

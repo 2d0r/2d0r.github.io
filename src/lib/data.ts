@@ -342,7 +342,7 @@ export const projectsData : ProjectDataType[] = [
     },
     {
         id: 'wolfys-posters',
-        title: "Wolfy's Posters",
+        title: 'Wolfy\'s Posters',
         description: 'Poster designs for a cosy café bar in south-east London',
         thumbnail: 'images/wolfys-posters-thumb.png',
         tools: ['Figma', 'Pixelmator', 'Photoshop'],
@@ -357,7 +357,7 @@ export const projectsData : ProjectDataType[] = [
     },
     {
         id: 'f1-showcase',
-        title: "F1 Showcase",
+        title: 'F1 Showcase',
         description: 'Design for an event that promoted will.i.am\'s collaboration with F1',
         thumbnail: 'images/f1-thumb-1.png',
         tools: ['Figma', 'Pixelmator', 'Photoshop'],
@@ -419,6 +419,14 @@ export const timelineData = [
         text: 'Learnt React and worked as a front-end developer at WeJam for 2 years. Tasks started involving Node.js and back-end.',
         years: '2022 - 2024',
         type: 'work',
+    },
+    {
+        index: 5,
+        title: 'Filling in the gaps',
+        location: null,
+        text: 'Learnt how to build a Next.js app from scratch while creating Kronos and this very portfolio. Filled the remaining gaps with Codecademy\'s Front-End Engineer Professional Certification.',
+        years: '2024',
+        type: 'education',
     },
 ]
 
