@@ -39,7 +39,7 @@ export default function Projects () {
             {/* Subtitle */}
             <div className='flex gap-4 text-center justify-between items-center w-full text-lg'>
                 <span className='hidden md:inline'>X</span>
-                <span className='w-full text-center mt-8 md:mt-0 px-8 md:px-0'>I am a Front-End Developer with 3 years experience building & designing web apps.</span>
+                <span className='w-full text-center mt-8 md:mt-0 px-8 md:px-0'>I am a Front-End Developer with 2 years experience building & designing web apps.</span>
                 <span className='hidden md:inline'>X</span>
             </div>
         </motion.div>

@@ -11,7 +11,7 @@ const museoModerno = localFont({ src: '../../public/fonts/museoModerno.ttf'});
 
 export const metadata: Metadata = {
   title: 'Tudor | Portfolio',
-  description: 'Tudor is a Front-End Developer with 3 years experience.',
+  description: 'Tudor is a Front-End Developer with 2 years experience.',
 };
 
 export default function RootLayout({
