@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/context/active-section-context';
 import ProjectLink from './project-link';
-import { cvData } from '@/lib/data';
+import { personalLinks } from '@/lib/data';
 
 export default function Projects () {
 
@@ -22,6 +22,16 @@ export default function Projects () {
         }
     }, [inView, setActiveSection, timeOfLastClick]);
 
+    const QuickLinks = ({className} : {className: string}) => {
+        return (
+            <div className={className}>
+                <a href={personalLinks.linkedin} className='w-0 md:w-1/3 highlight text-right' target='_blank'>Linkedin</a>
+                {' • '}
+                <a href={personalLinks.cv} download className='w-0 md:w-1/3 highlight text-right'>Download CV</a>
+            </div>
+        );
+    }
+
     return (<section id='projects' ref={ref} className='z-40 w-full scroll-mt-[100rem] flex flex-col items-center gap-8'>
         {/* Hero */}
         <motion.div 
@@ -31,8 +41,9 @@ export default function Projects () {
             {/* Overtitle */}
             <div className='flex justify-center md:justify-between items-center w-full z-40 my-6 md:my-0'>
                 <span className='md:w-1/3 cursor-default'>Hi! My name is</span>
-                <Link href={cvData.href} download className='w-0 md:w-1/3 hidden md:inline highlight text-right'>Download CV</Link>
+                <QuickLinks className='hidden md:inline' />
             </div>
+
             {/* Title */}
             <div className='text-7xl sm:text-8xl md:text-9xl pt-0 mb-4 font-semibold text-center cursor-default leading-[80px] md:leading-none'>Tudor Popescu</div>
             
@@ -42,6 +53,7 @@ export default function Projects () {
                 <span className='w-full text-center mt-8 md:mt-0 px-8 md:px-0'>I am a Front-End Developer with 2 years experience building & designing web apps.</span>
                 <span className='hidden md:inline'>X</span>
             </div>
+            <QuickLinks className='inline md:hidden mt-6 text-yellow-300' />
         </motion.div>
 
         <motion.div className='w-full flex flex-col items-center justify-center gap-4 font-medium'

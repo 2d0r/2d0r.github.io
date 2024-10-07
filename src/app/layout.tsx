@@ -6,6 +6,7 @@ import ActiveSectionContextProvider from '@/context/active-section-context';
 import clsx from 'clsx';
 import { Toaster } from 'react-hot-toast';
 import localFont from 'next/font/local';
+import SunrayEffect from '@/components/sunray-effect';
 
 const museoModerno = localFont({ src: '../../public/fonts/museoModerno.ttf'});
 
@@ -28,14 +29,15 @@ export default function RootLayout({
       </head>
       <body className='file:flex min-h-screen flex flex-col items-center justify-center overflow-x-hidden overscroll-none
       bg-gradient-to-b from-blue-500 to-blue-300 hide-scrollbar pt-12'>
-          <ActiveSectionContextProvider>
-            <Header />
-            <div className={clsx('w-[min(900px,96%)] flex flex-col gap-8 items-center justify-start text-white font-regular mt-8 p-4 md:p-0', museoModerno.className)}>
-              {children}
-            </div>
-            <Footer />
-            <Toaster position='bottom-right'/>
-          </ActiveSectionContextProvider>
+        <ActiveSectionContextProvider>
+          <Header />
+          <div className={clsx('w-[min(900px,96%)] flex flex-col gap-8 items-center justify-start text-white font-regular mt-8 p-4 md:p-0', museoModerno.className)}>
+            {children}
+          </div>
+          <Footer />
+          <Toaster position='bottom-right'/>
+        </ActiveSectionContextProvider>
+        <SunrayEffect />
       </body>
     </html>
   );

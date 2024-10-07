@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 // import { sendEmail } from '@/actions/sendEmail';
 import SubmitBtn from './submit-btn';
+import Link from 'next/link';
 // import toast from 'react-hot-toast';
 
 export default function ContactForm () {
@@ -27,7 +28,7 @@ export default function ContactForm () {
     >
         <Divider heading='Contact' />
         <div className='text-center w-full md:w-3/5'>
-            Contact me using this form:
+            Contact me at <Link href='mailto:tudor.m.p@outlook.com' className='text-yellow-300'>tudor.m.p@outlook.com</Link> or using this form:
         </div>
         <div className='w-[min(100%,400px)]' id='contact-form'>
             <form action='https://formsubmit.co/5583cae2e581490e3f28d5d4f1b23470' method='POST' target='_blank'

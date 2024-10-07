@@ -381,7 +381,7 @@ export const projectsData : ProjectDataType[] = [
 export const aboutData = {
     text: `
         <p>After graduating music, the affected music industry during the pandemic turned me to my other passion from college, programming.<br/></p>
-        <p>I started in a sound production role at WeJam, then received training as a front-end programmer. I completed several programming certifications to fill in the gaps, and finished a Product Design course at Love Circular.<br/></p>
+        <p>After a few months in a sound production role at WeJam, I received training as a front-end developer. I completed several coding courses in Python, React and Node to fill in the gaps, and finished a Product Design course at Love Circular, London.<br/></p>
         <p>On the side, I started working as a freelancer, designing and building sites and assets for various clients.<br/></p>
         <p>I like to understand every bit of code I work with, I refuse to separate good code from a good user experience and I am endlessly hungry to learn more and build better.</p>
     `,
@@ -544,7 +544,7 @@ export const links = [
     },
 ] as const;
 
-export const cvData = {
-    name: 'Tudor Popescu\'s CV',
-    href: 'files/tudor-popescu-cv.pdf',
+export const personalLinks = {
+    cv: 'files/tudor-popescu-cv.pdf',
+    linkedin: 'https://www.linkedin.com/in/tudor-m-p/',
 }
