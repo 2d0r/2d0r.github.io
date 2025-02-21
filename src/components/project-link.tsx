@@ -17,6 +17,8 @@ export default function ProjectLink({ projectId, className } : ProjectLinkProps)
 
     const [ showCard, setShowCard ] = useState<boolean>(false);
     const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
+    const project = projectsData.find(proj => proj.id === projectId);
+
     const handleHover = (hover: boolean) => {
         if (isMobile) {
             setShowCard(false);
@@ -30,7 +32,6 @@ export default function ProjectLink({ projectId, className } : ProjectLinkProps)
             setShowCard( !showCard );
         }
     }
-    const project = projectsData.find(proj => proj.id === projectId);
 
     // Hook to detect when user clicks outside of ProjectCard
     const ref = useRef<HTMLDivElement>(null);
@@ -48,7 +49,7 @@ export default function ProjectLink({ projectId, className } : ProjectLinkProps)
     }, [ref]);
 
     return (<div className='md:relative w-full md:w-auto flex flex-col justify-center align-center'>
-        <Link href={`./${projectId}`} 
+        <Link href={project?.redirect || `./${projectId}`} 
             className={clsx(className, 'highlight text-center')} 
             onMouseOver={() => handleHover(true)} 
             onMouseOut={isMobile ? () => {} : () => handleHover(false)}

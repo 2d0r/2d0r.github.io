@@ -24,4 +24,5 @@ export type ProjectDataType = {
         name: string,
         href: string,
     }[],
+    redirect?: string,
 };

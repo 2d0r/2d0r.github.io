@@ -376,6 +376,15 @@ export const projectsData : ProjectDataType[] = [
             },
         ],
     },
+    {
+        id: 'a-music-quiz',
+        title: 'a music quiz',
+        description: 'The first project from The Full-Stack Course by The Learning People',
+        thumbnail: 'images/a-music-quiz.png',
+        tools: ['HTML', 'CSS', 'JavaScript'],
+        sections: [],
+        redirect: 'https://2d0r.github.io/music-quiz',
+    },
 ] as const;
 
 export const aboutData = {

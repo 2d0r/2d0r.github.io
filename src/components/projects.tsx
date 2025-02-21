@@ -67,8 +67,8 @@ export default function Projects () {
 
             {/* Tier 2 */}
             <div className='flex flex-wrap gap-x-8 gap-y-4 justify-center'>
+                <ProjectLink projectId='a-music-quiz' className='text-6xl md:text-7xl' />
                 <ProjectLink projectId='wolfpack' className='text-6xl md:text-7xl' /> 
-                <ProjectLink projectId='bvr' className='text-6xl md:text-7xl' /> 
             </div>
         </motion.div>
 
@@ -77,6 +77,7 @@ export default function Projects () {
         initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
             <div className='flex flex-col gap-4 w-full'>
                 <Divider heading='Web Design Stage' />
+                <ProjectLink projectId='bvr' className='text-3xl font-medium' /> 
                 <ProjectLink projectId='wolf-mentorship' className='text-3xl font-medium' />
                 <ProjectLink projectId='soundr-landing' className='text-3xl font-medium' />
                 <ProjectLink projectId='counselling-site' className='text-3xl font-medium' />
