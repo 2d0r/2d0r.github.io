@@ -71,7 +71,7 @@ export const projectsData : ProjectDataType[] = [
             },
         ],
         links: [
-            { name: 'Deployed Site', href: 'https://kronos-fsn1eomm9-tudor-popescus-projects.vercel.app/' },
+            { name: 'Deployed Site', href: 'https://kronos-web-umber.vercel.app/' },
             { name: 'Git Repo', href: 'https://github.com/2d0r/kronos-web.git' },
         ],
     },
@@ -91,7 +91,7 @@ export const projectsData : ProjectDataType[] = [
                     <p>WeJam is an immersive band experience for groups of up to 6 people who can play popular songs together in sync.</p>
                     <p>This is made possible by a user interface that simplifies the song score, while still triggering the full track. A bit like Guitar Hero.</p>
                 `,
-                images: [ 'gifs/wejam-play.gif' ],
+                images: [ 'gifs/wejam-studio-1.1.gif' ],
                 layout: 'wide',
             },
             {
@@ -118,7 +118,7 @@ export const projectsData : ProjectDataType[] = [
                         <li class='soon'>Turning the score images into functional code, for faster loading, faster score creation and a customisable score scroll animation</li>
                     </ul>
                 `,
-                images: ['gifs/wejam-setUpPlayer-1.1.gif'],
+                images: [ 'gifs/wejam-play.gif' ],
             },
             // {
             //     title: 'Gallery',
@@ -140,7 +140,7 @@ export const projectsData : ProjectDataType[] = [
                         <li>The huge speed boost of a well organised project management tool</li>
                     </ul>
                 `,
-                images: [ 'gifs/wejam-studio-1.1.gif' ],
+                images: [ 'gifs/wejam-setUpPlayer-1.1.gif' ],
                 layout: 'wide',
             },
         ],
@@ -224,9 +224,7 @@ export const projectsData : ProjectDataType[] = [
                 layout: 'wide',
             },
         ],
-        links: [
-            { href: 'https://www.wolf-mentor.com/', name: 'Link to live page' },
-        ]
+        links: [],
     },
     {
         id: 'soundr-landing',
@@ -385,6 +383,24 @@ export const projectsData : ProjectDataType[] = [
         sections: [],
         redirect: 'https://2d0r.github.io/music-quiz',
     },
+    {
+        id: 'ccc',
+        title: 'Collab Centre',
+        description: 'Website redesign for NFT projects community',
+        thumbnail: 'images/ccc-thumb.png',
+        tools: ['Wix', 'JavaScript'],
+        sections: [
+            { 
+                title: 'Overview', 
+                text: 'Redesigned the website for a community that tracks, vets and collaborates on NFT projects. Featuring a dynamically updated projects directory built using JavaScript, which can be updated via the Wix CMS tool.', 
+                images: [ 'gifs/ccc-site.gif' ],
+                layout: 'wide',
+            },
+        ],
+        links: [
+            { href: 'https://www.thecollabcentre.co.uk/', name: 'Live site' },
+        ],
+    }
 ] as const;
 
 export const aboutData = {

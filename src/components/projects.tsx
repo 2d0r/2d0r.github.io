@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import Divider from '@/components/divider';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -78,7 +77,8 @@ export default function Projects () {
             <div className='flex flex-col gap-4 w-full'>
                 <Divider heading='Web Design Stage' />
                 <ProjectLink projectId='bvr' className='text-3xl font-medium' /> 
-                <ProjectLink projectId='wolf-mentorship' className='text-3xl font-medium' />
+                <ProjectLink projectId='ccc' className='text-3xl font-medium' /> 
+                {/* <ProjectLink projectId='wolf-mentorship' className='text-3xl font-medium' /> */}
                 <ProjectLink projectId='soundr-landing' className='text-3xl font-medium' />
                 <ProjectLink projectId='counselling-site' className='text-3xl font-medium' />
             </div>
