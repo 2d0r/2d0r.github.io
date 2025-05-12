@@ -2,6 +2,102 @@ import { ProjectDataType } from './types';
 
 export const projectsData : ProjectDataType[] = [
     {
+        id: 'wejam',
+        title: 'WeJam',
+        description: 'A music game for immersive band experiences',
+        thumbnail: 'images/wejam-thumb.png',
+        links: [
+            { href: 'https://wejam.studio/', name: 'WeJam Website' },
+        ],
+        tools: ['React', 'Node.js', 'Python', 'Socket.io', 'SASS', 'Figma'],
+        sections: [
+            {
+                title: 'Overview',
+                text: `
+                    <p>WeJam is an immersive band experience for groups of up to 6 people who can play popular songs together in sync.</p>
+                    <p>This is made possible by a user interface that simplifies the song score, while still triggering the full track. A bit like Guitar Hero.</p>
+                `,
+                images: [ 'gifs/wejam-studio-1.1.gif' ],
+                layout: 'wide',
+            },
+            {
+                title: 'My Contribution',
+                layout: 'wide',
+                text: `
+                    <p style='text-align:left'>I arrived at the company at a time when the experience was ready for booked sessions, but still bare bones in terms of UI and features.
+                    Here are some of the features I developed:</p>
+                    <ul style='text-align:left'>
+                        <li>Game modes: studio, quick, school sessions, accessible for special needs, accessible for visually impaired</li>
+                        <li>Stats Screen, with players' scores and metrics</li>
+                        <li>UI Redesign: from a black and white, bare bones UI, to a colourful and dynamic theme, in line with the existing branding.</li>
+                        <li>Python script that turns a MuseScore score into the images needed in the game (using Lilypond, a music engraving language)</li>
+                        <li>Animated karaoke mode (CSS Animations)</li>
+                        <li>Song list for browsing available songs and difficulties</li>
+                        <li>Video tutorials and UI</li>
+                        <li>Minimised random client disconnections</li>
+                        <li>Facilitator controls to manage client tablets remotely</li>
+                        <li>Migrated to Redux for more efficient state management (than the context providers)</li>
+                        <li class='soon'>Automating the score creation process in Python, by testing different note patterns for each difficulty</li>
+                        <li class='soon'>Optimising the server for faster loading and better connectivity</li>
+                        <li class='soon'>Adding animations for a more dynamic UI</li>
+                        <li class='soon'>Generating scores directly from code, for faster loading and real-time feedback</li>
+                        <li class='soon'>Side-scroll animation</li>
+                    </ul>
+                `,
+                images: [ 'gifs/wejam-play.gif' ],
+            },
+            {
+                title: 'What I Learned',
+                text: `
+                    <ul style='text-align:left'>
+                        <li>Becoming familiar with an existing codebase</li>
+                        <li>Coding with consideration for other developers</li>
+                        <li>Reusing code and components</li>
+                        <li>Complex CSS animations managed by custom classes</li>
+                        <li>Git versioning and GitLab</li>
+                        <li>Pair programming and pair debugging</li>
+                        <li>Workflow automation with Python</li>
+                        <li>Improving server logs</li>
+                        <li>Using a project management tool</li>
+                        <li>Refactoring, evergreening, migrating to better technologies</li>
+                        <li>Designing UI in line with a brand</li>
+                    </ul>
+                `,
+                images: [ 'gifs/wejam-setUpPlayer-1.1.gif' ],
+                layout: 'wide',
+            },
+        ],
+    },
+    {
+        id: 'dnm-academy',
+        title: 'D&M Academy',
+        description: 'Learning management system with user roles and permissions',
+        thumbnail: 'images/dnm-academy-thumb.png',
+        tools: ['React', 'CSS', 'Python', 'Django', 'PostgreSQL'],
+        sections: [
+            {
+                title: 'Overview',
+                layout: 'wide',
+                text: 'Learning management system built in React and Django (Python). This was the final project for the Learning People Full-Stack Certification.',
+            }
+        ],
+        links: [
+            { name: 'Deployed Site', href: 'https://dnmacademy.netlify.app/' }
+        ]
+    },
+    {
+        id: 'a-music-quiz',
+        title: 'a music quiz',
+        description: 'A straight forward music quiz that uses TriviaAPI',
+        thumbnail: 'images/a-music-quiz.png',
+        tools: ['HTML', 'CSS', 'JavaScript'],
+        sections: [],
+        redirect: 'https://2d0r.github.io/music-quiz',
+        links: [
+            { href: 'https://2d0r.github.io/music-quiz', name: 'Deployed site' }
+        ],
+    },
+    {
         id: 'kronos',
         title: 'Kronos',
         description: 'A smart organiser that understands mindsets',
@@ -76,78 +172,8 @@ export const projectsData : ProjectDataType[] = [
         ],
     },
     {
-        id: 'wejam',
-        title: 'WeJam',
-        description: 'A music game for immersive band experiences',
-        thumbnail: 'images/wejam-thumb.png',
-        links: [
-            { href: 'https://wejam.studio/', name: 'WeJam Website' },
-        ],
-        tools: ['React', 'Node.js', 'Python', 'Socket.io', 'SASS', 'Figma'],
-        sections: [
-            {
-                title: 'Overview',
-                text: `
-                    <p>WeJam is an immersive band experience for groups of up to 6 people who can play popular songs together in sync.</p>
-                    <p>This is made possible by a user interface that simplifies the song score, while still triggering the full track. A bit like Guitar Hero.</p>
-                `,
-                images: [ 'gifs/wejam-studio-1.1.gif' ],
-                layout: 'wide',
-            },
-            {
-                title: 'Features',
-                layout: 'wide',
-                text: `
-                    <p style='text-align:left'>I arrived at the company at a time when the experience was ready for booked sessions, but still bare bones in terms of UI and features.
-                    Here are some of the features I developed:</p>
-                    <ul style='text-align:left'>
-                        <li>User journeys that separate functionality for facilitators, booking clients, and school sessions</li>
-                        <li>Stats screen: players' performance metrics after a song, and overall leaderboard</li>
-                        
-                        <li>UI Redesign: from a black and white, bare bones UI, to a colourful and dynamic theme, in line with the existing branding.</li>
-                        <li>Python script that turns a MuseScore score into the images needed in the game (using Lilypond, a music engraving language)</li>
-                        <li>Animated karaoke mode (CSS Animations)</li>
-                        <li>Song list for browsing available songs and difficulties</li>
-                        <li>Game tutorial: animated demonstrations and UI</li>
-                        <li>Minimised random client disconnections</li>
-                        <li>Facilitator controls to manage client tablets during a session (in collaboration with the MaxMSP developers)</li>
-                        <li class='soon'>Automating the score creation process in Python, by testing different note patterns for each difficulty</li>
-                        <li class='soon'>Implementing Redux for better complex state management (than the context providers)</li>
-                        <li class='soon'>Optimising the server for faster loading and better connectivity</li>
-                        <li class='soon'>Adding animations for a more dynamic UI</li>
-                        <li class='soon'>Turning the score images into functional code, for faster loading, faster score creation and a customisable score scroll animation</li>
-                    </ul>
-                `,
-                images: [ 'gifs/wejam-play.gif' ],
-            },
-            // {
-            //     title: 'Gallery',
-            //     images: [ 'images/wejam-playme.png', 'images/wejam-tutorial.png', 'images/wejam-songlist-sq.png' ],
-            //     layout: 'gallery'
-            // },
-            {
-                title: 'What I Learned',
-                text: `
-                    <ul style='text-align:left'>
-                        <li>Learning an existing codebase from scratch</li>
-                        <li>Coding with consideration for developers other than myself</li>
-                        <li>Reusing code and components</li>
-                        <li>That CSS animations can do unexpectedly complex things</li>
-                        <li>Overcoming Git versioning headaches when one of the app languages isn’t versionable</li>
-                        <li>Pair programming and pair debugging</li>
-                        <li>How Python can automate seemingly anything</li>
-                        <li>How to make server logging make sense</li>
-                        <li>The huge speed boost of a well organised project management tool</li>
-                    </ul>
-                `,
-                images: [ 'gifs/wejam-setUpPlayer-1.1.gif' ],
-                layout: 'wide',
-            },
-        ],
-    },
-    {
         id: 'wolfpack',
-        title: 'Wolfpack',
+        title: 'WolfpackNFT',
         description: 'Landing site for an NFT collection',
         thumbnail: 'images/wolfpack-thumb.png',
         tools: ['HTML', 'CSS', 'JavaScript', 'Figma'],
@@ -211,21 +237,23 @@ export const projectsData : ProjectDataType[] = [
         ],
     },
     {
-        id: 'wolf-mentorship',
-        title: 'Wolf Mentorship',
-        description: 'Landing site for a business mentorship programme',
-        thumbnail: 'images/wolf-mentorship-thumb.png',
-        tools: ['Squarespace', 'Figma', 'Pixelmator'],
+        id: 'ccc',
+        title: 'Collab Centre',
+        description: 'Website redesign for NFT projects community',
+        thumbnail: 'images/ccc-thumb.png',
+        tools: ['Wix', 'JavaScript'],
         sections: [
             { 
-                title: 'Demo', 
-                text: 'Designed in Figma. Built using Squarespace, as per client requirement.', 
-                images: ['gifs/wolf-mentorship-demo-1.1.gif'],
+                title: 'Overview', 
+                text: 'Redesigned the website for a community that tracks, vets and collaborates on NFT projects. Featuring a dynamically updated projects directory built using JavaScript, which can be updated via the Wix CMS tool.', 
+                images: [ 'gifs/ccc-site.gif' ],
                 layout: 'wide',
             },
         ],
-        links: [],
-    },
+        links: [
+            { href: 'https://www.thecollabcentre.co.uk/', name: 'Live site' },
+        ],
+    }, 
     {
         id: 'soundr-landing',
         title: 'Soundr Landing',
@@ -305,55 +333,6 @@ export const projectsData : ProjectDataType[] = [
         ],
     },
     {
-        id: 'music-artworks',
-        title: 'Music Artworks',
-        description: 'Artworks for my music creations',
-        thumbnail: 'images/music-artworks-thumb.png',
-        tools: ['Photoshop', 'Pixelmator'],
-        sections: [
-            { 
-                title: 'Gallery', 
-                text: 'I use Photoshop, Pixelmator and Rhino 3D to create artworks for music releases.', 
-                images: [
-                    'images/musicArt-autopilot-1.png',
-                    'images/musicArt-collection-silver.png',
-                    'images/musicArt-trust-2.png',
-                ],
-                layout: 'gallery',
-            },
-        ],
-    },
-    {
-        id: 'soundr-rebrand',
-        title: 'Soundr Rebrand',
-        description: 'Design assets for a rebranded metaverse NFT creator',
-        thumbnail: 'images/soundr-rebrand-thumb.png',
-        tools: ['Pixelmator'],
-        sections: [
-            { 
-                title: 'Overview', 
-                text: 'Soundr were shifting their focus to metaverse NFTs, which required rethinking their visual identity to express the futuristic and natively digital nature of their new product.', 
-                images: ['images/soundr-rebrand-posters-sq.png'], layout: 'sides' },
-            { title: 'Banner', text: '', images: ['images/soundr-rebrand-banner.png'], layout: 'wide' },
-            { title: '', text: '', images: [] },
-        ],
-    },
-    {
-        id: 'wolfys-posters',
-        title: 'Wolfy\'s Posters',
-        description: 'Poster designs for a cosy café bar in south-east London',
-        thumbnail: 'images/wolfys-posters-thumb.png',
-        tools: ['Figma', 'Pixelmator', 'Photoshop'],
-        sections: [
-            { 
-                title: 'Overview', 
-                text: 'Wolfy’s Bar started hosting events to engage their community and create a sense of excitement around the brand. The posters sprinkle that excitement over their cosy, hearth-of-the-neighbourhood aesthetic and spirit.', 
-                images: [ 'images/wolfys-posters-qr.jpg', 'images/wolfys-posters-halloween.jpg', 'images/wolfys-posters-dragshow.jpg', 'images/wolfys-posters-rugby.jpg', 'images/wolfys-posters-nft.png' ],
-                layout: 'gallery',
-            },
-        ],
-    },
-    {
         id: 'f1-showcase',
         title: 'F1 Showcase',
         description: 'Design for an event that promoted will.i.am\'s collaboration with F1',
@@ -375,40 +354,62 @@ export const projectsData : ProjectDataType[] = [
         ],
     },
     {
-        id: 'a-music-quiz',
-        title: 'a music quiz',
-        description: 'The first project from The Full-Stack Course by The Learning People',
-        thumbnail: 'images/a-music-quiz.png',
-        tools: ['HTML', 'CSS', 'JavaScript'],
-        sections: [],
-        redirect: 'https://2d0r.github.io/music-quiz',
-    },
-    {
-        id: 'ccc',
-        title: 'Collab Centre',
-        description: 'Website redesign for NFT projects community',
-        thumbnail: 'images/ccc-thumb.png',
-        tools: ['Wix', 'JavaScript'],
+        id: 'wolfys-posters',
+        title: 'Wolfy\'s Posters',
+        description: 'Poster designs for a cosy café bar in south-east London',
+        thumbnail: 'images/wolfys-posters-thumb.png',
+        tools: ['Figma', 'Pixelmator', 'Photoshop'],
         sections: [
             { 
                 title: 'Overview', 
-                text: 'Redesigned the website for a community that tracks, vets and collaborates on NFT projects. Featuring a dynamically updated projects directory built using JavaScript, which can be updated via the Wix CMS tool.', 
-                images: [ 'gifs/ccc-site.gif' ],
-                layout: 'wide',
+                text: 'Wolfy’s Bar started hosting events to engage their community and create a sense of excitement around the brand. The posters sprinkle that excitement over their cosy, hearth-of-the-neighbourhood aesthetic and spirit.', 
+                images: [ 'images/wolfys-posters-qr.jpg', 'images/wolfys-posters-halloween.jpg', 'images/wolfys-posters-dragshow.jpg', 'images/wolfys-posters-rugby.jpg', 'images/wolfys-posters-nft.png' ],
+                layout: 'gallery',
             },
         ],
-        links: [
-            { href: 'https://www.thecollabcentre.co.uk/', name: 'Live site' },
+    },
+    {
+        id: 'soundr-rebrand',
+        title: 'Soundr Rebrand',
+        description: 'Design assets for a rebranded metaverse NFT creator',
+        thumbnail: 'images/soundr-rebrand-thumb.png',
+        tools: ['Pixelmator'],
+        sections: [
+            { 
+                title: 'Overview', 
+                text: 'Soundr were shifting their focus to metaverse NFTs, which required rethinking their visual identity to express the futuristic and natively digital nature of their new product.', 
+                images: ['images/soundr-rebrand-posters-sq.png'], layout: 'sides' },
+            { title: 'Banner', text: '', images: ['images/soundr-rebrand-banner.png'], layout: 'wide' },
+            { title: '', text: '', images: [] },
+        ],
+    },
+    {
+        id: 'music-artworks',
+        title: 'Music Artworks',
+        description: 'Artworks for my music creations',
+        thumbnail: 'images/music-artworks-thumb.png',
+        tools: ['Photoshop', 'Pixelmator'],
+        sections: [
+            { 
+                title: 'Gallery', 
+                text: 'I use Photoshop, Pixelmator and Rhino 3D to create artworks for music releases.', 
+                images: [
+                    'images/musicArt-autopilot-1.png',
+                    'images/musicArt-collection-silver.png',
+                    'images/musicArt-trust-2.png',
+                ],
+                layout: 'gallery',
+            },
         ],
     }
 ] as const;
 
 export const aboutData = {
     text: `
-        <p>After graduating music, the affected music industry during the pandemic turned me to my other passion from college, programming.<br/></p>
-        <p>After a few months in a sound production role at WeJam, I received training as a front-end developer. I completed several coding courses in Python, React and Node to fill in the gaps, and finished a Product Design course at Love Circular, London.<br/></p>
+        <p>After graduating music, a slowed-down music industry caused by the Covid pandemic turned me to my other passion: coding.<br/></p>
+        <p>After a few months in a sound production role at WeJam, I did training as a front-end developer. I completed several coding courses in Python, React and Node to fill in the gaps, and finished a Product Design course at Love Circular, London.<br/></p>
         <p>On the side, I started working as a freelancer, designing and building sites and assets for various clients.<br/></p>
-        <p>I like to understand every bit of code I work with, I refuse to separate good code from a good user experience and I am endlessly hungry to learn more and build better.</p>
+        <p>I like to understand every bit of code I work with, I refuse to separate great code from a great user experience and I am endlessly hungry to learn more and build better.</p>
     `,
 }
 
@@ -449,8 +450,8 @@ export const timelineData = [
         index: 5,
         title: 'Filling in the gaps',
         location: null,
-        text: 'Learnt how to build a Next.js app from scratch while creating Kronos and this very portfolio. Filled the remaining gaps with Codecademy\'s Front-End Engineer Professional Certification.',
-        years: '2024',
+        text: 'Pursuing The Learning People\'s Full-Stack Certification. Completed Codecademy\'s Front-End Engineer Professional Certification. Built several projects from scratch, to solidify and connect my full stack skills.',
+        years: '2024 - 2025',
         type: 'education',
     },
 ]
@@ -467,6 +468,10 @@ export const skillsData = [
     {
         name: 'CSS',
         icon: './icons/css-w.png',
+    },
+    {
+        name: 'Django',
+        icon: './icons/django-w.png',
     },
     {
         name: 'Figma',

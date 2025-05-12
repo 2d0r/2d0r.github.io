@@ -22,7 +22,7 @@ export default function Timeline() {
                 <div className='md:w-1/2 h-full flex items-start md:justify-end pl-[72px] md:pl-0 md:pr-[36px]'>
                     <div className='text-left md:text-right mt-[12px]'>Download CV</div>
                 </div>
-                <div className='w-1/2 h-full hidden md:flex items-start md:pl-[36px] pl-[12px] mt-[12px] font-light md:font-normal'>2024</div>
+                <div className='w-1/2 h-full hidden md:flex items-start md:pl-[36px] pl-[12px] mt-[12px] font-light md:font-normal'>{new Date().getFullYear()}</div>
                 <div className='z-40 absolute rounded-full w-[48px] h-[48px] bg-white
                 top-0 left-0 md:right-0 md:mx-auto 
                 flex items-center justify-center group-hover:bg-yellow-300 group-hover:scale-105 transition'>

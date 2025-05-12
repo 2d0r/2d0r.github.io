@@ -58,20 +58,21 @@ export default function Projects () {
         <motion.div className='w-full flex flex-col items-center justify-center gap-4 font-medium'
         initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
             <Divider heading='Headliners' /> 
-            {/* Headliners */}
+            {/* Headliners 1 */}
             <div className='flex flex-wrap flex-col md:flex-row gap-x-8 gap-y-4 justify-center'>
-                <ProjectLink projectId='kronos' className='text-6xl md:text-8xl' />
-                <ProjectLink projectId='wejam' className='text-6xl md:text-8xl' /> 
+                <ProjectLink projectId='wejam' className='text-5xl md:text-7xl' />
+                <ProjectLink projectId='dnm-academy' className='text-5xl md:text-7xl' />
+                <ProjectLink projectId='a-music-quiz' className='text-5xl md:text-7xl' />
             </div>
 
-            {/* Tier 2 */}
+            {/* Headliners 2 */}
             <div className='flex flex-wrap gap-x-8 gap-y-4 justify-center'>
-                <ProjectLink projectId='a-music-quiz' className='text-6xl md:text-7xl' />
-                <ProjectLink projectId='wolfpack' className='text-6xl md:text-7xl' /> 
+                <ProjectLink projectId='wolfpack' className='text-5xl md:text-7xl' /> 
+                <ProjectLink projectId='kronos' className='text-5xl md:text-7xl' />
             </div>
         </motion.div>
 
-        {/* Tier 3 - by stage */}
+        {/* By stage */}
         <motion.div className='flex flex-wrap md:flex-nowrap gap-8 justify-center w-full text-center mt-2 mb-2'
         initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
             <div className='flex flex-col gap-4 w-full'>

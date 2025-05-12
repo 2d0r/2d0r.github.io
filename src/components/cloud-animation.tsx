@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function CloudAnimation({ clouds }: { clouds?: (1 | 2 | 3) }) {
     return (<>
-        <div className='absolute z-0 top-0 bottom-0 w-full h-full opacity-20 overflow-x-clip'>
+        <div className='absolute z-0 top-0 bottom-0 w-full h-full opacity-20 overflow-x-clip pointer-events-none'>
             <motion.div className='absolute top-[40vh] left-0 w-full h-[20vh] sm:h-[30vh]'
             initial={{ x: '-70%' }} animate={{ x: '100%' }}
             transition={{ duration: 30, repeat: Infinity, repeatType: 'loop', ease: 'linear' }}>
