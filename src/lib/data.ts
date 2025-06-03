@@ -6,9 +6,7 @@ export const projectsData : ProjectDataType[] = [
         title: 'WeJam',
         description: 'A music game for immersive band experiences',
         thumbnail: 'images/wejam-thumb.png',
-        links: [
-            { href: 'https://wejam.studio/', name: 'WeJam Website' },
-        ],
+        links: [],
         tools: ['React', 'Node.js', 'Python', 'Socket.io', 'SASS', 'Figma'],
         sections: [
             {
@@ -77,12 +75,23 @@ export const projectsData : ProjectDataType[] = [
         sections: [
             {
                 title: 'Overview',
+                text: `
+                    <p style='padding-bottom:12px'>Learning management system built in React and Django (Python). This was the final project for the Learning People Full-Stack Certification.</p>
+                    <ul style='text-align:left'>
+                        <li>Built a React frontend connected to a Django REST API backend.</li>
+                        <li>Implemented JWT-based user authentication and protected routes.</li>
+                        <li>Used PostgreSQL for data modeling and storage; deployed via Render.com</li>
+                        <li>Wrote unit tests using React Testing Library and Jest to validate core components.</li>
+                        <li>Deployed frontend to Netlify with environment-based API integration.</li>
+                    </ul>
+                `,
+                // images: [ 'gifs/wejam-setUpPlayer-1.1.gif' ],
                 layout: 'wide',
-                text: 'Learning management system built in React and Django (Python). This was the final project for the Learning People Full-Stack Certification.',
-            }
+            },
         ],
         links: [
-            { name: 'Deployed Site', href: 'https://dnmacademy.netlify.app/' }
+            { name: 'GitHub Repo', href: 'https://github.com/2d0r/dm-lms' },
+            { name: 'Live App', href: 'https://dnmacademy.netlify.app/' },
         ]
     },
     {
@@ -91,10 +100,25 @@ export const projectsData : ProjectDataType[] = [
         description: 'A straight forward music quiz that uses TriviaAPI',
         thumbnail: 'images/a-music-quiz.png',
         tools: ['HTML', 'CSS', 'JavaScript'],
-        sections: [],
+        sections: [
+            {
+                title: 'Overview',
+                text: `
+                    <p style='padding-bottom:12px'>A simple, mobile-responsive music trivia app that fetches random quiz data using external APIs.</p>
+                    <ul style='text-align:left'>
+                        <li>Fetches data dynamically using the Open Trivia API.</li>
+                        <li>Developed interactive UI components with vanilla JavaScript (no frameworks).</li>
+                        <li>Styled with custom CSS3, including transitions and responsive layout.</li>
+                        <li>Focused on logic-driven quiz flows with clean separation of concerns.</li>
+                    </ul>
+                `,
+                layout: 'wide',
+            }
+        ],
         redirect: 'https://2d0r.github.io/music-quiz',
         links: [
-            { href: 'https://2d0r.github.io/music-quiz', name: 'Deployed site' }
+            { name: 'Live App', href: 'https://2d0r.github.io/music-quiz' },
+            { name: 'GitHub Repo', href: 'https://github.com/2d0r/music-quiz' },
         ],
     },
     {
@@ -107,9 +131,14 @@ export const projectsData : ProjectDataType[] = [
             {
                 title: 'Overview',
                 text: `
-                    <p>Kronos was born from a creative's need to get organised. 
-                    It is a smart organiser that goes one step further by understanding a user's tasks more deeply and assisting with reaching personal goals.</p>
-                    <p>The final aim is to integrate research findings about personal time management and the psychology of motivation into an AI model that can offer a personalised and interactive guide towards one's goals.</p>
+                    <p style='padding-bottom: 12px'>A smart productivity app designed to help users align tasks with mental focus states and personal goals.</p>
+                    <ul style='text-align:left'>
+                        <li>Built a custom markdown editor using TipTap and a calendar UI using date-fns.</li>
+                        <li>Managed full-stack interactions with PostgreSQL via Prisma ORM.</li>
+                        <li>Deployed with Docker for local containerization and Vercel for frontend hosting.</li>
+                        <li>Integrated authentication and user state management using Next.js API routes.</li>
+                        <li>Designed with Tailwind CSS, embracing utility-first principles and responsive theming.</li>
+                    </ul>
                 `,
                 images: [ 'gifs/kronos-timeline-1.gif' ],
                 layout: 'wide',
@@ -122,53 +151,21 @@ export const projectsData : ProjectDataType[] = [
                         <li>Smart timeline showing the next organised task in real time</li>
                         <li>Calendar component to visualise and edit events</li>
                         <li>Task browser, with filter and sort</li>
-                        <li>Deeply conditional task input form, to speed up adding nuanced tasks</li>
+                        <li>Conditional task input form, to speed up task input</li>
                         <li>A dyanmic UI colour palette, updating in real time based on the nearest event's mindset</li>
                         <li>A next-level checkbox, for displaying 'in progress' and 'repeating' status</li>
                         <li>Markdown text editor, with checklists, headings and bullet lists</li>
                         <li>Framer Motion animations</li>
                         <li>Redux store which communicates with database to update the app's states</li>
-                        <li class='soon'>User profile</li>
-                        <li class='soon'>Smart notifications</li>
-                        <li class='soon'>Drag & drop tasks into the calendar</li>
-                        <li class='soon'>Search for dates and inside task notes</li>
-                        <li class='soon'>Settings for a personalised experience</li>
-                        <li class='soon'>User stats and scoring system</li>
-                        <li class='soon'>Integration with Notion, to sync tasks with personal Notion database</li>
-                        <li class='soon'>Interactive set up</li>
-                        <li class='soon'>Smart prompts and dynamic guides</li>
-                        <li class='soon'>NLP model to categorise tasks by mindset</li>
-                        <li class='soon'>ML model to learn user's mindset patterns, and organise tasks in accordance</li>
                     </ul>
                 `,
-                images: [ 'gifs/kronos-addTask-1.gif' ],
+                images: [ 'gifs/kronos-addTask-1.gif', 'gifs/kronos-organiser-2.3.gif' ],
                 layout: 'wide',
-            },
-            {
-                title: 'What I Learned',
-                layout: 'wide',
-                text: `
-                    <ul style='text-align:left'>
-                        <li>How to set up a Next.js web app with its own database from scratch</li>
-                        <li>The life-saving preventive measures of Typescript</li>
-                        <li>Styling like the wind with Tailwind CSS</li>
-                        <li>When to use client components or server components</li>
-                        <li>Using route handlers to fetch data from within client components</li>
-                        <li>Self-hosting a database using Docker</li>
-                        <li>The wonders of Redux: avoiding prop drilling and cascading hooks</li>
-                        <li>Creating animations for transitions and gestures using Framer Motion</li>
-                        <li>How search parameters can be used to centralise often-present components</li>
-                        <li>Organising a web project and planning a complex algorithm</li>
-                        <li>Deploying to Vercel</li>
-                        <li>Iteratively developing a piece of software</li>
-                    </ul>
-                `,
-                images: [ 'gifs/kronos-organiser-2.3.gif' ],
             },
         ],
         links: [
             { name: 'Deployed Site', href: 'https://kronos-web-umber.vercel.app/' },
-            { name: 'Git Repo', href: 'https://github.com/2d0r/kronos-web.git' },
+            { name: 'GitHub Repo', href: 'https://github.com/2d0r/kronos-web.git' },
         ],
     },
     {
@@ -203,7 +200,7 @@ export const projectsData : ProjectDataType[] = [
             { title: '', text: '', images: [] },
         ],
         links: [
-            { href: 'https://www.wolfysbar.com/nft-wolfys-bar', name: 'Link to live page'},
+            { name: 'Live Page', href: 'https://www.wolfysbar.com/nft-wolfys-bar' },
         ]
     },
     {
@@ -251,7 +248,7 @@ export const projectsData : ProjectDataType[] = [
             },
         ],
         links: [
-            { href: 'https://www.thecollabcentre.co.uk/', name: 'Live site' },
+            { href: 'https://www.thecollabcentre.co.uk/', name: 'Live Site' },
         ],
     }, 
     {
@@ -274,7 +271,7 @@ export const projectsData : ProjectDataType[] = [
             { title: 'Demo', text: 'Landing page for an independent wellbeing counsellor looking to improve his online presence. Built with Wix.', images: [ 'gifs/counselling-site-demo.gif' ], layout: 'wide', },
         ],
         links: [
-            { name: 'Go to site', href: 'https://www.wellbeingcounselingoregon.com/' }
+            { name: 'Live Site', href: 'https://www.wellbeingcounselingoregon.com/' }
         ],
     },
     {
@@ -292,7 +289,7 @@ export const projectsData : ProjectDataType[] = [
             }
         ],
         links: [
-            { href: 'https://finishthattrack.com/', name: 'Mentorship site' }
+            { href: 'https://finishthattrack.com/', name: 'Live Site' }
         ],
     },
     {
