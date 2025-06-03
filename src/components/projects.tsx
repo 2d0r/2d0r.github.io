@@ -61,14 +61,17 @@ export default function Projects () {
             {/* Headliners 1 */}
             <div className='flex flex-wrap flex-col md:flex-row gap-x-8 gap-y-4 justify-center'>
                 <ProjectLink projectId='wejam' className='text-5xl md:text-7xl' />
+                <span className='text-5xl md:text-7xl'> • </span>
                 <ProjectLink projectId='dnm-academy' className='text-5xl md:text-7xl' />
                 <ProjectLink projectId='a-music-quiz' className='text-5xl md:text-7xl' />
             </div>
 
             {/* Headliners 2 */}
             <div className='flex flex-wrap gap-x-8 gap-y-4 justify-center'>
-                <ProjectLink projectId='wolfpack' className='text-5xl md:text-7xl' /> 
-                <ProjectLink projectId='kronos' className='text-5xl md:text-7xl' />
+                <ProjectLink projectId='wolfpack' className='text-4xl md:text-6xl' />
+                <span className='text-4xl md:text-6xl'> • </span>
+                <ProjectLink projectId='kronos' className='text-4xl md:text-6xl' />
+                <ProjectLink projectId='2d0r-portfolio' className='text-4xl md:text-6xl' />
             </div>
         </motion.div>
 

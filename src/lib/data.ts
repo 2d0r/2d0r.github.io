@@ -122,6 +122,30 @@ export const projectsData : ProjectDataType[] = [
         ],
     },
     {
+        id: '2d0r-portfolio',
+        title: 'This portfolio',
+        description: 'This very online portfolio',
+        thumbnail: 'images/2d0r-portfolio-1.png',
+        tools: ['Next.js', 'Tailwind', 'Framer Motion'],
+        sections: [
+            {
+                title: 'Overview',
+                text: `
+                    <p style='padding-bottom:12px'>My interactive personal website, showcasing my journey, technical projects, and creative work.</p>
+                    <ul style='text-align:left'>
+                        <li>Built with Next.js and optimized for performance and SEO.</li>
+                        <li>Used Framer Motion to create smooth animations and transitions.</li>
+                        <li>Fully responsive and mobile-first, tested across breakpoints.</li>
+                        <li>Custom-designed UI system using Tailwind CSS for rapid prototyping.</li>
+                        <li>Deployed on GitHub Pages.</li>
+                    </ul>
+                `,
+                layout: 'wide',
+                images: [ 'images/2d0r-portfolio-1.png' ],
+            }
+        ],
+    },
+    {
         id: 'kronos',
         title: 'Kronos',
         description: 'A smart organiser that understands mindsets',
@@ -473,6 +497,10 @@ export const skillsData = [
     {
         name: 'Figma',
         icon: './icons/figma-w.png',
+    },
+    {
+        name: 'Framer Motion',
+        icon: './icons/framer-motion-w.png',
     },
     {
         name: 'GitHub',
