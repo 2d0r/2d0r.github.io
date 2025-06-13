@@ -85,7 +85,7 @@ export const projectsData : ProjectDataType[] = [
                         <li>Deployed frontend to Netlify with environment-based API integration.</li>
                     </ul>
                 `,
-                // images: [ 'gifs/wejam-setUpPlayer-1.1.gif' ],
+                images: [ 'images/dnm-academy-thumb.png' ],
                 layout: 'wide',
             },
         ],
@@ -113,9 +113,9 @@ export const projectsData : ProjectDataType[] = [
                     </ul>
                 `,
                 layout: 'wide',
+                images: [ 'images/a-music-quiz.png' ],
             }
         ],
-        redirect: 'https://2d0r.github.io/music-quiz',
         links: [
             { name: 'Live App', href: 'https://2d0r.github.io/music-quiz' },
             { name: 'GitHub Repo', href: 'https://github.com/2d0r/music-quiz' },
@@ -427,10 +427,10 @@ export const projectsData : ProjectDataType[] = [
 
 export const aboutData = {
     text: `
-        <p>After graduating music, a slowed-down music industry caused by the Covid pandemic turned me to my other passion: coding.<br/></p>
-        <p>After a few months in a sound production role at WeJam, I did training as a front-end developer. I completed several coding courses in Python, React and Node to fill in the gaps, and finished a Product Design course at Love Circular, London.<br/></p>
-        <p>On the side, I started working as a freelancer, designing and building sites and assets for various clients.<br/></p>
-        <p>I like to understand every bit of code I work with, I refuse to separate great code from a great user experience and I am endlessly hungry to learn more and build better.</p>
+        <p>I am Tudor, a Front-End Developer with a product mindset, 2+ years of hands-on experience, and a focus on crafting clean, accessible, and intuitive interfaces using React, Next.js, and TypeScript. Currently transitioning into full-stack roles with growing backend experience and an AI certification in progress.</p>
+        <p>I bridge the gap between design and engineering. With a foundation in UX and freelance design, I build digital experiences that aren’t just functional—but visually engaging and inclusive.</p>
+        <p>I'm drawn to meaningful problems and I strive to combine performance, creativity, and empathy in the software I build.</p>
+        <p>Let's build something that works and feels right.</p>
     `,
 }
 
@@ -447,7 +447,7 @@ export const timelineData = [
         index: 2,
         title: 'Trainee Programmer',
         location: 'WeJam, London, UK',
-        text: 'Learnt Python while working at WeJam. For half a year I auomated parts of the song production workflow.',
+        text: 'Learnt Python while working as a Music Data Assistant at WeJam. I automated parts of the song production workflow.',
         years: '2021 - 2022',
         type: 'work',
     },
@@ -455,7 +455,7 @@ export const timelineData = [
         index: 3,
         title: 'Product Design Course',
         location: 'Love Circular, London, UK',
-        text: 'Completed a Product Design course at Love Circular, London. I saw through a design overhaul of the WeJam app UI. Pursued freelance design work on the side.',
+        text: 'Completed a Product Design course at Love Circular, London. I overhauled the WeJam app UI. Pursued freelance design work on the side.',
         years: '2022',
         type: 'education',
     },
@@ -463,15 +463,15 @@ export const timelineData = [
         index: 4,
         title: 'Front-End Developer',
         location: 'Wejam, London, UK',
-        text: 'Learnt React and worked as a front-end developer at WeJam for 2 years. Tasks started involving Node.js and back-end.',
+        text: 'Learnt React and worked as a front-end developer at WeJam for 2 years. Gradually started taking on back-end tasks in Express.js.',
         years: '2022 - 2024',
         type: 'work',
     },
     {
         index: 5,
-        title: 'Filling in the gaps',
-        location: null,
-        text: 'Pursuing The Learning People\'s Full-Stack Certification. Completed Codecademy\'s Front-End Engineer Professional Certification. Built several projects from scratch, to solidify and connect my full stack skills.',
+        title: 'BCS Tech10 Full-Stack Developer Certification',
+        location: 'The Learning People',
+        text: 'After completing Codecademy\'s Front-End Engineer Professional Certification, I enrolled in The Learning People\'s accredited full-stack certification, which I completed in May 2025 with top grades.',
         years: '2024 - 2025',
         type: 'education',
     },

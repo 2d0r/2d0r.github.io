@@ -49,7 +49,9 @@ export default function Projects () {
             {/* Subtitle */}
             <div className='flex gap-4 text-center justify-between items-center w-full text-lg'>
                 <span className='hidden md:inline'>X</span>
-                <span className='w-full text-center mt-8 md:mt-0 px-8 md:px-0'>I am a Front-End Developer with 2 years experience building & designing web apps.</span>
+                <span className='w-full text-center mt-8 md:mt-0 px-8 md:px-0'>
+                    I am a Front-End Developer with 2+ years experience building & designing web apps.
+                </span>
                 <span className='hidden md:inline'>X</span>
             </div>
             <QuickLinks className='inline md:hidden mt-6 text-yellow-300' />
@@ -57,8 +59,8 @@ export default function Projects () {
 
         <motion.div className='w-full flex flex-col items-center justify-center gap-4 font-medium'
         initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-            <Divider heading='Headliners' /> 
             {/* Headliners 1 */}
+            <Divider heading='Headliners' /> 
             <div className='flex flex-wrap flex-col md:flex-row gap-x-8 gap-y-4 justify-center'>
                 <ProjectLink projectId='wejam' className='text-5xl md:text-7xl' />
                 <span className='text-5xl md:text-7xl'> • </span>
@@ -67,6 +69,7 @@ export default function Projects () {
             </div>
 
             {/* Headliners 2 */}
+            <Divider heading='Main Support' /> 
             <div className='flex flex-wrap gap-x-8 gap-y-4 justify-center'>
                 <ProjectLink projectId='wolfpack' className='text-4xl md:text-6xl' />
                 <span className='text-4xl md:text-6xl'> • </span>
