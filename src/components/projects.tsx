@@ -44,13 +44,13 @@ export default function Projects () {
             </div>
 
             {/* Title */}
-            <div className='text-7xl sm:text-8xl md:text-9xl pt-0 mb-4 font-semibold text-center cursor-default leading-[80px] md:leading-none'>Tudor Popescu</div>
-            
+            <div className='text-[12vw] md:text-[7rem] pt-0 mb-4 font-semibold text-center cursor-default leading-[80px] md:leading-none'>Tudor Popescu</div>
+            {/* text-7xl sm:text-7xl */}
             {/* Subtitle */}
             <div className='flex gap-4 text-center justify-between items-center w-full text-lg'>
                 <span className='hidden md:inline'>X</span>
                 <span className='w-full text-center mt-8 md:mt-0 px-8 md:px-0'>
-                    I am a Front-End Developer with 2+ years experience building & designing web apps.
+                    I am a Software Developer with 2+ years experience building & designing web apps.
                 </span>
                 <span className='hidden md:inline'>X</span>
             </div>
@@ -63,16 +63,17 @@ export default function Projects () {
             <Divider heading='Headliners' /> 
             <div className='flex flex-wrap flex-col md:flex-row gap-x-8 gap-y-4 justify-center'>
                 <ProjectLink projectId='wejam' className='text-5xl md:text-7xl' />
-                <span className='text-5xl md:text-7xl'> • </span>
-                <ProjectLink projectId='dnm-academy' className='text-5xl md:text-7xl' />
+                <span className='text-5xl md:text-7xl hidden md:inline'> • </span>
                 <ProjectLink projectId='a-music-quiz' className='text-5xl md:text-7xl' />
+                <ProjectLink projectId='dnm-academy' className='text-5xl md:text-7xl' />
+                
             </div>
 
             {/* Headliners 2 */}
             <Divider heading='Main Support' /> 
             <div className='flex flex-wrap gap-x-8 gap-y-4 justify-center'>
                 <ProjectLink projectId='wolfpack' className='text-4xl md:text-6xl' />
-                <span className='text-4xl md:text-6xl'> • </span>
+                <span className='text-4xl md:text-6xl hidden md:inline'> • </span>
                 <ProjectLink projectId='kronos' className='text-4xl md:text-6xl' />
                 <ProjectLink projectId='2d0r-portfolio' className='text-4xl md:text-6xl' />
             </div>

@@ -33,7 +33,7 @@ export default function Page({params} : {params: any}) {
         })}
 
         {/* Project Links */}
-        { project.links?.length && 
+        { project.links?.length ? 
             <div className='w-full text-xl flex flex-col gap-8 justify-center items-center py-16'>
                 { project.links.map((link, idx) => {
                     return (
@@ -45,7 +45,7 @@ export default function Page({params} : {params: any}) {
                         </a>
                     );
                 })}
-            </div>
+            </div> : <></>
         }
         <ProjectNav project1={adjacentProjects[0]} project2={adjacentProjects[1]} />
         <CloudAnimation clouds={2} />

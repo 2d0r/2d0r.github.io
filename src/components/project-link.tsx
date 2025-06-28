@@ -50,7 +50,7 @@ export default function ProjectLink({ projectId, className } : ProjectLinkProps)
 
     return (<div className='md:relative w-full md:w-auto flex flex-col justify-center align-center'>
         <Link href={project?.redirect || `./${projectId}`} 
-            className={clsx(className, 'highlight text-center')} 
+            className={clsx(className, 'highlight text-center z-0')} 
             onMouseOver={() => handleHover(true)} 
             onMouseOut={isMobile ? () => {} : () => handleHover(false)}
             onClick={handleClick}
