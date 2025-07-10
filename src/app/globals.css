@@ -93,3 +93,11 @@ p {
 .wire-button {
   @apply rounded-full hover:bg-white/25 py-1 px-3;
 }
+
+@media (min-width: 768px) {
+  .bg-pattern-zigzag3d {
+    @apply bg-transparent;
+    background-image: radial-gradient(#ffffff55 0.5px, rgba(229,229,247,0) 0.5px);
+    background-size: 10px 10px;
+  }
+}

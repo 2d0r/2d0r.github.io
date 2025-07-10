@@ -47,12 +47,12 @@ export default function ContactForm () {
                     <div className='flex flex-col gap-2 w-full'>
                         {/* <label htmlFor='name'>Email address</label> */}
                         <input name='senderEmail' type='email' placeholder='Email address' required
-                        className='w-full bg-transparent border border-white/70 rounded-xl p-2 placeholder:text-white/30 focus:outline-none focus:border-white' />
+                        className='w-full bg-transparent border border-white/70 rounded-xl p-2 placeholder:text-white/30 focus:outline-none focus:border-white backdrop-blur-md' />
                     </div>
                     <div className='flex flex-col gap-2 w-full'>
                         {/* <label htmlFor='name'>Message</label> */}
                         <textarea name='message' placeholder='Your message' required
-                            className='w-full bg-transparent border border-white/70 rounded-xl p-2 placeholder:text-white/30 min-h-[140px] focus:outline-none focus:border-white' />
+                            className='w-full bg-transparent border border-white/70 rounded-xl p-2 placeholder:text-white/30 min-h-[140px] focus:outline-none focus:border-white backdrop-blur-md' />
                     </div>
                     <SubmitBtn />
                 </div>

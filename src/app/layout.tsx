@@ -33,8 +33,8 @@ export default function RootLayout({
         <ActiveSectionContextProvider>
           <Header />
           <div className={clsx(
-              'z-10 w-[min(900px,96%)] flex flex-col gap-8 items-center justify-start text-white font-regular mt-8 md:mt-2 p-4 md:p-8 pb-12', 
-              'border-white/60 border md:outline outline-8 outline-offset-8 outline-white/60 rounded-xl', 
+              'z-10 w-[min(900px,100%)] flex flex-col gap-8 items-center justify-start text-white font-regular md:mt-2 p-4 md:p-8 pb-12', 
+              'md:border border-white/60 md:outline outline-8 outline-offset-8 outline-white/60 rounded-xl bg-pattern-zigzag3d', 
               museoModerno.className
             )}>
             {children}

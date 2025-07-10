@@ -28,7 +28,7 @@ export default function TimelineMoment ({ index } : { index: number }) {
             <div className={clsx('w-full md:w-1/2 h-full flex items-start flex-row-reverse md:flex-row', !isOdd && 'md:flex-row-reverse')}>
 
                 {/* Card */}
-                <div className='border border-white rounded-3xl w-full h-full flex flex-col p-4 gap-2'>
+                <div className='border border-white rounded-3xl w-full h-full flex flex-col p-4 gap-2 backdrop-blur-md'>
                     <div className='flex flex-col'>
                         <span className='font-semibold'>{timelineMoment?.title}</span>
                         {timelineMoment?.location && <span className='font-medium'>
