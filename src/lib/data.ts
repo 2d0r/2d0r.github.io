@@ -141,9 +141,12 @@ export const projectsData : ProjectDataType[] = [
                     </ul>
                 `,
                 layout: 'wide',
-                images: [ 'images/2d0r-portfolio-1.png' ],
             }
         ],
+        links: [
+            { name: 'Deployed Site', href: 'https://2d0r.github.io/' },
+            { name: 'Repo', href: 'https://github.com/2d0r/2d0r.github.io' },
+        ]
     },
     {
         id: 'kronos',
@@ -155,40 +158,96 @@ export const projectsData : ProjectDataType[] = [
             {
                 title: 'Overview',
                 text: `
-                    <p style='padding-bottom: 12px'>A smart productivity app designed to help users align tasks with mental focus states and personal goals.</p>
+                    <p>Kronos is a productivity tool designed to help users reach flow state, by aligning tasks with organically evolving mindsets and with layered personal goals.</p>
+                    <p>It is a long-lived passion of mine, to make a computer understand human time and goals, in order to be a companion who is aware of our most valuable asset: time.</p>
+                    <p>Aside from my research in turning flow-state and well-known time management paradigms into an algorithm, Kronos draws from my personal life as I learn how to juggle my goals, everyday life, and my obstacles, and observe useful or bad patterns.</p>
+                `,
+                layout: 'wide',
+                images: [ 'gifs/kronos-timeline-1.gif' ],
+            },
+            {
+                title: 'Key Features',
+                text: `
                     <ul style='text-align:left'>
-                        <li>Built a custom markdown editor using TipTap and a calendar UI using date-fns.</li>
-                        <li>Managed full-stack interactions with PostgreSQL via Prisma ORM.</li>
-                        <li>Deployed with Docker for local containerization and Vercel for frontend hosting.</li>
-                        <li>Integrated authentication and user state management using Next.js API routes.</li>
-                        <li>Designed with Tailwind CSS, embracing utility-first principles and responsive theming.</li>
+                        <li>
+                            <h3 style='text-align: left; font-weight: 600; font-size: 1.1em'>Task Scheduler Algorithm</h3>
+                            <p>Automatically schedules tasks into ideal calendar gaps using constraints like:<br>
+                                - Preferred time of day (morning, afternoon, evening)<br>
+                                - Ideal days of week<br>
+                                - Repetition rules (daily, weekly, hourly)<br>
+                                - Time durations
+                            </p>
+                            <p>Avoids overlaps with existing events using a gap-finding and conflict resolution strategy.</p>
+                        </li>
+                        <li>
+                            <h3 style='text-align: left; font-weight: 600; font-size: 1.1em; margin-top: 24px;'>Dynamic Modal Routing</h3>
+                            <p>Uses Next.js searchParams to open modals for editing tasks/events while preserving the current route.</p>
+                            <p>Modals behave like overlays but retain full routing capabilities.</p>
+                        </li>
+                        <li>
+                            <h3 style='text-align: left; font-weight: 600; font-size: 1.1em; margin-top: 24px;'>Animated, color-coded UI</h3>
+                            <p>The UI si designed with a dynamic accent colour, reflective of the ongoing task.</p>
+                            <p>Transitions and animations are created with Framer Motion</p>
+                        </li>
+                        <li>
+                            <h3 style='text-align: left; font-weight: 600; font-size: 1.1em; margin-top: 24px;'>Reusable Input System</h3>
+                            <p>MultiSelect, DateTime, and Mindset selectors are modular React components, fully controlled via props and Redux state sync.</p>
+                        </li>
+                        <li>Calendar component built with Hexaflexa library</li>
+                        <li>Markdown editor built with TipTap</li>
                     </ul>
                 `,
-                images: [ 'gifs/kronos-timeline-1.gif' ],
+                images: [ 'gifs/kronos-addTask-1.gif' ],
                 layout: 'wide',
             },
             {
-                title: 'Features',
+                title: 'Architecture and Engineering Highlights',
                 text: `
                     <ul style='text-align:left'>
-                        <li>Next.js app with app router</li>
-                        <li>Smart timeline showing the next organised task in real time</li>
-                        <li>Calendar component to visualise and edit events</li>
-                        <li>Task browser, with filter and sort</li>
-                        <li>Conditional task input form, to speed up task input</li>
-                        <li>A dyanmic UI colour palette, updating in real time based on the nearest event's mindset</li>
-                        <li>A next-level checkbox, for displaying 'in progress' and 'repeating' status</li>
-                        <li>Markdown text editor, with checklists, headings and bullet lists</li>
-                        <li>Framer Motion animations</li>
-                        <li>Redux store which communicates with database to update the app's states</li>
+                        <li>
+                            <h3 style='text-align: left; font-weight: 600; font-size: 1.1em'>Monolithic App with Modular Domain Separation</h3>
+                            <p>
+                                - /app - routing and pages<br>
+                                - /components - client-side UI and forms<br>
+                                - /lib - database interface, shared types, utilities
+                            </p>
+                        </li>
+                        <li>
+                            <h3 style='text-align: left; font-weight: 600; font-size: 1.1em; margin-top: 24px;'>Database (PostgreSQL + Prisma)</h3>
+                            <p>Uses Next.js searchParams to open modals for editing tasks/events while preserving the current route.</p>
+                            <p>Modals behave like overlays but retain full routing capabilities.</p>
+                        </li>
+                        <li>
+                            <h3 style='text-align: left; font-weight: 600; font-size: 1.1em; margin-top: 24px;'>Testing and Local Dev Strategy</h3>
+                            <p>Mock database layer using pg-mem and Jest for unit testing the organiser algorithm</p>
+                            <p>Development and preview databases separated via .env, .env.development.local, .env.test</p>
+                        </li>
+                        <li>
+                            <h3 style='text-align: left; font-weight: 600; font-size: 1.1em; margin-top: 24px;'>Deployment</h3>
+                            <p>Hosted on Vercel with Postgres.</p>
+                            <p>Preview deployments use a separate database to avoid schema drift.</p>
+                        </li>
                     </ul>
                 `,
-                images: [ 'gifs/kronos-addTask-1.gif', 'gifs/kronos-organiser-2.3.gif' ],
+                images: [ 'gifs/kronos-organiser-2.3.gif' ],
+                layout: 'wide',
+            },
+            {
+                title: 'Next Steps',
+                text: `
+                    <ul style='text-align:left'>
+                        <li>Implement an 7-layer system of tracking goals and determining emerging priority, tied to humans' perception of time: from life goals down to work sessions.</li>
+                        <li>Connect to Notion API, to make use of the world's most versatile personal data organisation tool.</li>
+                        <li>Train a custom ML model that learns from weekly patterns and offers suggestions accordingly.</li>
+                        <li>Build a React Native version, to be used and tested as a mobile app.</li>
+                        <li>Come up with ways to gather data about the user's time, without needing direct input. The need for abundant and constant input is of the biggest hurdles for such a tool.</li>
+                    </ul>
+                `,
                 layout: 'wide',
             },
         ],
         links: [
-            { name: 'Deployed Site', href: 'https://kronos-web-umber.vercel.app/' },
+            // { name: 'Deployed App', href: 'https://kronos-web-umber.vercel.app/' },
             { name: 'GitHub Repo', href: 'https://github.com/2d0r/kronos-web.git' },
         ],
     },
@@ -250,7 +309,6 @@ export const projectsData : ProjectDataType[] = [
                         <li>Versatile design system with responsiveness in mind</li>
                         <li>High fidelity visual prototypes for more specific transitions</li>
                         <li>Mostly Dark UI, as per requirement</li>
-                        <li>
                     </ul>
                 `, 
                 images: [ 'gifs/bvr-demo-drawer.gif' ] 
@@ -394,13 +452,12 @@ export const projectsData : ProjectDataType[] = [
         title: 'Soundr Rebrand',
         description: 'Design assets for a rebranded metaverse NFT creator',
         thumbnail: 'images/soundr-rebrand-thumb.png',
-        tools: ['Pixelmator'],
+        tools: ['Pixelmator', 'Photoshop'],
         sections: [
             { 
                 title: 'Overview', 
                 text: 'Soundr were shifting their focus to metaverse NFTs, which required rethinking their visual identity to express the futuristic and natively digital nature of their new product.', 
-                images: ['images/soundr-rebrand-posters-sq.png'], layout: 'sides' },
-            { title: 'Banner', text: '', images: ['images/soundr-rebrand-banner.png'], layout: 'wide' },
+                images: ['images/soundr-rebrand-posters-sq.png', 'images/soundr-rebrand-banner.png'], layout: 'gallery' },
             { title: '', text: '', images: [] },
         ],
     },
