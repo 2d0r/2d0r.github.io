@@ -42,7 +42,7 @@ export default function Footer () {
         }
     }
     
-    return (<footer className='w-full flex-col items-center mt-24 overflow-hidden md:h-[43vw]'> 
+    return (<footer className='w-full z-10 flex-col items-center mt-24 overflow-hidden md:h-[43vw]'> 
         {gradientFooter}
     </footer>)
 }

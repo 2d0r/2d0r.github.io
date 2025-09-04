@@ -4,7 +4,7 @@ import Divider from '@/components/divider';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useActiveSectionContext } from '@/context/active-section-context';
+import { useSessionContext } from '@/context/session-context';
 import ProjectLink from './project-link';
 import { personalLinks } from '@/lib/data';
 
@@ -14,7 +14,7 @@ export default function Projects () {
         threshold: 0.5,
     });
 
-    const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+    const { setActiveSection, timeOfLastClick } = useSessionContext();
     useEffect(() => {
         if (inView && Date.now() - timeOfLastClick > 1000) {
             setActiveSection('Projects');

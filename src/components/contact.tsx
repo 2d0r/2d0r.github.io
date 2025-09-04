@@ -2,7 +2,7 @@
 
 import { useInView } from 'react-intersection-observer';
 import Divider from './divider';
-import { useActiveSectionContext } from '@/context/active-section-context';
+import { useSessionContext } from '@/context/session-context';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 // import { sendEmail } from '@/actions/sendEmail';
@@ -15,7 +15,7 @@ export default function ContactForm () {
     const { ref, inView } = useInView({
         threshold: 0.5,
     });
-    const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+    const { setActiveSection, timeOfLastClick } = useSessionContext();
 
     useEffect(() => {
         if (inView && Date.now() - timeOfLastClick > 1000) {

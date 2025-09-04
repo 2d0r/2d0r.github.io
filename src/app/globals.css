@@ -23,12 +23,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-blue-500;
 }
 
 p {
@@ -44,8 +39,24 @@ p {
 #about p {
   @apply mb-4;
 }
-.enlarge {
+.animate-enlarge {
   @apply hover:scale-105 transition cursor-pointer;
+}
+.animate-lightning {
+  animation: lightning 10s linear infinite;
+  @apply bg-white/50;
+}
+@keyframes lightning {
+  0%, 20% { opacity: 0; }
+  20.5%, 21.5% { opacity: 1; }
+  21%, 22.5% { opacity: 0; }
+  50% { opacity: 0; }
+  50.5% { opacity: 1; }
+  51%, 90% { opacity: 0; }
+  90% { opacity: 0; }
+  90.25%, 91% { opacity: 1; }
+  90.5%, 91.5% { opacity: 0; }
+  100% { opacity: 0; } 
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hide-scrollbar::-webkit-scrollbar {

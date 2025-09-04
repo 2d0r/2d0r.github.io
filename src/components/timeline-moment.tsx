@@ -3,23 +3,22 @@ import { timelineData } from '../lib/data';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
 import { useWindowDimensions } from '@/lib/use-window-dimensions';
+import { useSessionContext } from '@/context/session-context';
 
 export default function TimelineMoment ({ index } : { index: number }) {
+    const { windowWidth } = useWindowDimensions();
+    const { bgIsBlue } = useSessionContext();
+
     const timelineMoment = timelineData.find(moment => moment.index === index);
     const isOdd = index % 2 === 0 ? false : true;
-
-    const { windowWidth } = useWindowDimensions();
-
     const isMobile = windowWidth && windowWidth < 800;
-    const timelineMomentVariant = 
-    !isMobile ?
-    {
+    const timelineMomentVariant = !isMobile ? {
         initial: {  opacity: 0, x: isOdd ? -10 : 10 },
         animate: () => ({ opacity: 1, x: 0, transition: { duration: 1 } }),
-    } 
-    : {
+    } : {
         initial: { opacity: 1, x: 0 }, animate: { opacity: 1, x: 0 }
     };
+    const iconClass = clsx('transition-all duration-[3000ms] ease-in-out', bgIsBlue ? 'fill-blue-400' : 'fill-slate-400');
 
     return (<>
         <motion.div className={clsx('w-full flex relative flex-row-reverse md:flex-row', !isOdd && 'md:flex-row-reverse')}
@@ -51,8 +50,8 @@ export default function TimelineMoment ({ index } : { index: number }) {
             left-0 md:right-0 top-0 md:mx-auto 
             flex items-center justify-center'>
                 { timelineMoment?.type === 'education' ? 
-                    <AcademicCapIcon height={24} className='fill-blue-400' /> :
-                    <BriefcaseIcon height={24} className='fill-blue-400' />
+                    <AcademicCapIcon height={24} className={iconClass} /> :
+                    <BriefcaseIcon height={24} className={iconClass} />
                 }
             </div>
         </motion.div>

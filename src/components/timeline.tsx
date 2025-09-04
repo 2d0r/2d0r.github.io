@@ -6,8 +6,13 @@ import '@/app/globals.css';
 import { motion } from 'framer-motion';
 import TimelineMoment from './timeline-moment';
 import { personalLinks, timelineData } from '@/lib/data';
+import clsx from 'clsx';
+import { useSessionContext } from '@/context/session-context';
 
 export default function Timeline() {
+    const { bgIsBlue } = useSessionContext();
+    const iconClass = clsx('transition-all duration-[3000ms] ease-in-out', bgIsBlue ? 'fill-blue-400' : 'fill-slate-400');
+
     return (<div className='w-full md:w-4/5 flex flex-col gap-8 relative my-8'>
         {/* The line */}
         <div className='absolute top-[24px] bottom-0  w-[1px] bg-white
@@ -23,10 +28,9 @@ export default function Timeline() {
                     <div className='text-left md:text-right mt-[12px]'>Download CV</div>
                 </div>
                 <div className='w-1/2 h-full hidden md:flex items-start md:pl-[36px] pl-[12px] mt-[12px] font-light md:font-normal'>{new Date().getFullYear()}</div>
-                <div className='z-40 absolute rounded-full w-[48px] h-[48px] bg-white
-                top-0 left-0 md:right-0 md:mx-auto 
+                <div className='z-40 absolute rounded-full w-[48px] h-[48px] bg-white top-0 left-0 md:right-0 md:mx-auto 
                 flex items-center justify-center group-hover:bg-yellow-300 group-hover:scale-105 transition'>
-                    <ArrowDownIcon height={24} className='fill-blue-400' />
+                    <ArrowDownIcon height={24} className={iconClass} />
                 </div>
             </Link>
         </motion.div>

@@ -1,21 +1,21 @@
 'use client';
 
-import { useActiveSectionContext } from '@/context/active-section-context';
+import { useSessionContext } from '@/context/session-context';
 import { links } from '@/lib/data';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function Header() {
-    const { activeSection, setActiveSection, setTimeOfLastClick } =
-        useActiveSectionContext();
+    const { activeSection, setActiveSection, setTimeOfLastClick, bgIsBlue } = useSessionContext();
 
-    return (<header className='z-50 relative w-full font-body'>
+    return (<header className='z-50 w-full relative font-body'>
         <motion.div 
-            className='fixed top-0 sm:top-6 left-1/2 -translate-x-1/2 text-white
-            h-[3.25rem] w-full sm:h-[3.25rem] sm:w-[28rem]
+            className={`fixed top-0 sm:top-6 left-1/2 -translate-x-1/2 text-white
+            h-[3.25rem] sm:h-[3.25rem] w-full sm:w-[28rem]
             border-b sm:border border-b-white sm:border-white rounded-none sm:rounded-full
-            bg-blue-500 md:bg-white/10 md:backdrop-blur-lg shadow-lg shadow-black/[0.03]'
+            md:bg-white/10 md:backdrop-blur-lg shadow-lg shadow-black/[0.03]
+            ${bgIsBlue ? 'bg-blue-500' : 'bg-slate-800'} transition-colors duration-[3s]`}
             initial={{ x: '-50%', y: -100, opacity: 0 }}
             animate={{ x: '-50%', y: 0, opacity: 1 }}
         >

@@ -2,7 +2,7 @@
 
 import Divider from '@/components/divider';
 import Timeline from '@/components/timeline';
-import { useActiveSectionContext } from '@/context/active-section-context';
+import { useSessionContext } from '@/context/session-context';
 import { aboutData } from '@/lib/data';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
@@ -13,7 +13,7 @@ export default function AboutSection() {
     const { ref, inView } = useInView({
         threshold: 0.5,
     });
-    const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+    const { setActiveSection, timeOfLastClick } = useSessionContext();
 
     useEffect(() => {
         if (inView && Date.now() - timeOfLastClick > 1000) {
