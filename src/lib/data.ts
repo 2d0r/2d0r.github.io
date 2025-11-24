@@ -484,7 +484,7 @@ export const projectsData : ProjectDataType[] = [
 
 export const aboutData = {
     text: `
-        <p>I am Tudor, a Front-End Developer with a product mindset, 2+ years of hands-on experience, and a focus on crafting clean, accessible, and intuitive interfaces using React, Next.js, and TypeScript. Currently transitioning into full-stack roles with growing backend experience and an AI certification in progress.</p>
+        <p>I am Tudor, a Front-End Developer with a product mindset, 3 years of hands-on experience, and a focus on crafting clean, accessible, and intuitive interfaces using React, Next.js, and TypeScript. Currently transitioning into full-stack roles with growing backend experience and an AI certification in progress.</p>
         <p>I bridge the gap between design and engineering. With a foundation in UX and freelance design, I build digital experiences that aren’t just functional—but visually engaging and inclusive.</p>
         <p>I'm drawn to meaningful problems and I strive to combine performance, creativity, and empathy in the software I build.</p>
         <p>Let's build something that works and feels right.</p>
@@ -494,7 +494,7 @@ export const aboutData = {
 export const timelineData = [
     {
         index: 1,
-        title: 'Computer Science College',
+        title: 'Computer Science College (Andrei Saguna)',
         location: 'Brasov, Romania',
         text: 'Graduated Maths and Computer Science profile at top-tier college in Romania. I passed the Baccalaureate with 9.80 in Maths, 9.30 in Physics, and 10 in Digital Competencies.',
         years: '',
@@ -657,6 +657,6 @@ export const links = [
 ] as const;
 
 export const personalLinks = {
-    cv: 'files/tudor-popescu-cv.pdf',
+    cv: 'files/CV_Tudor_Popescu_Frontend.pdf',
     linkedin: 'https://www.linkedin.com/in/tudor-m-p/',
 }
