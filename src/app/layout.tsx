@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import '@/app/globals.css';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
-import SessoionContextProvider from '@/context/session-context';
+import SessionContextProvider from '@/context/session-context';
 import clsx from 'clsx';
 import { Toaster } from 'react-hot-toast';
 import localFont from 'next/font/local';
@@ -28,8 +28,8 @@ export default function RootLayout({
         <meta name='theme-color' content='#3b82f6' />
         <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
       </head>
-      <body className='overscroll-none overflow-x-hidden relative w-full z-10 file:flex flex flex-col items-center justify-center pt-12'>
-        <SessoionContextProvider>
+      <body className='overscroll-none overflow-x-hidden relative w-full z-10 file:flex flex flex-col items-center justify-center pt-12 animate-skychange'>
+        <SessionContextProvider>
           <Header />
           <div id='content' className={clsx(
               'z-10 w-[min(900px,100%)] flex flex-col gap-8 items-center justify-start text-white font-regular md:mt-2 p-4 md:p-8 pb-12', 
@@ -41,7 +41,7 @@ export default function RootLayout({
           <Footer />
           <Toaster position='bottom-right'/>
           <Background />
-        </SessoionContextProvider>
+        </SessionContextProvider>
       </body>
     </html>
   );
